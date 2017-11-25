@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="429px" preserveAspectRatio="none" style="width:557px;height:429px;" version="1.1" viewBox="0 0 557 429" width="557px" zoomAndPan="magnify"><defs><filter height="300%" id="f3zv6uy537rqt" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="398" x="80.5" y="23.5352">Desktop Web Server App to Uport Mobile Request Flow</text><line style="stroke: #878787; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="75" x2="75" y1="116.9766" y2="342.1504"/><line style="stroke: #878787; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="239" x2="239" y1="116.9766" y2="342.1504"/><line style="stroke: #878787; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="381" x2="381" y1="116.9766" y2="342.1504"/><line style="stroke: #878787; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="525" x2="525" y1="116.9766" y2="342.1504"/><rect fill="#FFFFFF" filter="url(#f3zv6uy537rqt)" height="30.4883" rx="5" ry="5" style="stroke: #6959DB; stroke-width: 1.5;" width="111" x="18" y="81.4883"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="97" x="25" y="102.0234">ClientBackEnd</text><rect fill="#FFFFFF" filter="url(#f3zv6uy537rqt)" height="30.4883" rx="5" ry="5" style="stroke: #6959DB; stroke-width: 1.5;" width="111" x="18" y="341.1504"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="97" x="25" y="361.6855">ClientBackEnd</text><rect fill="#FFFFFF" filter="url(#f3zv6uy537rqt)" height="30.4883" rx="5" ry="5" style="stroke: #6959DB; stroke-width: 1.5;" width="117" x="179" y="81.4883"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="103" x="186" y="102.0234">ClientFrontEnd</text><rect fill="#FFFFFF" filter="url(#f3zv6uy537rqt)" height="30.4883" rx="5" ry="5" style="stroke: #6959DB; stroke-width: 1.5;" width="117" x="179" y="341.1504"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="103" x="186" y="361.6855">ClientFrontEnd</text><rect fill="#FFFFFF" filter="url(#f3zv6uy537rqt)" height="30.4883" rx="5" ry="5" style="stroke: #6959DB; stroke-width: 1.5;" width="99" x="330" y="81.4883"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="85" x="337" y="102.0234">UportMobile</text><rect fill="#FFFFFF" filter="url(#f3zv6uy537rqt)" height="30.4883" rx="5" ry="5" style="stroke: #6959DB; stroke-width: 1.5;" width="99" x="330" y="341.1504"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="85" x="337" y="361.6855">UportMobile</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="45" x="500" y="114.0234">Owner</text><ellipse cx="525.5" cy="43.4883" fill="#FFFFFF" filter="url(#f3zv6uy537rqt)" rx="8" ry="8" style="stroke: #6959DB; stroke-width: 2.0;"/><path d="M525.5,51.4883 L525.5,78.4883 M512.5,59.4883 L538.5,59.4883 M525.5,78.4883 L512.5,93.4883 M525.5,78.4883 L538.5,93.4883 " fill="#FFFFFF" filter="url(#f3zv6uy537rqt)" style="stroke: #6959DB; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="45" x="500" y="354.6855">Owner</text><ellipse cx="525.5" cy="367.6387" fill="#FFFFFF" filter="url(#f3zv6uy537rqt)" rx="8" ry="8" style="stroke: #6959DB; stroke-width: 2.0;"/><path d="M525.5,375.6387 L525.5,402.6387 M512.5,383.6387 L538.5,383.6387 M525.5,402.6387 L512.5,417.6387 M525.5,402.6387 L538.5,417.6387 " fill="#FFFFFF" filter="url(#f3zv6uy537rqt)" style="stroke: #6959DB; stroke-width: 2.0;"/><polygon fill="#6959DB" points="227.5,143.9766,237.5,147.9766,227.5,151.9766,231.5,147.9766" style="stroke: #6959DB; stroke-width: 1.0;"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="75.5" x2="233.5" y1="147.9766" y2="147.9766"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="140" x="82.5" y="143.5449">Create Signed Request</text><polygon fill="#6959DB" points="513.5,173.2871,523.5,177.2871,513.5,181.2871,517.5,177.2871" style="stroke: #6959DB; stroke-width: 1.0;"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="239.5" x2="519.5" y1="177.2871" y2="177.2871"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="211" x="246.5" y="172.8555">Show QR code containing request</text><polygon fill="#6959DB" points="392.5,202.5977,382.5,206.5977,392.5,210.5977,388.5,206.5977" style="stroke: #6959DB; stroke-width: 1.0;"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="386.5" x2="524.5" y1="206.5977" y2="206.5977"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="92" x="398.5" y="202.166">Scans QR code</text><polygon fill="#6959DB" points="513.5,231.9082,523.5,235.9082,513.5,239.9082,517.5,235.9082" style="stroke: #6959DB; stroke-width: 1.0;"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="381.5" x2="519.5" y1="235.9082" y2="235.9082"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="120" x="388.5" y="231.4766">Authorize Request?</text><polygon fill="#6959DB" points="392.5,261.2188,382.5,265.2188,392.5,269.2188,388.5,265.2188" style="stroke: #6959DB; stroke-width: 1.0;"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="386.5" x2="524.5" y1="265.2188" y2="265.2188"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="96" x="398.5" y="260.7871">Allow/Disallow</text><polygon fill="#6959DB" points="86.5,290.5293,76.5,294.5293,86.5,298.5293,82.5,294.5293" style="stroke: #6959DB; stroke-width: 1.0;"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="80.5" x2="380.5" y1="294.5293" y2="294.5293"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="91" x="92.5" y="290.0977">Send response</text><polygon fill="#6959DB" points="227.5,319.8398,237.5,323.8398,227.5,327.8398,231.5,323.8398" style="stroke: #6959DB; stroke-width: 1.0;"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="75.5" x2="233.5" y1="323.8398" y2="323.8398"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="105" x="82.5" y="319.4082">Handle response</text><!--
+@startuml
+skinparam roundcorner 10
+skinparam BoxPadding 10
+skinparam headerFontColor #6959DB
+skinparam headerFontSize 18
+skinparam sequence {
+  ArrowColor #6959DB
+  GroupBackgroundColor #6959DB
+  GroupBorderColor #EDECFF
+  GroupHeaderFontColor #ffffff
+  BoxBorderColor #6959DB
+  BoxBackgroundColor #EDECFF
+  BoxPadding 10
+
+  ParticipantBorderColor #6959DB
+  ParticipantBackgroundColor #ffffff
+  ParticipantPadding 10
+
+  ActorBorderColor #6959DB
+  ActorBackgroundColor #ffffff
+  EntityBorderColor #6959DB
+  EntityBackgroundColor #ffffff
+  DatabaseBorderColor #6959DB
+  DatabaseBackgroundColor #ffffff
+
+  LifeLineBorderColor #878787
+}
+
+title Desktop Web Server App to Uport Mobile Request Flow
+participant ClientBackEnd
+participant ClientFrontEnd
+participant UportMobile
+actor Owner
+
+ClientFrontEnd <- ClientBackEnd : Create Signed Request
+ClientFrontEnd -> Owner : Show QR code containing request
+Owner -> UportMobile: Scans QR code
+UportMobile -> Owner : Authorize Request?
+Owner -> UportMobile: Allow/Disallow
+UportMobile -> ClientBackEnd: Send response
+ClientBackEnd -> ClientFrontEnd: Handle response
+
+@enduml
+
+PlantUML version 1.2017.19(Sun Nov 12 05:46:22 CST 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_144-b01
+Operating System: Mac OS X
+OS Version: 10.13.1
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
