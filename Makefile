@@ -1,5 +1,5 @@
 PLANTUML_JAR_URL = https://sourceforge.net/projects/plantuml/files/plantuml.jar/download
-DIAGRAMS_SRC := $(wildcard flows/*.plantuml)
+DIAGRAMS_SRC := $(wildcard **/*.plantuml)
 DIAGRAMS_PNG := $(addsuffix .png, $(basename $(DIAGRAMS_SRC)))
 DIAGRAMS_SVG := $(addsuffix .svg, $(basename $(DIAGRAMS_SRC)))
 
@@ -18,9 +18,9 @@ plantuml.jar:
 	curl -sSfL $(PLANTUML_JAR_URL) -o plantuml.jar
 
 # Each PNG output depends on its corresponding .plantuml file
-flows/%.png: flows/%.plantuml 
+**/%.png: **/%.plantuml 
 	java -jar plantuml.jar -tpng $^
 
 # Each SVG output depends on its corresponding .plantuml file
-flows/%.svg: flows/%.plantuml 
+**/%.svg: **/%.plantuml 
 	java -jar plantuml.jar -tsvg $^
