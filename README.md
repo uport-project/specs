@@ -57,6 +57,8 @@ Most Off-chain messages consist of signed JWTs (JSON Web Tokens) as defined in [
 
 Ethereum transactions can be requested to be signed by the mobile app
 
+### [More about Signing Ethereum transactions](flows/tx.md)
+
 ## Uport PKI
 
 Uport implements a simple yet general purpose decentralized PKI system making it easy to create and verify offchain JWT messages.
