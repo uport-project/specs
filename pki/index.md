@@ -34,7 +34,7 @@ Since it is a JSON LD document you can place all kinds of data in there such as 
 
 ### `publicKey` item
 
-The most important part for the function of the PKI itself is that it contains the `publicKey` of the identity.
+The most important part for the function of the PKI itself is that it contains the `publicKey` of the identity. This is the only required item.
 
 This is a `0x` prefixed hex encoded DER encoded public key for the [secp256k1 ECDSA curve](https://en.bitcoin.it/wiki/Secp256k1).
 
