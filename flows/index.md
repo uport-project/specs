@@ -7,7 +7,7 @@ A request will typically be signed by a client app and sent to mobile app using 
 ## Specific Application flows
 
 - [Selective Disclosure Flow](selectivedisclosure.md)
-- Send Verification Flow
+- [Send Verification Flow](verification.md)
 - [Ethereum Transaction Request Flow](tx.md)
 
 ## Errors

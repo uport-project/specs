@@ -4,19 +4,6 @@ The Selective Disclosure Request is created by a client app and sent to a users 
 
 The request can be either signed or unsigned.
 
-## Endpoint
-
-The request should be sent to one of the following URLs:
-
-- `me.uport:me`
-- `https://id.uport.me/me`
-
-## Signed Request
-
-A JWT using the standard [Uport JWT Requirements](index.md) is sent to the endpoint using the `requestToken` query parameter. Eg:
-
-`me.uport:me?requestToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJp...`
-
 #### Attributes
 
 The following attributes of the JWT are supported:

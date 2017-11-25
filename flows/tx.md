@@ -46,9 +46,15 @@ Either `value`, `function` or `bytecode` is required.
 
 The client app SHOULD include a URL where the response is returned from the user. This can be a https url or a custom app url which receives the response.
 
-A sucessfull response is returned as an Ethereum transaction hash as the `tx` param appended to a url fragment. If the callback requires the response as a HTTP POST, it is sent as a JSON POST request to the callback url instead.
+Responses are param appended to a url fragment. If the callback requires the response as a HTTP POST, it is sent as a JSON POST request to the callback url instead.
 
-When the callback has been called with the `tx` parameter the transacton has been submitted to the relevant Ethereum blockchain. The client app SHOULD verify that the transaction has been successfully included in a block.
+### Successful Response
+
+param | Description
+----- | -----------
+`tx`  | Ethereum Transaction Hash
+
+The client app SHOULD verify that the transaction has been successfully included in a block.
 
 ### Errors
 

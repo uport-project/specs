@@ -1,0 +1,13 @@
+@startuml
+!include ../uportskin.plantuml
+title Uport Send Verification Flow
+participant Issuer
+participant UportMobile
+actor Owner
+
+Issuer <-> Owner : On or Off-line Identity verification
+Issuer -> UportMobile : Verification
+UportMobile -> Owner : Show Verification
+UportMobile -> Issuer : Acknowledgement
+
+@enduml

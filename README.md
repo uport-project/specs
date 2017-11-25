@@ -18,7 +18,7 @@ An identity can:
   - [Authenticate themselves to a third party](messages/shareresp.md)
   - [Disclose private information about themselves](messages/shareresp.md)
 - [Receive requests for disclosure about themselves](messages/sharereq.md)
-- Receive and store signed third party verifications about themselves
+- [Receive and store signed third party verifications about themselves](flows/verification.md)
 - [Sign Ethereum transactions](flows/tx.md)
 
 ### Identities created using the Uport Mobile App
@@ -30,6 +30,12 @@ Currently most Uport users manage their identities through their mobile app. Ide
 A request will typically be signed by a client app and sent to mobile app using this generic request flow:
 
 ![Generic Uport Request Flow](flows/generic.png)
+
+We currently support the following flows:
+
+- [Selective Disclosure Flow](flows/selectivedisclosure.md)
+- [Send Verification Flow](flows/verification.md)
+- [Ethereum Transaction Request Flow](flows/tx.md)
 
 ### [More about request flows](flows/index.md)
 
