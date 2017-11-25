@@ -13,7 +13,7 @@ The request should be sent to one of the following URLs:
 
 ## Signed Request
 
-A JWT using the standard [Uport JWT Requirements](./index.md) is sent to the endpoint using the `requestToken` query parameter. Eg:
+A JWT using the standard [Uport JWT Requirements](index.md) is sent to the endpoint using the `requestToken` query parameter. Eg:
 
 `me.uport:me?requestToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJp...`
 

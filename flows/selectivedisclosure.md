@@ -4,7 +4,7 @@ A client application can request various information from the user.
 
 The following shows the basic flow:
 
-![Selective Disclosure Flow](./selectivedisclosure.png)
+![Selective Disclosure Flow](selectivedisclosure.png)
 
 ## Endpoint
 

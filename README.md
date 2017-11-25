@@ -29,9 +29,9 @@ Currently most Uport users manage their identities through their mobile app. Ide
 
 A request will typically be signed by a client app and sent to mobile app using this generic request flow:
 
-![Generic Uport Request Flow](./flows/generic.png)
+![Generic Uport Request Flow](flows/generic.png)
 
-### [More about request flows]((./flows/index.md))
+### [More about request flows](flows/index.md)
 
 ## Off-chain Messages
 
@@ -39,7 +39,7 @@ Most request and responses are performed Off-chain in a private manner between t
 
 Most Off-chain messages consist of signed JWTs (JSON Web Tokens) as defined in [RFC 7519](https://tools.ietf.org/html/rfc7519). Signatures are verified using our simple Uport PKI (see later in this document).
 
-### [More about Off-chain Messages]((./messages/index.md))
+### [More about Off-chain Messages](messages/index.md)
 
 ## On-chain Transactions
 
