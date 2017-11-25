@@ -1,0 +1,27 @@
+skinparam roundcorner 10
+skinparam BoxPadding 10
+skinparam headerFontColor #6959DB
+skinparam headerFontSize 18
+skinparam sequence {
+  ArrowColor #6959DB
+  GroupBackgroundColor #6959DB
+  GroupBorderColor #EDECFF
+  GroupHeaderFontColor #ffffff
+  BoxBorderColor #6959DB
+  BoxBackgroundColor #EDECFF
+  BoxPadding 10
+
+  ParticipantBorderColor #6959DB
+  ParticipantBackgroundColor #ffffff
+  ParticipantPadding 10
+
+  ActorBorderColor #6959DB
+  ActorBackgroundColor #ffffff
+  EntityBorderColor #6959DB
+  EntityBackgroundColor #ffffff
+  DatabaseBorderColor #6959DB
+  DatabaseBackgroundColor #ffffff
+
+  LifeLineBorderColor #878787
+}
+

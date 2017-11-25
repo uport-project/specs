@@ -1,0 +1,13 @@
+@startuml
+!include ../uportskin.plantuml
+title Mobile App or Browser to Uport Mobile Request Flow
+participant ClientApp
+participant UportMobile
+actor Owner
+
+ClientApp -> UportMobile : Open URL containing request
+UportMobile -> Owner : Authorize Request?
+Owner -> UportMobile: Allow/Disallow
+UportMobile -> ClientApp: Open URL containg callback url and Response
+
+@enduml

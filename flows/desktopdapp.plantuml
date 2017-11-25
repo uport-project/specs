@@ -1,0 +1,16 @@
+@startuml
+!include ../uportskin.plantuml
+title Desktop Browser dApp to Uport Mobile Request Flow
+participant ClientApp
+participant MessagingServer
+participant UportMobile
+actor Owner
+
+ClientApp -> Owner : Show QR code containing request
+Owner -> UportMobile: Scans QR code
+UportMobile -> Owner : Authorize Request?
+Owner -> UportMobile: Allow/Disallow
+UportMobile -> MessagingServer: Send response
+MessagingServer -> ClientApp: Receive Response
+
+@enduml

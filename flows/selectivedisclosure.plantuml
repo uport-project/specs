@@ -1,0 +1,13 @@
+@startuml
+!include ../uportskin.plantuml
+title Uport Selective Disclosure Flow
+participant ClientApp
+participant UportMobile
+actor Owner
+
+ClientApp -> UportMobile : Selective Disclosure Request
+UportMobile -> Owner : Authorize Request?
+Owner -> UportMobile: Allow/Disallow
+UportMobile -> ClientApp: Selective Disclosure Response
+
+@enduml
