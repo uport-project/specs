@@ -20,23 +20,8 @@ Error         | Description
 ------------- | -----------
 access_denied | User denies the request
 
+## Request and Response Transports
 
-## Different Request flows depending on client application type
+There are various ways that requests can be sent to the Uport app and how responses can be returned.
 
-### Mobile Request Flow
-
-In the case of a mobile app or a web app running in a mobile web browser the request looks like this in more detail:
-
-![Mobile Request Flow](mobile.png)
-
-### Desktop Browser Serverless Flow
-
-For web apps running in a desktop browser with no server backing the flow request flow looks like this:
-
-![Desktop Serverless App Flow](desktopdapp.png)
-
-### Desktop Browser Server Backed Flow
-
-For web apps running in a desktop browser with no server backing the flow request flow looks like this:
-
-![Desktop Server Backed Flow](desktopserverapp.png)
+### [Request/Response Transports](transports.md)

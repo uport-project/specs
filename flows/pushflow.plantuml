@@ -1,0 +1,29 @@
+@startuml
+!include ../uportskin.plantuml
+title Desktop Web Server App to Uport Mobile Request Flow
+participant ClientApp
+participant MessagingServer
+participant PushServer
+participant UportMobile
+actor Owner
+
+group App Request Permission
+  ClientApp -> ClientApp : Selective Disclosure Request requesting notifications permissions
+  ClientApp -> Owner : Show QR code containing request
+  Owner -> UportMobile: Scans QR code
+  UportMobile -> Owner : Authorize Request?
+  Owner -> UportMobile: Allow/Disallow
+  UportMobile -> UportMobile: Sign Selective Disclosure Response with PushToken
+  UportMobile -> MessagingServer: Selective Disclosure Response
+  MessagingServer -> ClientApp: Selective Disclosure Response
+end
+
+group Send Request
+  ClientApp -> PushServer : Send Request Authenticated with PushToken
+  PushServer -> UportMobile : Notify App
+  UportMobile -> Owner : Authorize Request?
+  Owner -> UportMobile: Allow/Disallow
+  UportMobile -> MessagingServer: Send response
+  MessagingServer -> ClientApp: Receive Response
+end
+@enduml
