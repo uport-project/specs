@@ -8,6 +8,7 @@ actor Owner
 ClientApp -> UportMobile : Selective Disclosure Request
 UportMobile -> Owner : Authorize Request?
 Owner -> UportMobile: Allow/Disallow
+UportMobile -> UportMobile: Sign Selective Disclosure Response
 UportMobile -> ClientApp: Selective Disclosure Response
 
 @enduml

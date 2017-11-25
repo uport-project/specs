@@ -30,3 +30,11 @@ Unsigned example:
 The client app MUST include a URL where the response is returned from the user. This can be a https url or a custom app url which receives the response.
 
 A sucessfull response is returned as a [Selective Disclosure Response](../messages/shareresp.md) as the `access_token` param appended to a url fragment. If the callback requires the response as a HTTP POST, it is sent as a JSON POST request to the callback url instead.
+
+### Errors
+
+An `error` parameter is returned as the response to the Client App, containing one of following:
+
+Error         | Description
+------------- | -----------
+access_denied | User denies the request

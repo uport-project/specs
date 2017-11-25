@@ -1,3 +1,0 @@
-# Ethereum Transaction Request
-
-TODO

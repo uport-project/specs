@@ -15,11 +15,11 @@ An identity has:
 An identity can:
 
 - Sign JWTs (JSON Web Tokens)
-  - Authenticate themselves to a third party
-  - Disclose private information about themselves
-- Receive requests for disclosure about themselves
+  - [Authenticate themselves to a third party](messages/shareresp.md)
+  - [Disclose private information about themselves](messages/shareresp.md)
+- [Receive requests for disclosure about themselves](messages/sharereq.md)
 - Receive and store signed third party verifications about themselves
-- Sign Ethereum transactions
+- [Sign Ethereum transactions](flows/tx.md)
 
 ### Identities created using the Uport Mobile App
 

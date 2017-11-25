@@ -63,4 +63,3 @@ There are several standard message types that the Uport mobile app knows how to 
 - **[Selective Disclosure Request](sharereq.md)** for asking private data from a user
 - **[Selective Disclosure Response](shareresp.md)** signed by the app as a response to a Selective Disclosure Request
 - **Verification** - signed claim by one party about another party
-- **Ethereum Transaction Request**
