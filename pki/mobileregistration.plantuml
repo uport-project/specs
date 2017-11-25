@@ -1,0 +1,19 @@
+@startuml
+!include ../uportskin.plantuml
+title Generic Identity Registration
+actor Owner
+participant UportApp
+participant IdentityManager
+database UportRegistry
+database IPFS
+
+Owner -> UportApp : Create Identity
+UportApp -> UportApp: Generate Key Pair
+UportApp -> UportApp: Store private key securely
+UportApp -> UportApp: Generate Address
+UportApp -> IdentityManager: Generate Identity SmartContract on Ethereum
+UportApp -> IPFS: Generate Identity Document containing PublicKey
+IPFS -> UportApp: Return IPFS hash of Identity Document
+UportApp -> IdentityManager: Request IdentityManager forward registration transaction
+IdentityManager -> UportRegistry: Ethereum transaction registering IPFS hash
+@enduml

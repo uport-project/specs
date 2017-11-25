@@ -63,6 +63,4 @@ Ethereum transactions can be requested to be signed by the mobile app
 
 Uport implements a simple yet general purpose decentralized PKI system making it easy to create and verify offchain JWT messages.
 
-### Identity Document
-### Register Identity Document
-### Lookup Identity Document
+### [More about the Uport PKI](pki/index.md)

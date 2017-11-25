@@ -1,0 +1,11 @@
+@startuml
+!include ../uportskin.plantuml
+title Resolving PublicKey
+actor Recipient
+database UportRegistry
+database IPFS
+
+Recipient <-> UportRegistry: Lookup IPFS hash for Sender
+Recipient <-> IPFS: Identity Document for IPFS hash
+Recipient -> Recipient: Extract PublicKey from Identity Document
+@enduml

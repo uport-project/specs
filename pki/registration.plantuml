@@ -1,0 +1,17 @@
+@startuml
+!include ../uportskin.plantuml
+title Generic Identity Registration
+actor Owner
+participant IdentityWallet
+database UportRegistry
+database IPFS
+
+Owner -> IdentityWallet : Create Identity
+IdentityWallet -> IdentityWallet: Generate Key Pair
+IdentityWallet -> IdentityWallet: Store private key securely
+IdentityWallet -> IdentityWallet: Generate Address
+IdentityWallet -> IPFS: Generate Identity Document containing PublicKey
+IPFS -> IdentityWallet: Return IPFS hash of Identity Document
+IdentityWallet -> UportRegistry: Ethereum transaction registering IPFS hash
+
+@enduml

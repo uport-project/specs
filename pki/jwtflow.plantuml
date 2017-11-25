@@ -1,0 +1,17 @@
+@startuml
+!include ../uportskin.plantuml
+title Identity Resolving
+actor Sender
+participant IdentityWallet
+database UportRegistry
+database IPFS
+actor Recipient
+
+Sender -> IdentityWallet : Sign JWT
+IdentityWallet -> Sender: Signed JWT
+Sender -> Recipient: Signed JWT
+Recipient <-> UportRegistry: Lookup IPFS hash for iss
+Recipient <-> IPFS: Identity Document for IPFS hash
+Recipient -> Recipient: Extract PublicKey from Identity Document
+Recipient -> Recipient: Verify signature using PublicKey
+@enduml

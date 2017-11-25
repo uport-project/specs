@@ -22,17 +22,17 @@ Name | Description | Required
 
 In most cases we recommend having a single claim per verification. This allows your users to share only the specific claims they want.
 
-'''json
+```json
 {"name":"Carol Crypteau"}
-'''
+```
 
 ### Bundling multiple claims as one
 
 Some times multiple claims are actually a single claim. A good example is an address which can consist of multiple fields. In that case we recommend nesting them under a single claim like this:
 
-'''json
+```json
 {"address":{"streetAddress":"12345 Buterin Lane", "postalCode":"123133", "addressLocality":"Toronto", "addressRegion":"ON", "addressCountry":"CA"}}
-'''
+```
 
 ### Claim Taxonomy
 

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="455px" preserveAspectRatio="none" style="width:848px;height:455px;" version="1.1" viewBox="0 0 848 455" width="848px" zoomAndPan="magnify"><defs><filter height="300%" id="f1sasfxa4blaaz" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="132" x="357" y="23.5352">Identity Resolving</text><line style="stroke: #878787; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="35" x2="35" y1="116.9766" y2="368.1504"/><line style="stroke: #878787; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="137" x2="137" y1="116.9766" y2="368.1504"/><line style="stroke: #878787; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="262" x2="262" y1="116.9766" y2="368.1504"/><line style="stroke: #878787; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="340" x2="340" y1="116.9766" y2="368.1504"/><line style="stroke: #878787; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="565.5" x2="565.5" y1="116.9766" y2="368.1504"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="48" x="8" y="114.0234">Sender</text><ellipse cx="35" cy="43.4883" fill="#FFFFFF" filter="url(#f1sasfxa4blaaz)" rx="8" ry="8" style="stroke: #6959DB; stroke-width: 2.0;"/><path d="M35,51.4883 L35,78.4883 M22,59.4883 L48,59.4883 M35,78.4883 L22,93.4883 M35,78.4883 L48,93.4883 " fill="#FFFFFF" filter="url(#f1sasfxa4blaaz)" style="stroke: #6959DB; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="48" x="8" y="380.6855">Sender</text><ellipse cx="35" cy="393.6387" fill="#FFFFFF" filter="url(#f1sasfxa4blaaz)" rx="8" ry="8" style="stroke: #6959DB; stroke-width: 2.0;"/><path d="M35,401.6387 L35,428.6387 M22,409.6387 L48,409.6387 M35,428.6387 L22,443.6387 M35,428.6387 L48,443.6387 " fill="#FFFFFF" filter="url(#f1sasfxa4blaaz)" style="stroke: #6959DB; stroke-width: 2.0;"/><rect fill="#FFFFFF" filter="url(#f1sasfxa4blaaz)" height="30.4883" rx="5" ry="5" style="stroke: #6959DB; stroke-width: 1.5;" width="106" x="82" y="81.4883"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="92" x="89" y="102.0234">IdentityWallet</text><rect fill="#FFFFFF" filter="url(#f1sasfxa4blaaz)" height="30.4883" rx="5" ry="5" style="stroke: #6959DB; stroke-width: 1.5;" width="106" x="82" y="367.1504"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="92" x="89" y="387.6855">IdentityWallet</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="94" x="212" y="114.0234">UportRegistry</text><path d="M244,64.4883 C244,54.4883 262,54.4883 262,54.4883 C262,54.4883 280,54.4883 280,64.4883 L280,90.4883 C280,100.4883 262,100.4883 262,100.4883 C262,100.4883 244,100.4883 244,90.4883 L244,64.4883 " fill="#FEFECE" filter="url(#f1sasfxa4blaaz)" style="stroke: #000000; stroke-width: 1.5;"/><path d="M244,64.4883 C244,74.4883 262,74.4883 262,74.4883 C262,74.4883 280,74.4883 280,64.4883 " fill="none" style="stroke: #000000; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="94" x="212" y="380.6855">UportRegistry</text><path d="M244,393.6387 C244,383.6387 262,383.6387 262,383.6387 C262,383.6387 280,383.6387 280,393.6387 L280,419.6387 C280,429.6387 262,429.6387 262,429.6387 C262,429.6387 244,429.6387 244,419.6387 L244,393.6387 " fill="#FEFECE" filter="url(#f1sasfxa4blaaz)" style="stroke: #000000; stroke-width: 1.5;"/><path d="M244,393.6387 C244,403.6387 262,403.6387 262,403.6387 C262,403.6387 280,403.6387 280,393.6387 " fill="none" style="stroke: #000000; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28" x="323" y="114.0234">IPFS</text><path d="M322,64.4883 C322,54.4883 340,54.4883 340,54.4883 C340,54.4883 358,54.4883 358,64.4883 L358,90.4883 C358,100.4883 340,100.4883 340,100.4883 C340,100.4883 322,100.4883 322,90.4883 L322,64.4883 " fill="#FEFECE" filter="url(#f1sasfxa4blaaz)" style="stroke: #000000; stroke-width: 1.5;"/><path d="M322,64.4883 C322,74.4883 340,74.4883 340,74.4883 C340,74.4883 358,74.4883 358,64.4883 " fill="none" style="stroke: #000000; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28" x="323" y="380.6855">IPFS</text><path d="M322,393.6387 C322,383.6387 340,383.6387 340,383.6387 C340,383.6387 358,383.6387 358,393.6387 L358,419.6387 C358,429.6387 340,429.6387 340,429.6387 C340,429.6387 322,429.6387 322,419.6387 L322,393.6387 " fill="#FEFECE" filter="url(#f1sasfxa4blaaz)" style="stroke: #000000; stroke-width: 1.5;"/><path d="M322,393.6387 C322,403.6387 340,403.6387 340,403.6387 C340,403.6387 358,403.6387 358,393.6387 " fill="none" style="stroke: #000000; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="63" x="531.5" y="114.0234">Recipient</text><ellipse cx="566" cy="43.4883" fill="#FFFFFF" filter="url(#f1sasfxa4blaaz)" rx="8" ry="8" style="stroke: #6959DB; stroke-width: 2.0;"/><path d="M566,51.4883 L566,78.4883 M553,59.4883 L579,59.4883 M566,78.4883 L553,93.4883 M566,78.4883 L579,93.4883 " fill="#FFFFFF" filter="url(#f1sasfxa4blaaz)" style="stroke: #6959DB; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="63" x="531.5" y="380.6855">Recipient</text><ellipse cx="566" cy="393.6387" fill="#FFFFFF" filter="url(#f1sasfxa4blaaz)" rx="8" ry="8" style="stroke: #6959DB; stroke-width: 2.0;"/><path d="M566,401.6387 L566,428.6387 M553,409.6387 L579,409.6387 M566,428.6387 L553,443.6387 M566,428.6387 L579,443.6387 " fill="#FFFFFF" filter="url(#f1sasfxa4blaaz)" style="stroke: #6959DB; stroke-width: 2.0;"/><polygon fill="#6959DB" points="125,143.9766,135,147.9766,125,151.9766,129,147.9766" style="stroke: #6959DB; stroke-width: 1.0;"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="35" x2="131" y1="147.9766" y2="147.9766"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="54" x="42" y="143.5449">Sign JWT</text><polygon fill="#6959DB" points="46,173.2871,36,177.2871,46,181.2871,42,177.2871" style="stroke: #6959DB; stroke-width: 1.0;"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="40" x2="136" y1="177.2871" y2="177.2871"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="69" x="52" y="172.8555">Signed JWT</text><polygon fill="#6959DB" points="554,202.5977,564,206.5977,554,210.5977,558,206.5977" style="stroke: #6959DB; stroke-width: 1.0;"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="35" x2="560" y1="206.5977" y2="206.5977"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="69" x="42" y="202.166">Signed JWT</text><polygon fill="#6959DB" points="273,231.9082,263,235.9082,273,239.9082,269,235.9082" style="stroke: #6959DB; stroke-width: 1.0;"/><polygon fill="#6959DB" points="554,231.9082,564,235.9082,554,239.9082,558,235.9082" style="stroke: #6959DB; stroke-width: 1.0;"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="267" x2="560" y1="235.9082" y2="235.9082"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="154" x="279" y="231.4766">Lookup IPFS hash for iss</text><polygon fill="#6959DB" points="351,261.2188,341,265.2188,351,269.2188,347,265.2188" style="stroke: #6959DB; stroke-width: 1.0;"/><polygon fill="#6959DB" points="554,261.2188,564,265.2188,554,269.2188,558,265.2188" style="stroke: #6959DB; stroke-width: 1.0;"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="345" x2="560" y1="265.2188" y2="265.2188"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="202" x="357" y="260.7871">Identity Document for IPFS hash</text><line style="stroke: #6959DB; stroke-width: 1.0;" x1="566" x2="608" y1="294.8398" y2="294.8398"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="608" x2="608" y1="294.8398" y2="307.8398"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="567" x2="608" y1="307.8398" y2="307.8398"/><polygon fill="#6959DB" points="577,303.8398,567,307.8398,577,311.8398,573,307.8398" style="stroke: #6959DB; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="263" x="573" y="290.0977">Extract PublicKey from Identity Document</text><line style="stroke: #6959DB; stroke-width: 1.0;" x1="566" x2="608" y1="337.1504" y2="337.1504"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="608" x2="608" y1="337.1504" y2="350.1504"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="567" x2="608" y1="350.1504" y2="350.1504"/><polygon fill="#6959DB" points="577,346.1504,567,350.1504,577,354.1504,573,350.1504" style="stroke: #6959DB; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="202" x="573" y="332.4082">Verify signature using PublicKey</text><!--
+@startuml
+skinparam roundcorner 10
+skinparam BoxPadding 10
+skinparam headerFontColor #6959DB
+skinparam headerFontSize 18
+skinparam sequence {
+  ArrowColor #6959DB
+  GroupBackgroundColor #6959DB
+  GroupBorderColor #EDECFF
+  GroupHeaderFontColor #ffffff
+  BoxBorderColor #6959DB
+  BoxBackgroundColor #EDECFF
+  BoxPadding 10
+
+  ParticipantBorderColor #6959DB
+  ParticipantBackgroundColor #ffffff
+  ParticipantPadding 10
+
+  ActorBorderColor #6959DB
+  ActorBackgroundColor #ffffff
+  EntityBorderColor #6959DB
+  EntityBackgroundColor #ffffff
+  DatabaseBorderColor #6959DB
+  DatabaseBackgroundColor #ffffff
+
+  LifeLineBorderColor #878787
+}
+
+title Identity Resolving
+actor Sender
+participant IdentityWallet
+database UportRegistry
+database IPFS
+actor Recipient
+
+Sender -> IdentityWallet : Sign JWT
+IdentityWallet -> Sender: Signed JWT
+Sender -> Recipient: Signed JWT
+Recipient <-> UportRegistry: Lookup IPFS hash for iss
+Recipient <-> IPFS: Identity Document for IPFS hash
+Recipient -> Recipient: Extract PublicKey from Identity Document
+Recipient -> Recipient: Verify signature using PublicKey
+@enduml
+
+PlantUML version 1.2017.19(Sun Nov 12 05:46:22 CST 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_144-b01
+Operating System: Mac OS X
+OS Version: 10.13.1
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
