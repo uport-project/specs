@@ -38,7 +38,7 @@ From a protocol point of view it works like this:
 
 ![Desktop Server Backed Flow](desktopserverapp.png)
 
-- The user performs a regular [Selective Disclosure Flow](selectivedisclosure.md) asking for notification permissions using whichever transport they want
+- The user performs a regular [Selective Disclosure Flow](../flows/selectivedisclosure.md) asking for notification permissions using whichever transport they want
 - User authorizes the issuance of a "PushToken" to the client app
 - Client App receives response containing PushToken
 - All future requests are sent to a Push Server maintained by Uport authenticated using the PushToken as a Bearer token see [RFC 6750](https://tools.ietf.org/html/rfc6750)

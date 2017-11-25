@@ -39,6 +39,12 @@ We currently support the following flows:
 
 ### [More about request flows](flows/index.md)
 
+## Request and Response Transports
+
+There are various ways that requests can be sent to the Uport app and how responses can be returned.
+
+### [Request/Response Transports](transports/index.md)
+
 ## Off-chain Messages
 
 Most request and responses are performed Off-chain in a private manner between the different parties to a flow.

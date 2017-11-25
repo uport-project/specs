@@ -19,9 +19,3 @@ An `error` parameter is returned as the response to the Client App, containing o
 Error         | Description
 ------------- | -----------
 access_denied | User denies the request
-
-## Request and Response Transports
-
-There are various ways that requests can be sent to the Uport app and how responses can be returned.
-
-### [Request/Response Transports](transports.md)
