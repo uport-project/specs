@@ -1,6 +1,147 @@
 # Request/Response Transports
 
-## Mobile Browser Transport
+## Requests
+
+Requests always consist of URL's that are handled by the mobile app. There are different built in ways of sending the URL to the mobile app.
+
+The 3 basic ways of sending a request to the phone is:
+
+- Open Uport URL on the phone
+- Scan QR Code
+- Send Push Notification
+
+For all of these cases the request consists of a URL.
+
+### Open URL
+
+On the device any URL whose scheme is `me.uport:` or hostname is `id.uport.me` will be opened directly in the Uport app if installed.
+
+The benefit of using `https://id.uport.me` urls is that it will open up a web site with an app store link if the App is not installed. On a desktop browser a QR code will be displayed containing the request asking the user to scan it on their mobile app.
+
+The obvious use of these URL's are to create links in a mobile web app containing requests to the Uport App.
+
+iOS developers can use [`open()`](https://developer.apple.com/documentation/uikit/uiapplication/1648685-open) with the URL directly.
+
+Android developers can use the [`ACTION_VIEW` intent](https://developer.android.com/reference/android/content/Intent.html#ACTION_VIEW) to open the URL as well.
+
+Less obvious uses of the URL is that URL's starting with `https://id.uport.me` can be sent as tweets, in messages, emails or any other way that you interact with your users.
+
+### QR Code
+
+By encoding the request in a QR code it is very easy for users with the Uport app installed to scan the request. On iOS 11 you can also scan these using the system camera and the app will open.
+
+While this is often used for interacting with an application in a Desktop Browser, there are many other applications. QR codes can be printed or displayed at conferences.
+
+### Push Notifications
+
+As part of a regular [Selective Disclosure Flow](../flows/selectivedisclosure.md) you can request permissions from your user to send requests directly to their Uport app using push notifications.
+
+Push notifications makes the user interaction flow much simpler for users if they have to interact with multiple requests on their phone.
+
+They can also be used to send [Verifications](../flows/verification.md) or [Ethereum Transaction Requests](../flow/tx.md) directly to the user outside of a regular logged in session based on some external event.
+
+TODO
+
+Specs for call to push notification server
+
+## Responses
+
+Responses are sent to the callback url included with the Request.
+
+Name | Description | Required
+---- | ----------- | --------
+`callback_url` | The URL that receives the response | no
+`callback_type` | Valid values `post` or `redirect`. Determines if callback should be sent as a 
+
+For signed [Selective Disclosure Requests](../messages/sharereq.md) you should include the `callback` attribute in the JWT to ensure that it is not modified by malicious code.
+
+If no callback_url is specified then no response is returned.
+
+If no `callback_type` is specified the mobile app will attempt to pick the correct one:
+
+- If request was received as an Open Link it will default to `redirect`
+- If request was either scanned as a QR code or received as a push notification it assumes `post`
+
+### Redirect callback type
+
+In this case the callback url is opened by the Uport mobile app with the response parameters added to the fragment component using the "application/x-www-form-urlencoded" format.
+
+### HTTP post callback type
+
+The response is encoded as JSON and sent as an HTTP POST to the callback url provided.
+
+The callback MUST return 200 to notify the user it has been received correctly.
+
+## Messaging Server
+
+Uport operates a free messaging server at the URL:
+
+`https://chasqui.uport.me`
+
+This allows serverless desktop browser apps to receive a response from the mobile app.
+
+### Preparing callback URL
+
+To use the Messaging server create a large secure URL safe random number that we call the topic id.
+
+Include the callback url with the following format in your request `https://chasqui.uport.me/api/v1/topic/[TOPIC ID]`.
+
+### Listening for Response
+
+You can perform polling to the same callback URL you passed along to the request using HTTP GET.
+
+#### Endpoint
+
+`GET /api/v1/topic/:id`
+
+#### Response
+
+| Status |     Message    |                               |
+|:------:|----------------|-------------------------------|
+| 200    | Ok.            | Message stored on topic <id>  |
+| 500    | Internal Error | Internal error                |
+
+#### Response data
+
+If no response has been received the `message` object will be empty:
+
+```json
+{
+  "status": "success",
+  "message": {}
+}
+```
+
+Once the Uport app returns the response it will be included there:
+
+```json
+{
+  "status": "success",
+  "message": {"access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJp..."}
+}
+```
+
+### Cleanup
+
+To avoid having potentially private data stored on our server please `DELETE` the response after receiving a succesful response.
+
+Just perform a HTTP `DELETE` on the callback url.
+
+#### Endpoint
+
+`DELETE /api/v1/topic/:id`
+
+#### Response
+
+| Status |     Message    |                                            |
+|:------:|----------------|--------------------------------------------|
+| 200    | Ok.            | Topic deleted                              |
+| 404    | Not found      | Topic not found                            |
+| 500    | Internal Error | Internal Error                             |
+
+## Examples
+
+### Mobile Browser Transport
 
 In the case of a mobile app or a web app running in a mobile web browser the request looks like this in more detail:
 
@@ -8,7 +149,6 @@ In the case of a mobile app or a web app running in a mobile web browser the req
 
 - Client App opens the request URL directly and app opens
 - Reponse is "redirected" back to client app using the callback url included. Original app opens and handles response.
-
 
 ### Desktop Browser Serverless Transport
 
