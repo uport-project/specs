@@ -23,7 +23,11 @@ The Identity Document is a [JSON LD](https://json-ld.org) document stored on IPF
 [IPFS Hash QmNVHxsMAXvYktfHLYhRjcL7hGBBojTwY7mnJKsJweCZJK]:https://ipfs.infura.io/ipfs/QmNVHxsMAXvYktfHLYhRjcL7hGBBojTwY7mnJKsJweCZJK
 
 ```json
-{"@context":"http://schema.org","@type":"Person","publicKey":"0x04848b547c6effe251b6e9f69c3bc6845b7997963554703aa41bc1b4c8d8db787ac966938139d5b36f404b89727fbc279153a20ad43ff25da0c30edb8b84d9c836","publicEncKey":"bpEGZfAtubOkFSsIdZFSlMN30hYlNOjHzS7LJgep82A="}
+{ 
+  "@context":"http://schema.org",
+  "@type":"Person","publicKey":"0x04848b547c6effe251b6e9f69c3bc6845b7997963554703aa41bc1b4c8d8db787ac966938139d5b36f404b89727fbc279153a20ad43ff25da0c30edb8b84d9c836",
+  "publicEncKey":"bpEGZfAtubOkFSsIdZFSlMN30hYlNOjHzS7LJgep82A="
+}
 ```
 
 Since it is a JSON LD document you can place all kinds of data in there such as name, location etc.
