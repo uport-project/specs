@@ -40,9 +40,7 @@ Push notifications makes the user interaction flow much simpler for users if the
 
 They can also be used to send [Verifications](../flows/verification.md) or [Ethereum Transaction Requests](../flow/tx.md) directly to the user outside of a regular logged in session based on some external event.
 
-TODO
-
-Specs for call to push notification server
+For more details see [Push Notification Transport](./push.md)
 
 ## Responses
 
@@ -172,7 +170,7 @@ For web apps running in a desktop browser with an application server the resques
 
 ### Push Notification Transport
 
-Any of the above transports can be augmented with our Push Notification Transport mechanism. [We have a detailed article explaining how it works ]:(https://medium.com/uport/adventures-in-decentralized-push-notifications-3c64e700ec18). 
+Any of the above transports can be augmented with our Push Notification Transport mechanism. [We have a detailed article explaining how it works](https://medium.com/uport/adventures-in-decentralized-push-notifications-3c64e700ec18).
 
 From a protocol point of view it works like this:
 
