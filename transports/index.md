@@ -40,9 +40,70 @@ Push notifications makes the user interaction flow much simpler for users if the
 
 They can also be used to send [Verifications](../flows/verification.md) or [Ethereum Transaction Requests](../flow/tx.md) directly to the user outside of a regular logged in session based on some external event.
 
-TODO
+#### Encrypting the request
+In order to properly encrypt the message you first need to [resolve the public encryption key](../pki/index.md#resolving-the-public-encryption-key-for-iss) for your user. From now on we call that `userPublicKey` in this section. If you want code to look at checkout the implementation in [uport-js](https://github.com/uport-project/uport-js/blob/develop/src/Credentials.js#L175)
 
-Specs for call to push notification server
+**Proper encoding of the reqyest**
+First simply wrap the request url in a JSON object, and encode it as a string, like so: `{"url":"<request-url>"}`.
+Now we recommend padding the message so that it is less vulnerable to analysis attacks. This is done by appending spaces to the message until it is of length `N * I`, where `N` is any integer and `I` is some consistent number. We recommend `I = 50`.
+
+Lastly by decoding this UTF-8 string to bytes we get message `m`.
+
+**Encryption of the request**
+To encrypt the request [NACL Box Public Key Encryption](http://nacl.cr.yp.to/box.html) is used. An ephemeral key is generated in order to encrypt the data to the public key of the user.
+
+The `userPublicKey` is encoded as a Base64 string. The decoded public key `upk` should be 32 bytes.
+The ephemeral key pair is generated using the NACL library. Both secret key `eSK` and the public key `epk` has to be 32 bytes.
+The nonce `n` should be randomly generated and of length 24.
+
+Using the data above a NACL Box can be used to encrypt the message: `c = crypto_box(m, n, upk, eSK)`
+
+**Encoding the encrypted data**
+In order for the mobile to be able to decrypt the ciphertext it also needs `epk` and `n`. This needs to be formated in a specific way. Most importantly the parameters needs to be encoded as Base64 strings.
+
+Simply create a JSON object and encode it as a string: `{"from":"<epk encoded as Base64>","nonce":"<n encoded as Base64>","ciphertext":"<c encoded as Base64>"}`. This string is now our `encrypted message`.
+
+### Push notification server
+
+The uPort push notification service is operating from the following url:
+
+`https://pututu.uport.me`
+
+It allows you to send encrypted push notifications to your user given that you have a `notification token` that you get when requesting the `'notifications'` permission in the [Selective Disclosure Flow](../flows/selectivedisclosure.md).
+
+#### Endpoint
+
+`GET /api/v1/sns`
+
+#### Headers
+
+`Authorization: Bearer <notification token>`
+
+#### Body
+```
+{
+  message: <encrypted message>
+}
+```
+
+#### Response
+
+| Status |     Message    |                               |
+|:------:|----------------|-------------------------------|
+| 200    | Ok             | Message Send                   |
+| 400    | Fail           | endpointArn not supported     |
+| 400    | Fail           | token not signed by endpointArn user |
+| 403    | Forbidden      | JWT token missing or invalid  |
+| 500    | Internal Error | Internal error                |
+
+#### Response data
+```
+{
+  status: 'success',
+  message: <messageId>
+}
+```
+
 
 ## Responses
 
@@ -172,7 +233,7 @@ For web apps running in a desktop browser with an application server the resques
 
 ### Push Notification Transport
 
-Any of the above transports can be augmented with our Push Notification Transport mechanism. [We have a detailed article explaining how it works ]:(https://medium.com/uport/adventures-in-decentralized-push-notifications-3c64e700ec18). 
+Any of the above transports can be augmented with our Push Notification Transport mechanism. [We have a detailed article explaining how it works](https://medium.com/uport/adventures-in-decentralized-push-notifications-3c64e700ec18).
 
 From a protocol point of view it works like this:
 
