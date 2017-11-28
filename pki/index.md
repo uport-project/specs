@@ -102,7 +102,29 @@ Smart Contracts can't sign on their own, so a signing Key Pair will need to be c
 1. Decode IPFS hash returned to get the raw 32 byte hash value
 1. With your smart contract code create an internal transaction to the [uport-registry](https://github.com/uport-project/uport-registry) on the `network` that your smart contract is deployed to for the function `set("uPortProfileIPFS1220", address, hash)`
 
-TODO example solidity code for registering an Identity for your Smart Contract
+Here is an example of how to register an Identity for your Smart Contract in solidity:
+
+```js
+contract Registry { function set(bytes32 key, address subject, bytes32 value); }
+
+contract MyContract {
+    address public owner;
+    Registry registry;
+
+    function MyContract(address _registry) {
+        owner = msg.sender;
+        registry = Registry(_registry);
+    }
+
+    function setIdentityDoc(bytes32 hash) {
+        // Only allow owner of contract to set the identity document.
+        // There could of course be more advanced governance mechanisms here.
+        require(msg.sender == owner);
+
+        registry.set("uPortProfileIPFS1220", this, hash);
+    }
+}
+```
 
 ### Uport Mobile App Created Identities
 
