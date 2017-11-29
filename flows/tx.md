@@ -18,7 +18,7 @@ The request should be sent to one of the following URLs:
 
 ## Addresses
 
-Addresses SHOULD be [MNID](https://github.com/uport-project/mnid) encoded so they have the correct network specified with them. 
+Addresses SHOULD be [MNID](https://github.com/uport-project/mnid) encoded so they have the correct network specified with them.
 
 DEPRECATED: For backwards compatibility any hex address passed along will be interpreted as being on the Ropsten (0x3) network. This will be removed soon.
 
@@ -28,7 +28,7 @@ To perform an unsigned selective disclosure request append the request parameter
 
 `me.uport:2oDZvNUgn77w2BKTkd9qKpMeUo8EL94QL5V?transfer(address%200xdeadbeef%2C%20uint%205)&callback_url=https://mysite.com/callback&label=My%20Site`
 
-The following 
+The following
 
 Name | Description | Required
 ---- | ----------- | --------

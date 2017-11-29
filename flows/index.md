@@ -2,7 +2,7 @@
 
 A request will typically be signed by a client app and sent to mobile app using this generic request flow:
 
-![Generic Uport Request Flow](generic.png)
+![Generic uPort Request Flow](generic.png)
 
 ## Specific Application flows
 

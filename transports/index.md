@@ -2,11 +2,11 @@
 
 ## Requests
 
-Requests always consist of URL's that are handled by the mobile app. There are different built in ways of sending the URL to the mobile app.
+Requests always consist of URLs that are handled by the mobile app. There are different built in ways of sending the URL to the mobile app.
 
-The 3 basic ways of sending a request to the phone is:
+The 3 basic ways of sending a request to the phone are:
 
-- Open Uport URL on the phone
+- Open uPort URL on the phone
 - Scan QR Code
 - Send Push Notification
 
@@ -14,29 +14,29 @@ For all of these cases the request consists of a URL.
 
 ### Open URL
 
-On the device any URL whose scheme is `me.uport:` or hostname is `id.uport.me` will be opened directly in the Uport app if installed.
+On the device any URL whose scheme is `me.uport:` or hostname is `id.uport.me` will be opened directly in the uPort app if installed.
 
-The benefit of using `https://id.uport.me` urls is that it will open up a web site with an app store link if the App is not installed. On a desktop browser a QR code will be displayed containing the request asking the user to scan it on their mobile app.
+The benefit of using `https://id.uport.me` URLs is that they will open a web site with an App Store link if the uPort app is not installed. On a desktop browser, the browser will display a QR code containing the request and will ask the user to scan the code with their mobile app.
 
-The obvious use of these URL's are to create links in a mobile web app containing requests to the Uport App.
+The basic purpose of these URLs is to create links in a mobile web app containing requests to the uPort App.
 
 iOS developers can use [`open()`](https://developer.apple.com/documentation/uikit/uiapplication/1648685-open) with the URL directly.
 
 Android developers can use the [`ACTION_VIEW` intent](https://developer.android.com/reference/android/content/Intent.html#ACTION_VIEW) to open the URL as well.
 
-Less obvious uses of the URL is that URL's starting with `https://id.uport.me` can be sent as tweets, in messages, emails or any other way that you interact with your users.
+In addition to this basic interaction pattern, URLs starting with `https://id.uport.me` can be sent as tweets, in messages, emails or any other way that you interact with your users.
 
 ### QR Code
 
-By encoding the request in a QR code it is very easy for users with the Uport app installed to scan the request. On iOS 11 you can also scan these using the system camera and the app will open.
+By encoding the request in a QR code it is very easy for users with the uPort app installed to scan a request. On iOS 11 you can also scan these using the system camera and the app will open.
 
-While this is often used for interacting with an application in a Desktop Browser, there are many other applications. QR codes can be printed or displayed at conferences.
+While this is often used for interacting with an application in a desktop browser, there other applications: QR codes can be printed or displayed at conferences, on posters, or in other real-world use cases.
 
 ### Push Notifications
 
-As part of a regular [Selective Disclosure Flow](../flows/selectivedisclosure.md) you can request permissions from your user to send requests directly to their Uport app using push notifications.
+As part of a regular [Selective Disclosure Flow](../flows/selectivedisclosure.md) you can request permissions from your user to send requests directly to their uPort app using push notifications.
 
-Push notifications makes the user interaction flow much simpler for users if they have to interact with multiple requests on their phone.
+Push notifications makes the interaction flow much simpler for users if they have to interact with multiple requests on their phone.
 
 They can also be used to send [Verifications](../flows/verification.md) or [Ethereum Transaction Requests](../flow/tx.md) directly to the user outside of a regular logged in session based on some external event.
 
@@ -49,7 +49,7 @@ Responses are sent to the callback url included with the Request.
 Name | Description | Required
 ---- | ----------- | --------
 `callback_url` | The URL that receives the response | no
-`callback_type` | Valid values `post` or `redirect`. Determines if callback should be sent as a 
+`callback_type` | Valid values `post` or `redirect`. Determines if callback should be sent as a
 
 For signed [Selective Disclosure Requests](../messages/sharereq.md) you should include the `callback` attribute in the JWT to ensure that it is not modified by malicious code.
 
@@ -62,7 +62,7 @@ If no `callback_type` is specified the mobile app will attempt to pick the corre
 
 ### Redirect callback type
 
-In this case the callback url is opened by the Uport mobile app with the response parameters added to the fragment component using the "application/x-www-form-urlencoded" format.
+In this case the callback url is opened by the uPort mobile app with the response parameters added to the fragment component using the "application/x-www-form-urlencoded" format.
 
 ### HTTP post callback type
 
@@ -72,7 +72,7 @@ The callback MUST return 200 to notify the user it has been received correctly.
 
 ## Messaging Server
 
-Uport operates a free messaging server at the URL:
+uPort operates a free messaging server at the URL:
 
 `https://chasqui.uport.me`
 
@@ -80,9 +80,9 @@ This allows serverless desktop browser apps to receive a response from the mobil
 
 ### Preparing callback URL
 
-To use the Messaging server create a large secure URL safe random number that we call the topic id.
+To use the messaging server, create a large secure URL safe random number that we call the topic id.
 
-Include the callback url with the following format in your request `https://chasqui.uport.me/api/v1/topic/[TOPIC ID]`.
+Include the callback URL with the following format in your request `https://chasqui.uport.me/api/v1/topic/[TOPIC ID]`.
 
 ### Listening for Response
 
@@ -110,7 +110,7 @@ If no response has been received the `message` object will be empty:
 }
 ```
 
-Once the Uport app returns the response it will be included there:
+Once the uPort app returns the response it will be included there:
 
 ```json
 {
@@ -121,7 +121,7 @@ Once the Uport app returns the response it will be included there:
 
 ### Cleanup
 
-To avoid having potentially private data stored on our server please `DELETE` the response after receiving a succesful response.
+To avoid having potentially private data stored on our server please `DELETE` the response after receiving a successful response.
 
 Just perform a HTTP `DELETE` on the callback url.
 
@@ -141,32 +141,32 @@ Just perform a HTTP `DELETE` on the callback url.
 
 ### Mobile Browser Transport
 
-In the case of a mobile app or a web app running in a mobile web browser the request looks like this in more detail:
+In the case of a mobile app or a web app running in a mobile web browser, the request looks like this in more detail:
 
 ![Mobile Transport](mobile.png)
 
 - Client App opens the request URL directly and app opens
-- Reponse is "redirected" back to client app using the callback url included. Original app opens and handles response.
+- Response is "redirected" back to client app using the callback URL included. Original app opens and handles response.
 
 ### Desktop Browser Serverless Transport
 
-For web apps running in a desktop browser with no server backing it the resquest and response transport looks like this:
+For web apps running in a desktop browser with no server backing it, the request and response transport looks like this:
 
 ![Desktop Serverless App Flow](desktopdapp.png)
 
-- The request URL is displayed as a QR code in desktop brower
-- User scans QR code using Uport mobile app
-- Reponse is sent back to desktop browser using an external messaging server
+- The request URL is displayed as a QR code in desktop browser
+- User scans QR code using uPort mobile app
+- Response is sent back to desktop browser using an external messaging server
 
 ### Desktop Browser Server Backed Transport
 
-For web apps running in a desktop browser with an application server the resquest and response transport looks like this:
+For web apps running in a desktop browser with an application server, the request and response transport looks like this:
 
 ![Desktop Server Backed Flow](desktopserverapp.png)
 
 - The request URL is displayed as a QR code in desktop browser
-- User scans QR code using Uport mobile app
-- Reponse is sent directly to back end server which communicates with App front end in desktop browser
+- User scans QR code using uPort mobile app
+- Response is sent directly to back end server, which communicates with App front end in desktop browser
 
 ### Push Notification Transport
 
@@ -179,4 +179,4 @@ From a protocol point of view it works like this:
 - The user performs a regular [Selective Disclosure Flow](../flows/selectivedisclosure.md) asking for notification permissions using whichever transport they want
 - User authorizes the issuance of a "PushToken" to the client app
 - Client App receives response containing PushToken
-- All future requests are sent to a Push Server maintained by Uport authenticated using the PushToken as a Bearer token see [RFC 6750](https://tools.ietf.org/html/rfc6750)
+- All future requests are sent to a Push Server maintained by uPort authenticated using the PushToken as a Bearer token see [RFC 6750](https://tools.ietf.org/html/rfc6750)

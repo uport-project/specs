@@ -1,14 +1,14 @@
 # Off-chain Messages
 
-Most request and responses are performed Off-chain in a private manner between the different parties to a flow.
+Most request and responses are performed privately off-chain between the different parties to a flow.
 
 ## JSON Web Token
 
-Most Off-chain messages consist of signed JWTs (JSON Web Tokens) as defined in [RFC 7519](https://tools.ietf.org/html/rfc7519).
+Most off-chain messages consist of signed JWTs (JSON Web Tokens) as defined in [RFC 7519](https://tools.ietf.org/html/rfc7519).
 
 ### Requirements
 
-We currently only support signatures using the [secp256k1 ECDSA curve](https://en.bitcoin.it/wiki/Secp256k1), which is the same as used by both Bitcoin and Ethereum.
+We currently only support signatures using the [secp256k1 ECDSA curve](https://en.bitcoin.it/wiki/Secp256k1), which is also used by both Bitcoin and Ethereum.
 
 #### JOSE Header
 
@@ -20,7 +20,7 @@ The [JOSE header](https://tools.ietf.org/html/rfc7519#section-5) indicates the s
 
 #### Attributes
 
-The JWT spec calls these claims, but we use the term claims for identity specific claims. So in this document we will call these standard JWT "claims" "attributes"
+The JWT spec calls these claims, but we use the term "claims" for identity-specific data. So in this document we will call these standard JWT "claims" "attributes" instead.
 
 Name | Description | Required
 ---- | ----------- | --------
@@ -39,7 +39,7 @@ Name | Description | Required
 
 ### Signature Verification
 
-Each Uport compatible must be signed using an secp256k1 curve. The public key is resolved for the `iss` using the [Uport PKI](../pki/index.md).
+Each uPort compatible JWT must be signed using an secp256k1 curve. The public key is resolved for the `iss` using the [uPort PKI](../pki/index.md).
 
 ## Unsigned Requests
 
@@ -58,7 +58,7 @@ Name | Description | Required
 
 ## Message types
 
-There are several standard message types that the Uport mobile app knows how to handle or create:
+There are several standard message types that the uPort mobile app knows how to handle or create:
 
 - **[Selective Disclosure Request](sharereq.md)** for asking private data from a user
 - **[Selective Disclosure Response](shareresp.md)** signed by the app as a response to a Selective Disclosure Request

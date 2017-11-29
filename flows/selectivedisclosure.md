@@ -15,7 +15,7 @@ The request should be sent to one of the following URLs:
 
 ## Send Request
 
-Create a valid signed or unsigned [Selective Disclosure Request](../messages/sharereq.md) and send it to the Uport mobile app.
+Create a valid signed or unsigned [Selective Disclosure Request](../messages/sharereq.md) and send it to the uPort mobile app.
 
 Signed example:
 
@@ -27,9 +27,9 @@ Unsigned example:
 
 ## Client Callback
 
-The client app MUST include a URL where the response is returned from the user. This can be a https url or a custom app url which receives the response.
+The client app MUST include a URL where the response is returned from the user. This can be a HTTPS URL or a custom app URL which receives the response.
 
-Responses are param appended to a url fragment. If the callback requires the response as a HTTP POST, it is sent as a JSON POST request to the callback url instead.
+Responses are param appended to a URL fragment. If the callback requires the response as a HTTP POST, it is sent as a JSON POST request to the callback URL instead.
 
 ### Successful Response
 

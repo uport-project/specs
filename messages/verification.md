@@ -1,8 +1,8 @@
 # Verification
 
-A Verification is issued by a third party verifying claims about an identity [Verification Flow](../flows/verification.md).
+A Verification is a statement issued by a third party verifying claims about an identity [Verification Flow](../flows/verification.md).
 
-Verifications are always signed
+Verifications are always signed.
 
 ## Attributes
 
@@ -32,16 +32,16 @@ Some times multiple claims are actually a single claim. A good example is an add
 
 ```json
 {"address": {
-  "streetAddress":"12345 Buterin Lane", 
-  "postalCode":"123133", 
-  "addressLocality":"Toronto", 
-  "addressRegion":"ON", 
+  "streetAddress":"12345 Buterin Lane",
+  "postalCode":"123133",
+  "addressLocality":"Toronto",
+  "addressRegion":"ON",
   "addressCountry":"CA"}
 }
 ```
 
 ### Claim Taxonomy
 
-Uport is agnostic to the different claims types. This allows you to plug in your own taxonomy of claims or use an existing taxonomy that works in your industry. 
+uPort is agnostic to different claim types. This allows you to plug in your own taxonomy of claims or use an existing taxonomy that works in your industry. 
 
 If you don't need to follow a specific taxonomy of claims, we recommend that you find suitable claim types within [Schema.org](http://schema.org).
