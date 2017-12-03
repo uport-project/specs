@@ -62,4 +62,5 @@ There are several standard message types that the uPort mobile app knows how to 
 
 - **[Selective Disclosure Request](sharereq.md)** for asking private data from a user
 - **[Selective Disclosure Response](shareresp.md)** signed by the app as a response to a Selective Disclosure Request
-- **[Verification](verification.md)** - signed claim by one party about another party
+- **[Verification](verification.md)** signed claim by one party about another party
+- **[Private Chain Provisioning Message](privatechain.md)** for provisioning an identity on a private Ethereum chain

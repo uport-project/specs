@@ -1,0 +1,39 @@
+@startuml
+!include ../uportskin.plantuml
+title Private Chain Provisioning Flow 
+participant ProvisioningServer
+participant ClientApp
+actor Owner
+participant UportMobile
+participant RpcGateway
+participant FuelingService
+database PrivateChain
+
+group Private Chain Provisioning
+  ProvisioningServer -> ProvisioningServer : Selective Disclosure Request
+  ProvisioningServer -> Owner : Show QR code containing request
+  Owner -> UportMobile: Scans QR code
+  UportMobile -> Owner : Authorize Request?
+  Owner -> UportMobile: Allow/Disallow
+  UportMobile -> UportMobile: Sign Selective Disclosure Response
+  UportMobile -> ProvisioningServer: Selective Disclosure Response
+  ProvisioningServer -> RpcGateway : Create Account Transaction
+  RpcGateway -> PrivateChain : Submit Transaction
+  ProvisioningServer -> UportMobile : Send Private Chain Provisioning Message
+  UportMobile -> Owner : Authorize Request?
+  Owner -> UportMobile: Allow/Disallow
+  UportMobile -> UportMobile: Store Account details
+end
+
+group Private Chain Interaction
+  ClientApp -> UportMobile : Send Ethereum Transaction Request
+  UportMobile -> Owner : Authorize Request?
+  Owner -> UportMobile: Allow/Disallow
+  UportMobile -> UportMobile: Sign Transaction
+  UportMobile -> FuelingService: Request gas for transaction
+  FuelingService -> PrivateChain: Fueling Transaction
+  UportMobile -> PrivateChain: Signed Transaction
+  UportMobile -> ClientApp: Transaction Hash
+  ClientApp <-> PrivateChain: Transaction Confirmation
+end
+@enduml
