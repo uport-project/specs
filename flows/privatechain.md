@@ -16,7 +16,7 @@ The following shows the basic flow:
 ## Provisioning Methodology
 
 1. Use [Selective Disclosure Flow](selectivedisclosure.md) to request primary identity address of user
-2. Lookup public key in response from selective disclosure requst
+2. Lookup public key in response from selective disclosure request
 3. Calculate Ethereum address for public key
 4. Create transaction on IdentityManager contract calling `createIdentity` with the above ethereum address as the `owner`
 5. Lookup the `identity` field from the `LogIdentityCreated` event in the receipt from above transaction
