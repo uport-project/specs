@@ -1,0 +1,15 @@
+@startuml
+!include ../uportskin.plantuml
+title Uport Selective Disclosure Flow
+participant ClientApp
+participant UportMobile
+actor Owner
+
+ClientApp -> UportMobile : Attestation Request
+UportMobile -> Owner : Authorize Request?
+Owner -> UportMobile: Allow/Disallow
+UportMobile -> UportMobile: Sign requested claim
+UportMobile -> UportMobile: Sign Attestation Response (including signed claim)
+UportMobile -> ClientApp: Send signed Attestation Response
+
+@enduml
