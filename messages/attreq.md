@@ -20,7 +20,7 @@ Name | Description | Required
 
 ## Unsigned Requests
 
-To perform an unsigned selective attestation request append the unsigned claims as URL encoded query parameters to one of the above endpoints and open it. Eg.:
+To perform an unsigned attestation request append the unsigned claims as URL encoded query parameters to one of the above endpoints and open it. Eg.:
 
 `me.uport:attReq?unsignedClaims=[...]&callback_url=https://mysite.com/callback&label=My%20Site`
 

@@ -8,7 +8,7 @@ The following shows the basic flow:
 
 ## Endpoint
 
-The request should be sent to one of the following URLs:
+The request should be formatted using one of the following URLs:
 
 - `me.uport:me`
 - `https://id.uport.me/me`
@@ -35,7 +35,7 @@ Responses are param appended to a URL fragment. If the callback requires the res
 
 param          | Description
 -------------- | -----------
-`access_token` | [Selective Disclosure Response](../messages/attresp.md)
+`access_token` | [Attestation Response](../messages/attresp.md)
 
 ### Errors
 

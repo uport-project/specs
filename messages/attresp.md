@@ -13,5 +13,5 @@ The following attributes of the JWT are supported:
 Name | Description | Required
 ---- | ----------- | --------
 `type` | MUST have the value `attResp` | yes
-`req`| The original JWT encoded Selective Disclosure Request | yes for responses to signed requests
+`req`| The original JWT encoded Attestation Request | yes for responses to signed requests
 `signedClaims` | List of the signed JWTs | yes
