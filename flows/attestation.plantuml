@@ -1,6 +1,6 @@
 @startuml
 !include ../uportskin.plantuml
-title Uport Selective Disclosure Flow
+title Uport Attestation Flow
 participant ClientApp
 participant UportMobile
 actor Owner
