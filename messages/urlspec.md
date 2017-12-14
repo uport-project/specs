@@ -1,15 +1,15 @@
 # Message URLs
 
-These URLs are used for passing request/response JWTs to the mobile app, as well as encoding Ethereum transactions. 
+These URLs are used for passing request/response JWTs to a uPort client, as well as encoding Ethereum transactions. We will use a versioning scheme where we prepend `v1` to the URL.
 
 ## URL types
 
-The URLs can be either one of these general forms:
+The URLs can in general be either one of these general forms:
 
 ### Clickable links
 
 ```
-https://id.uport.me/command
+https://id.uport.me/v1/command
 ```
 
 Clicking this link in a document or email or similar opens the uPort client and consumes the message.
@@ -17,18 +17,24 @@ Clicking this link in a document or email or similar opens the uPort client and 
 ### App URL
 
 ```
-uport://command
+uport://v1/command
 ```
 
-Launching this App URL opens the uPort app and consumes the message.
+or 
+
+```
+uport:v1/command
+```
+
+Launching this App URL opens the uPort app and consumes the message. (TODO: which of these to use? Or support both?)
 
 ### x-callback-url
 
 ```
-uport://x-callback-url/command
+uport://x-callback-url/v1/command
 ```
 
-`x-callback-url` is a standard for inter-app communication. See <http://x-callback-url.com/examples/> for more information.
+`x-callback-url` is a widely-used standard for inter-app communication. See <http://x-callback-url.com/examples/> for more information.
 
 ## Return value URLs
 
@@ -40,11 +46,11 @@ Specifies the URL where the response will be sent to.
 
 ### callback_type=post|redirect
 
-Specifies how the response will be sent to the URL. If post, the result will be POSTed to the URL. If redirect, the result will launch the URL and do a GET request using a built-in browser.
+Specifies how the response will be sent to the URL. If `post`, the result will be POSTed to the URL. If `redirect`, the result will launch the URL and do a GET request using a built-in browser if available.
 
 ### x-success=<x-callback URL>
 
-This parameter specifies the x-callback-url of the app that is to be opened and given the result. The parameter for the apps x-callback-url is uport_result.
+This parameter specifies the x-callback-url of the app that is to be opened and given the result. The parameter for the apps x-callback-url is `uport_result`.
 
 ## Examples:
 
@@ -69,23 +75,23 @@ exampleapp://dostuff?uport_result=<result>
 in order to open ExampleApp and process the result.
 
 
-## Lightweight URLs for Ethereum requests from apps
+## URLs for Ethereum related requests from apps
 
-Request to send your ethereum account address 
+Request to send your ethereum account address
 
 ```
-https://id.uport.me/eth/account
-uport://eth/account
-uport://x-callback-url/eth/account
+https://id.uport.me/v1/eth/account
+uport://v1/eth/account
+uport://x-callback-url/v1/eth/account
 ```
 
 Request to sign a transaction and send the hash of the transaction to `<endpoint>`:
 
 ```
-uport://eth/tx/<address>[?value=<value>][?gas=<suggestedGas>][?function=nameOfFunction(param)]&callback_url=<endpoint>
+uport://v1/eth/tx/<address>[?value=<value>][?gas=<suggestedGas>][?function=nameOfFunction(param)]&callback_url=<endpoint>
 ```
 
-Or ETH standard URLs:
+Ethereum standard URLs are also supported:
 
 ```
 ethereum:<address>[?value=<value>][?gas=<suggestedGas>][?function=nameOfFunction(param)]&callback_url=<endpoint>
@@ -106,7 +112,7 @@ These URLs are for handling JWT messages like [Share Requests](./sharereq.md) or
 uport://credentials?req=<JWT of Request>
 ```
 
-This will create a response JWT (as outlined above) and send it depending on the method decided in the URL (POSTing, app URL etc)
+This will create a response JWT ([Share Response](./shareresp.md) or [Attestation Requests](./attresp.md)) and send it depending on the method decided in the URL (POSTing, app URL etc)
 
 
 Provide one or more credentials to user in comma separated list:
