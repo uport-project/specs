@@ -40,7 +40,7 @@ uport://x-callback-url/v1/command
 
 Return values is returned through specifying a URL using either one of these methods:
 
-### callback_url=<URL>
+### callback_url=[URL]
 
 Specifies the URL where the response will be sent to.
 
@@ -48,7 +48,7 @@ Specifies the URL where the response will be sent to.
 
 Specifies how the response will be sent to the URL. If `post`, the result will be POSTed to the URL. If `redirect`, the result will launch the URL and do a GET request using a built-in browser if available.
 
-### x-success=<x-callback URL>
+### x-success=[x-callback URL]
 
 This parameter specifies the x-callback-url of the app that is to be opened and given the result. The parameter for the apps x-callback-url is `uport_result`.
 
@@ -109,7 +109,7 @@ See these links for examples of Ethereum URLs:
 These URLs are for handling JWT messages like [Share Requests](./sharereq.md) or [Attestation Requests](./attreq.md).
 
 ```
-uport://credentials?req=<JWT of Request>
+uport://v1/credentials?req=<JWT of Request>
 ```
 
 This will create a response JWT ([Share Response](./shareresp.md) or [Attestation Requests](./attresp.md)) and send it depending on the method decided in the URL (POSTing, app URL etc)
@@ -118,5 +118,5 @@ This will create a response JWT ([Share Response](./shareresp.md) or [Attestatio
 Provide one or more credentials to user in comma separated list:
 
 ```
-uport://credentials?to_add=[<JWT of Attestat>,...]
+uport://v1/credentials?to_add=[<JWT of Attestat>,...]
 ```
