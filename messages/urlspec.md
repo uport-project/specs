@@ -1,6 +1,6 @@
 # Message URLs
 
-These URLs are used for passing request/response JWTs to a uPort client, as well as encoding Ethereum transactions. We will use a versioning scheme where we prepend `v1` to the URL.
+These URLs are used for passing request/response JWTs to a uPort client, as well as encoding Ethereum transactions. We will use a standard API versioning scheme where we prepend `v1` to the URL.
 
 ## URL types
 
@@ -20,7 +20,7 @@ Clicking this link in a document or email or similar opens the uPort client and 
 uport://v1/command
 ```
 
-or 
+or
 
 ```
 uport:v1/command
@@ -88,13 +88,13 @@ uport://x-callback-url/v1/eth/account
 Request to sign a transaction and send the hash of the transaction to `<endpoint>`:
 
 ```
-uport://v1/eth/tx/<address>[?value=<value>][?gas=<suggestedGas>][?function=nameOfFunction(param)]&callback_url=<endpoint>
+uport://v1/eth/tx/<address>[?value=<value>][?gas=<suggestedGas>][?data=<data of tx>]&callback_url=<endpoint>
 ```
 
 Ethereum standard URLs are also supported:
 
 ```
-ethereum:<address>[?value=<value>][?gas=<suggestedGas>][?function=nameOfFunction(param)]&callback_url=<endpoint>
+ethereum:<address>[?value=<value>][?gas=<suggestedGas>][?data=<data of tx>]&callback_url=<endpoint>
 ```
 
 See these links for examples of Ethereum URLs:
