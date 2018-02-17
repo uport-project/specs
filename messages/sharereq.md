@@ -16,7 +16,7 @@ Name | Description | Required
 [`exp`](https://tools.ietf.org/html/rfc7519#section-4.1.4) | Expiration time of JWT | no
 `callback` | Callback URL for returning the response to a request | no
 `net` | network id of Ethereum chain of identity eg. `0x4` for `rinkeby` | no
-`act` | Ethereum account type: `general` users choice (default), `segregated` a unique account will be created for requesting app, `none` no account is returned | no
+`act` | Ethereum account type: `general` users choice (default), `segregated` a unique smart contract based account will be created for requesting app, `keypair` a unique keypair based account will be created for requesting app, `none` no account is returned | no
 `requested` | The self signed claims requested from a user. Array of claim types for self signed claims eg: `["name", "email"]` | no
 `verified` | The verified claims requested from a user. Array of claim types for self signed claims eg: `["name", "email"]` | no
 `permissions` | An array of permissions requested. Currently only supported is `notifications` | no
