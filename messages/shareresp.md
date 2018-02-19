@@ -16,7 +16,7 @@ Name | Description | Required
 [`iat`](https://tools.ietf.org/html/rfc7519#section-4.1.6) | The time of issuance | yes
 [`exp`](https://tools.ietf.org/html/rfc7519#section-4.1.4) | Expiration time of JWT | yes
 `req`| The original JWT encoded Selective Disclosure Request | yes for responses to signed requests
-`nad`| The [MNID](https://github.com/uport-project/mnid) of the Ethereum account requested if different from the `iss` | no
+`nad`| The [MNID](https://github.com/uport-project/mnid) of the Ethereum account requested using `act` in the [Selective Disclosure Request](sharereq.md) | no
 `own` | The self signed claims requested from a user. Object of claim types for self signed claims eg: `{"name":"Carol Crypteau", "email":"carol@sample.com"}` | no
 `verified` | Array of requested verification JWTs | no
 `capabilities` | An array of JWT tokens giving client app the permissions requested. Currently a token allowing them to send push notifications | no

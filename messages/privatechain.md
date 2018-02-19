@@ -17,6 +17,6 @@ Name | Description | Required
 [`exp`](https://tools.ietf.org/html/rfc7519#section-4.1.4) | Expiration time of Verification | no
 `ctl`|Ethereum address of the [controller contract](https://github.com/uport-project/uport-identity/blob/develop/contracts/MetaIdentityManager.sol) used to control the account | yes
 `reg`|Ethereum address of the [Uport Registry](https://github.com/uport-project/uport-registry/blob/master/contracts/UportRegistry.sol) used on private chain | no
-`fct`|Url of [fueling service](../rest-apis/fuel-server.md) for providing gas on private network | yes
+`fct`|Url of [fueling service](../rest-apis/fuel-server.md) for providing gas on private network | no
+`rel`|Url of [fueling service](../rest-apis/fuel-server.md) for providing gas on private network | no
 `acc`|Fuel token used to authenticate on above `fct` url | yes
-
