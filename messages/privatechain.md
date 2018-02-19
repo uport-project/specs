@@ -15,6 +15,7 @@ Name | Description | Required
 [`sub`](https://tools.ietf.org/html/rfc7519#section-4.1.1) | The [MNID](https://github.com/uport-project/mnid) encoding of the [private chain account](https://github.com/uport-project/uport-identity/blob/develop/contracts/Proxy.sol)| yes
 [`iat`](https://tools.ietf.org/html/rfc7519#section-4.1.6) | The time of issuance | yes
 [`exp`](https://tools.ietf.org/html/rfc7519#section-4.1.4) | Expiration time of Verification | no
+`dad`|Ethereum address of devicekey as passed to provisioning service as `nad` in the [Selective Disclosure Response](./shareresp.md) | yes
 `ctl`|Ethereum address of the [controller contract](https://github.com/uport-project/uport-identity/blob/develop/contracts/MetaIdentityManager.sol) used to control the account | yes
 `reg`|Ethereum address of the [Uport Registry](https://github.com/uport-project/uport-registry/blob/master/contracts/UportRegistry.sol) used on private chain | no
 `fct`|Url of [fueling service](../rest-apis/fuel-server.md) for providing gas on private network | no
