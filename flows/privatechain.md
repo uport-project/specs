@@ -10,8 +10,9 @@ The following shows the basic flow:
 
 - Ethereum compatible blockchain
 - Public facing JSON RPC endpoint
-- [IdentityManager](https://github.com/uport-project/uport-identity/blob/develop/contracts/IdentityManager.sol) contract deployed on private blockchain
-- [Fueling Server](../rest-apis/fuel-server.md) for fueling transactions on private chain
+- [MetaIdentityManager](https://github.com/uport-project/uport-identity/blob/develop/contracts/MetaIdentityManager.sol) contract deployed on private blockchain
+- [TxRelay](https://github.com/uport-project/uport-identity/blob/develop/contracts/TxRelay.sol) contract deployed on private blockchain
+- [Relay Server](../rest-apis/relay-server.md) for funding and relaying transactions on private chain
 
 ## Provisioning Methodology
 
