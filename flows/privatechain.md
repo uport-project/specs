@@ -15,12 +15,10 @@ The following shows the basic flow:
 
 ## Provisioning Methodology
 
-1. Use [Selective Disclosure Flow](selectivedisclosure.md) to request primary identity address of user
-2. Lookup public key in response from selective disclosure request
-3. Calculate Ethereum address for public key
-4. Create transaction on IdentityManager contract calling `createIdentity` with the above ethereum address as the `owner`
-5. Lookup the `identity` field from the `LogIdentityCreated` event in the receipt from above transaction
-6. Create a valid signed [Private Chain Provisioning Message](../messages/privatechain.md) and send it to the uPort mobile app
+1. Use [Selective Disclosure Flow](selectivedisclosure.md) to request primary identity address of user as well as a new ethereum address known as the devicekey
+2. Create transaction on IdentityManager contract calling `createIdentity` with the devicekey as the `owner`
+3. Lookup the `identity` field from the `LogIdentityCreated` event in the receipt from above transaction
+4. Create a valid signed [Private Chain Provisioning Message](../messages/privatechain.md) and send it to the uPort mobile app
 
 NOTE: We will provide a better way of provisioning a owner address in future versions of this spec.
 
