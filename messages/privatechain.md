@@ -16,8 +16,8 @@ Name | Description | Required
 [`iat`](https://tools.ietf.org/html/rfc7519#section-4.1.6) | The time of issuance | yes
 [`exp`](https://tools.ietf.org/html/rfc7519#section-4.1.4) | Expiration time of Verification | no
 `dad`|Ethereum address of devicekey as passed to provisioning service as `nad` in the [Selective Disclosure Response](./shareresp.md) | yes
-`ctl`|Ethereum address of the [controller contract](https://github.com/uport-project/uport-identity/blob/develop/contracts/MetaIdentityManager.sol) used to control the account | yes
+`ctl`|Ethereum address of the [Meta Identity Manager](https://github.com/uport-project/uport-identity/blob/develop/contracts/MetaIdentityManager.sol) used to control the account | yes
 `reg`|Ethereum address of the [Uport Registry](https://github.com/uport-project/uport-registry/blob/master/contracts/UportRegistry.sol) used on private chain | no
+`rel`|Url of [relay service](../rest-apis/relay-server.md) for providing gas on private network | no (recommended)
 `fct`|Url of [fueling service](../rest-apis/fuel-server.md) for providing gas on private network | no
-`rel`|Url of [fueling service](../rest-apis/fuel-server.md) for providing gas on private network | no
 `acc`|Fuel token used to authenticate on above `fct` url | yes

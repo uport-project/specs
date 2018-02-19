@@ -6,7 +6,7 @@ participant ClientApp
 actor Owner
 participant UportMobile
 participant RpcGateway
-participant FuelingService
+participant RelayServer
 database PrivateChain
 
 group Private Chain Provisioning
@@ -30,9 +30,9 @@ group Private Chain Interaction
   UportMobile -> Owner : Authorize Request?
   Owner -> UportMobile: Allow/Disallow
   UportMobile -> UportMobile: Sign Transaction
-  UportMobile -> FuelingService: Request gas for transaction
-  FuelingService -> PrivateChain: Fueling Transaction
-  UportMobile -> PrivateChain: Signed Transaction
+  UportMobile -> RelayServer: Fund and relay transaction onto privatechain
+  RelayServer -> PrivateChain: Fueling Transaction
+  RelayServer -> UportMobile: Signed Transaction
   UportMobile -> ClientApp: Transaction Hash
   ClientApp <-> PrivateChain: Transaction Confirmation
 end
