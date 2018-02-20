@@ -71,13 +71,14 @@ An MNID contains an Ethereum address, the network id as well as a checksum.
 1. Decode the MNID of the `iss` and extract the `network` and the `address`
 2. In the [uport-registry](https://github.com/uport-project/uport-registry) for the `network` call the function `get("uPortProfileIPFS1220", address, address)` which returns a hash value encoded as 32 bytes
 3. Encode the IPFS hash by prepending hex `1220` to the 32 byte hash and encoding it as base58
-4. Fetch JSON Identity Document from IPFS using IPFS hash
+4. Fetch [JSON Identity Document](./identitydocument.md) from IPFS using IPFS hash
 5. Public Key is stored in the `publicKey` key of the Identity Document
 
 ### Resolving the Public Encryption Key for `iss`
+
 Done in the same way as above except for the last step:
 
-5. Public Key is stored in the `publicEncKey` key of the Identity Document
+5. Public Key is stored in the `publicEncKey` key of the [Identity Document](./identitydocument.md)
 
 ## Registering an Identity Document
 
@@ -90,7 +91,7 @@ This shows the basic process:
 ### External Accounts (Key Pairs)
 
 1. Generate a Key Pair
-1. Create an Identity Document containing the Public Key
+1. Create a [Identity Document](./identitydocument.md) containing the Public Key
 1. Publish Identity Document to IPFS
 1. Decode IPFS hash returned to get the raw 32 byte hash value
 1. Pick an Ethereum network to register your identity on
