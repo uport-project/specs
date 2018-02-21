@@ -21,7 +21,7 @@ This is an example of a minimal identity document:
     "publicKeyHex": "04613bb3a4874d27032618f020614c21cbe4c4e4781687525f6674089f9bd3d6c7f6eb13569053d31715a3ba32e0b791b97922af6387f087d6b5548c06944ab062"
   }, {
     "id": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX#keys-2",
-    "type": "Ed25519EncryptionPublicKey",
+    "type": "Curve25519EncryptionPublicKey",
     "owner": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX",
     "publicKeyBase64": "QCFPBLm5pwmuTOu+haxv0+Vpmr6Rrz/DEEvbcjktQnQ="
   }]
