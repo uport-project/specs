@@ -16,12 +16,12 @@ This is an example of a minimal identity document:
   "id": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX",
   "publicKey": [{
     "id": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX#keys-1",
-    "type": "EdDsaSAPublicKeySecp256k1",
+    "type": "EcdsaPublicKeySecp256k1",
     "owner": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX",
     "publicKeyHex": "04613bb3a4874d27032618f020614c21cbe4c4e4781687525f6674089f9bd3d6c7f6eb13569053d31715a3ba32e0b791b97922af6387f087d6b5548c06944ab062"
   }, {
     "id": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX#keys-2",
-    "type": "Ed25519SigningKey",
+    "type": "Ed25519EncryptionPublicKey",
     "owner": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX",
     "publicKeyBase64": "QCFPBLm5pwmuTOu+haxv0+Vpmr6Rrz/DEEvbcjktQnQ="
   }]
@@ -36,11 +36,11 @@ This is a example of a identity document for an app with extra public profile in
   "id": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX",
   "publicKey": [{
     "id": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX#keys-1",
-    "type": "EdDsaSAPublicKeySecp256k1",
+    "type": "EcdsaPublicKeySecp256k1",
     "owner": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX",
     "publicKeyHex": "04613bb3a4874d27032618f020614c21cbe4c4e4781687525f6674089f9bd3d6c7f6eb13569053d31715a3ba32e0b791b97922af6387f087d6b5548c06944ab062"
   }],
-  "owner": {
+  "uportProfile": {
     "@context":"http://schema.org",
     "@type":"Organization",
     "name":"uPort @ Devcon 3",
@@ -56,5 +56,5 @@ This is a example of a identity document for an app with extra public profile in
 Name | Description | Required
 ---- | ----------- | --------
 `@context` | `https://w3id.org/did/v1`| yes
-`publicKey` | array of allowed hex encoded [secp256k1 ECDSA curve](https://en.bitcoin.it/wiki/Secp256k1) public keys | yes
+`publicKey` | array of allowed hex encoded [secp256k1 ECDSA curve](https://en.bitcoin.it/wiki/Secp256k1) public keys and/or Ed25519| yes
 `owner` | Public profile information compatible with [schema.org](https://schema.org) | no
