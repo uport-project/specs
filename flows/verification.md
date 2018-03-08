@@ -25,6 +25,9 @@ Example:
 
 `me.uport:add?attestations=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJp...`
 
+The attributes `redirect_url` and `callback_type` can also be appended to the URL as encoded query parameters to specify how you want the response and control returned. For more details see [Messages](./index.md#json-web-token).
+
+
 ## Client Callback
 
 The client app MAY include a URL where the response is returned from the user. This can be a HTTPS URL or a custom app URL which receives the response. The callback is strictly optional and is mainly used if you need to acknowledge in your UX that the attestation has been received.

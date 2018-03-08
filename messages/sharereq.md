@@ -20,6 +20,8 @@ Name | Description | Required
 `verified` | The verified claims requested from a user. Array of claim types for self signed claims eg: `["name", "email"]` | no
 `permissions` | An array of permissions requested. Currently only supported is `notifications` | no
 
+The attributes `redirect_url` and `callback_type` can also be appended to the signed request as URL encoded query parameters outside of the signed payload. They are used to specify how you want the response and control returned. For more details see [Messages](./index.md#json-web-token).
+
 ## Unsigned Requests
 
 To perform an unsigned selective disclosure request append the request parameters as URL encoded query parameters to one of the above endpoints and open it. Eg.:
