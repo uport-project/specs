@@ -6,7 +6,7 @@ The request can be either signed or unsigned.
 
 #### Attributes
 
-The JWT shares these attributes with the [Share Request](sharereq.md): `iss`, `iat`, `exp`.
+The JWT shares these attributes with the [Share Request](sharereq.md): `iss`, `iat`, `exp`. The claims in the unsignedClaims array should follow the [claims best practices](./verification.md#claims-best-practices).
 
 The following additional attributes of the JWT are supported:
 
