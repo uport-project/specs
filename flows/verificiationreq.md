@@ -10,8 +10,8 @@ The following shows the basic flow:
 
 The request should be formatted using one of the following URLs:
 
-- `me.uport:me`
-- `https://id.uport.me/me`
+- `me.uport:req`
+- `https://id.uport.me/req`
 
 ## Send Request
 
