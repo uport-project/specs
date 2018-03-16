@@ -12,7 +12,7 @@ The following additional attributes of the JWT are supported:
 Name | Description | Required
 ---- | ----------- | --------
 `type` | MUST have the value `verReq` | yes
-`unsignedClaim` | An unsigned claim that the user is requested to sign, in the form of a JSON object that form part of the payload of the attestation. A mandatory field is the `claim` itself, and a common field would be `sub` for the subject. | yes
+`unsignedClaim` | An unsigned claim that the user is requested to sign, this should exactly match the `claim` of the finished signed [Verified Claim](./verification.md). | yes
 `aud` | The DID of the identity you want the user to sign the claims with | no
 `sub` | The DID of the identity you want the user to sign the claims about | no
 `callback` | Callback URL for returning the response to a request (may be deprecated in future) | no
