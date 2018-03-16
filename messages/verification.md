@@ -1,8 +1,8 @@
-# Verification
+# Verified Claim
 
-A Verification is a statement issued by a third party verifying claims about an identity [Verification Flow](../flows/verification.md).
+A Verified Claim is a statement issued by a third party verifying claims about an identity [Verified Claim Flow](../flows/verification.md).
 
-Verifications are always signed.
+Verified Claims are always signed.
 
 ## Attributes
 
@@ -20,7 +20,7 @@ Name | Description | Required
 
 ### Use atomic claims
 
-In most cases we recommend having a single claim per verification. This allows your users to share only the specific claims they want.
+In most cases we recommend having a single claim per Verified Claim. This allows your users to share only the specific claims they want.
 
 ```json
 {"name":"Carol Crypteau"}

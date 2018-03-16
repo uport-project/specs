@@ -1,10 +1,10 @@
-# Attestation Flow
+# Verified Claim Request Flow
 
-A client application can request that the user sign an attestation.
+A client application can request that the user sign a Verified Claim.
 
 The following shows the basic flow:
 
-![Attestation Flow](attestation.png)
+![Verified Request Flow](verificationreq.png)
 
 ## Endpoint
 
@@ -15,15 +15,12 @@ The request should be formatted using one of the following URLs:
 
 ## Send Request
 
-Create a valid signed or unsigned [Attestation Request](../messages/attreq.md) and send it to the uPort mobile app.
+Create a valid signed [Verified Claim Request](../messages/verificationreq.md) and send it to the uPort mobile app.
 
 Signed example:
 
-`me.uport:me?requestToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJp...`
+`me.uport:req?m=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJp...`
 
-Unsigned example:
-
-`me.uport:attReq?unsignedClaims=[...]&callback_url=https://mysite.com/callback&label=My%20Site`
 
 ## Client Callback
 
@@ -35,7 +32,7 @@ Responses are param appended to a URL fragment. If the callback requires the res
 
 param          | Description
 -------------- | -----------
-`access_token` | [Attestation Response](../messages/attresp.md)
+`verification` | [Verified Claim](../messages/verification.md)
 
 ### Errors
 
