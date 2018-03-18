@@ -1,4 +1,17 @@
-# Verified Claim
+---
+title: "Veriication"
+category: "reference"
+index: 0
+prefix: "/messages"
+type: "content"
+tags:
+    - programming
+    - stuff
+    - other
+---
+
+
+# Verification
 
 A Verified Claim is a statement issued by a third party verifying claims about an identity [Verified Claim Flow](../flows/verification.md).
 
@@ -42,6 +55,6 @@ Some times multiple claims are actually a single claim. A good example is an add
 
 ### Claim Taxonomy
 
-uPort is agnostic to different claim types. This allows you to plug in your own taxonomy of claims or use an existing taxonomy that works in your industry. 
+uPort is agnostic to different claim types. This allows you to plug in your own taxonomy of claims or use an existing taxonomy that works in your industry.
 
 If you don't need to follow a specific taxonomy of claims, we recommend that you find suitable claim types within [Schema.org](http://schema.org).

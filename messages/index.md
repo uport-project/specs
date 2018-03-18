@@ -1,3 +1,15 @@
+---
+title: "Off-chain Messages"
+category: "reference"
+index: 0
+prefix: "/messages"
+type: "content"
+tags:
+    - programming
+    - stuff
+    - other
+---
+
 # Off-chain Messages
 
 Most request and responses are performed privately off-chain between the different parties to a flow.

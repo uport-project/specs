@@ -1,3 +1,15 @@
+---
+title: "Private Chain Provisioning"
+category: "reference"
+index: 0
+prefix: "/messages"
+type: "content"
+tags:
+    - programming
+    - stuff
+    - other
+---
+
 # Private Chain Provisioning Message
 
 A Private Chain Provisioning Message can be used for adding an account created on a private Ethereum chain to a users Uport Mobile App.

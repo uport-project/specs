@@ -1,3 +1,16 @@
+---
+title: "Selective Disclosure Flow"
+index: 2
+prefix: "/flows"
+date: "01/01/2017"
+category: "reference"
+type: "content"
+tags:
+    - programming
+    - stuff
+    - other
+---
+
 # Selective Disclosure Flow
 
 A client application can request various information from the user.

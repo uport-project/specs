@@ -1,3 +1,15 @@
+---
+title: "Push Notification Transport"
+category: "reference"
+index: 0
+prefix: "/transports"
+type: "content"
+tags:
+    - programming
+    - stuff
+    - other
+---
+
 # Push Notification Transport
 Push notifications is a transport for sending requests to users. To make sure that the push notification service does not learn any information about what is in the request itself, all requests have to be encrypted. This means that sending a request as a push notification has two steps; encryption and a REST call.
 

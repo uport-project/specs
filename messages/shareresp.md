@@ -1,3 +1,15 @@
+---
+title: "Off-chain Messages"
+category: "reference"
+index: 0
+prefix: "/messages"
+type: "content"
+tags:
+    - programming
+    - stuff
+    - other
+---
+
 # Selective Disclosure Response
 
 The Selective Disclosure Response is created by a users mobile app as a response to a [Selective Disclosure Request](sharereq.md) during the [Selective Disclosure Flow](../flows/selectivedisclosure.md).

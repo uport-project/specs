@@ -1,3 +1,15 @@
+---
+title: "Uport Request Flows"
+index: 1
+prefix: "/flows"
+category: "reference"
+type: "content"
+tags:
+    - programming
+    - stuff
+    - other
+---
+
 # Uport Request Flows
 
 A request will typically be signed by a client app and sent to mobile app using this generic request flow:

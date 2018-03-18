@@ -1,3 +1,15 @@
+---
+title: "Ethereum Transaction Flow"
+index: 2
+prefix: "/flows"
+category: "reference"
+type: "content"
+tags:
+    - programming
+    - stuff
+    - other
+---
+
 # Ethereum Transaction Flow
 
 A client application can request that a user signs an Ethereum transaction.

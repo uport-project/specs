@@ -1,3 +1,15 @@
+---
+title: "Transaction Fueling Server"
+category: "reference"
+index: 0
+prefix: "/rest-apis"
+type: "content"
+tags:
+    - programming
+    - stuff
+    - other
+---
+
 # Transaction Fueling Server
 
 All transactions on Ethereum like networks are paid using transaction fees known as `gas`. To avoid the requirement for all end users to fund themselves with ETH on their respective networks we support a transaction fueling service, which will be called if the users account does not have enough funds available to fuel the transaction

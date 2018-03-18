@@ -1,3 +1,15 @@
+---
+title: "Private Chain Provisioning Flows"
+index: 1
+prefix: "/flows"
+category: "reference"
+type: "content"
+tags:
+    - programming
+    - stuff
+    - other
+---
+
 # Private Chain Provisioning Flow
 
 Experimental support for supporting Ethereum Accounts on private chains.

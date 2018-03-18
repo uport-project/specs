@@ -1,3 +1,15 @@
+---
+title: "Uport PKI"
+category: "reference"
+index: 0
+prefix: "/pki"
+type: "content"
+tags:
+    - programming
+    - stuff
+    - other
+---
+
 # uPort PKI
 
 uPort implements a simple yet general purpose decentralized PKI system, making it easy to create and verify off-chain JWT messages.
