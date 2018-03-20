@@ -1,8 +1,6 @@
 ---
 title: "Identity Document"
 category: "reference"
-index: 0
-prefix: "/pki"
 type: "content"
 tags:
     - programming

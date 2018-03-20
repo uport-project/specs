@@ -1,7 +1,5 @@
 ---
 title: "Selective Disclosure Flow"
-index: 2
-prefix: "/flows"
 date: "01/01/2017"
 category: "reference"
 type: "content"
@@ -28,7 +26,7 @@ The request should be sent to one of the following URLs:
 
 ## Send Request
 
-Create a valid signed or unsigned [Selective Disclosure Request](../messages/sharereq.md) and send it to the uPort mobile app.
+Create a valid signed or unsigned [Selective Disclosure Request](/messages/sharereq.md) and send it to the uPort mobile app.
 
 Signed example:
 
@@ -50,7 +48,7 @@ Responses are param appended to a URL fragment. If the callback requires the res
 
 param          | Description
 -------------- | -----------
-`access_token` | [Selective Disclosure Response](../messages/shareresp.md)
+`access_token` | [Selective Disclosure Response](/messages/shareresp.md)
 
 ### Errors
 

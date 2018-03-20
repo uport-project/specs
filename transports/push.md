@@ -1,8 +1,6 @@
 ---
 title: "Push Notification Transport"
 category: "reference"
-index: 0
-prefix: "/transports"
 type: "content"
 tags:
     - programming
@@ -14,7 +12,7 @@ tags:
 Push notifications is a transport for sending requests to users. To make sure that the push notification service does not learn any information about what is in the request itself, all requests have to be encrypted. This means that sending a request as a push notification has two steps; encryption and a REST call.
 
 ## Encrypting the request
-In order to properly encrypt the message you first need to [resolve the public encryption key](../pki/index.md#resolving-the-public-encryption-key-for-iss) for your user. From now on we call that `userPublicKey` in this section. If you want code to look at, check out the implementation in [uport-js](https://github.com/uport-project/uport-js/blob/develop/src/Credentials.js#L175)
+In order to properly encrypt the message you first need to [resolve the public encryption key](/pki/index.md#resolving-the-public-encryption-key-for-iss) for your user. From now on we call that `userPublicKey` in this section. If you want code to look at, check out the implementation in [uport-js](https://github.com/uport-project/uport-js/blob/develop/src/Credentials.js#L175)
 
 ### Proper encoding of the request
 
@@ -48,7 +46,7 @@ The uPort push notification service is operating from the following url:
 
 `https://pututu.uport.me`
 
-It allows you to send encrypted push notifications to your user given that you have a `notification token` that you get when requesting the `'notifications'` permission in the [Selective Disclosure Flow](../flows/selectivedisclosure.md).
+It allows you to send encrypted push notifications to your user given that you have a `notification token` that you get when requesting the `'notifications'` permission in the [Selective Disclosure Flow](/flows/selectivedisclosure.md).
 
 #### Endpoint
 

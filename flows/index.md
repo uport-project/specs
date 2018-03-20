@@ -1,7 +1,5 @@
 ---
 title: "Uport Request Flows"
-index: 1
-prefix: "/flows"
 category: "reference"
 type: "content"
 tags:

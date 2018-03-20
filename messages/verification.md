@@ -1,8 +1,6 @@
 ---
 title: "Veriication"
 category: "reference"
-index: 0
-prefix: "/messages"
 type: "content"
 tags:
     - programming

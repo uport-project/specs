@@ -1,7 +1,5 @@
 ---
 title: "Private Chain Provisioning Flows"
-index: 1
-prefix: "/flows"
 category: "reference"
 type: "content"
 tags:
@@ -24,14 +22,14 @@ The following shows the basic flow:
 - Public facing JSON RPC endpoint
 - [MetaIdentityManager](https://github.com/uport-project/uport-identity/blob/develop/contracts/MetaIdentityManager.sol) contract deployed on private blockchain
 - [TxRelay](https://github.com/uport-project/uport-identity/blob/develop/contracts/TxRelay.sol) contract deployed on private blockchain
-- [Relay Server](../rest-apis/relay-server.md) for funding and relaying transactions on private chain
+- [Relay Server](/rest-apis/relay-server.md) for funding and relaying transactions on private chain
 
 ## Provisioning Methodology
 
 1. Use [Selective Disclosure Flow](selectivedisclosure.md) to request primary identity address of user as well as the deviceKey to create a new identity on the private blockchain
 2. Create transaction on IdentityManager contract calling `createIdentity` with the devicekey as the `owner`
 3. Lookup the `identity` field from the `LogIdentityCreated` event in the receipt from above transaction
-4. Create a valid signed [Private Chain Provisioning Message](../messages/privatechain.md) and send it to the uPort mobile app
+4. Create a valid signed [Private Chain Provisioning Message](/messages/privatechain.md) and send it to the uPort mobile app
 
 NOTE: We will provide a better way of provisioning a owner address in future versions of this spec.
 

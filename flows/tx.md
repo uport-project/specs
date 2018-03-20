@@ -1,7 +1,5 @@
 ---
 title: "Ethereum Transaction Flow"
-index: 2
-prefix: "/flows"
 category: "reference"
 type: "content"
 tags:

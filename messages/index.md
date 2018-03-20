@@ -1,8 +1,6 @@
 ---
 title: "Off-chain Messages"
 category: "reference"
-index: 0
-prefix: "/messages"
 type: "content"
 tags:
     - programming
@@ -60,7 +58,7 @@ These options allow you to tell the client how you want to receive the response.
 
 ### Signature Verification
 
-Each uPort compatible JWT must be signed using an secp256k1 curve. The public key is resolved for the `iss` using the [uPort PKI](../pki/index.md).
+Each uPort compatible JWT must be signed using an secp256k1 curve. The public key is resolved for the `iss` using the [uPort PKI](/pki/index.md).
 
 ## Unsigned Requests
 

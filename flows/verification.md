@@ -1,7 +1,5 @@
 ---
 title: "Send Verification Flow"
-index: 3
-prefix: "/flows"
 category: "reference"
 type: "content"
 tags:
