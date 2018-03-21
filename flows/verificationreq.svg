@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="384px" preserveAspectRatio="none" style="width:402px;height:384px;" version="1.1" viewBox="0 0 402 384" width="402px" zoomAndPan="magnify"><defs><filter height="300%" id="f1ucapqqg21kgp" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="251" x="76.75" y="23.5352">Uport Verified Claim Request Flow</text><line style="stroke: #878787; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="61" x2="61" y1="116.9766" y2="296.5293"/><line style="stroke: #878787; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="226.5" x2="226.5" y1="116.9766" y2="296.5293"/><line style="stroke: #878787; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="370.5" x2="370.5" y1="116.9766" y2="296.5293"/><rect fill="#FFFFFF" filter="url(#f1ucapqqg21kgp)" height="30.4883" rx="5" ry="5" style="stroke: #6959DB; stroke-width: 1.5;" width="82" x="18" y="81.4883"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="68" x="25" y="102.0234">ClientApp</text><rect fill="#FFFFFF" filter="url(#f1ucapqqg21kgp)" height="30.4883" rx="5" ry="5" style="stroke: #6959DB; stroke-width: 1.5;" width="82" x="18" y="295.5293"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="68" x="25" y="316.0645">ClientApp</text><rect fill="#FFFFFF" filter="url(#f1ucapqqg21kgp)" height="30.4883" rx="5" ry="5" style="stroke: #6959DB; stroke-width: 1.5;" width="99" x="175.5" y="81.4883"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="85" x="182.5" y="102.0234">UportMobile</text><rect fill="#FFFFFF" filter="url(#f1ucapqqg21kgp)" height="30.4883" rx="5" ry="5" style="stroke: #6959DB; stroke-width: 1.5;" width="99" x="175.5" y="295.5293"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="85" x="182.5" y="316.0645">UportMobile</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="45" x="345.5" y="114.0234">Owner</text><ellipse cx="371" cy="43.4883" fill="#FFFFFF" filter="url(#f1ucapqqg21kgp)" rx="8" ry="8" style="stroke: #6959DB; stroke-width: 2.0;"/><path d="M371,51.4883 L371,78.4883 M358,59.4883 L384,59.4883 M371,78.4883 L358,93.4883 M371,78.4883 L384,93.4883 " fill="#FFFFFF" filter="url(#f1ucapqqg21kgp)" style="stroke: #6959DB; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="45" x="345.5" y="309.0645">Owner</text><ellipse cx="371" cy="322.0176" fill="#FFFFFF" filter="url(#f1ucapqqg21kgp)" rx="8" ry="8" style="stroke: #6959DB; stroke-width: 2.0;"/><path d="M371,330.0176 L371,357.0176 M358,338.0176 L384,338.0176 M371,357.0176 L358,372.0176 M371,357.0176 L384,372.0176 " fill="#FFFFFF" filter="url(#f1ucapqqg21kgp)" style="stroke: #6959DB; stroke-width: 2.0;"/><polygon fill="#6959DB" points="215,143.9766,225,147.9766,215,151.9766,219,147.9766" style="stroke: #6959DB; stroke-width: 1.0;"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="61" x2="221" y1="147.9766" y2="147.9766"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="142" x="68" y="143.5449">Verified Claim Request</text><polygon fill="#6959DB" points="359,173.2871,369,177.2871,359,181.2871,363,177.2871" style="stroke: #6959DB; stroke-width: 1.0;"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="227" x2="365" y1="177.2871" y2="177.2871"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="120" x="234" y="172.8555">Authorize Request?</text><polygon fill="#6959DB" points="238,202.5977,228,206.5977,238,210.5977,234,206.5977" style="stroke: #6959DB; stroke-width: 1.0;"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="232" x2="370" y1="206.5977" y2="206.5977"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="96" x="244" y="202.166">Allow/Disallow</text><line style="stroke: #6959DB; stroke-width: 1.0;" x1="227" x2="269" y1="236.2188" y2="236.2188"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="269" x2="269" y1="236.2188" y2="249.2188"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="228" x2="269" y1="249.2188" y2="249.2188"/><polygon fill="#6959DB" points="238,245.2188,228,249.2188,238,253.2188,234,249.2188" style="stroke: #6959DB; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="119" x="234" y="231.4766">Sign Verified Claim</text><polygon fill="#6959DB" points="72,274.2188,62,278.2188,72,282.2188,68,278.2188" style="stroke: #6959DB; stroke-width: 1.0;"/><line style="stroke: #6959DB; stroke-width: 1.0;" x1="66" x2="226" y1="278.2188" y2="278.2188"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="122" x="78" y="273.7871">Send Verified Claim</text><!--
+@startuml
+skinparam roundcorner 10
+skinparam BoxPadding 10
+skinparam headerFontColor #6959DB
+skinparam headerFontSize 18
+skinparam sequence {
+  ArrowColor #6959DB
+  GroupBackgroundColor #6959DB
+  GroupBorderColor #EDECFF
+  GroupHeaderFontColor #ffffff
+  BoxBorderColor #6959DB
+  BoxBackgroundColor #EDECFF
+  BoxPadding 10
+
+  ParticipantBorderColor #6959DB
+  ParticipantBackgroundColor #ffffff
+  ParticipantPadding 10
+
+  ActorBorderColor #6959DB
+  ActorBackgroundColor #ffffff
+  EntityBorderColor #6959DB
+  EntityBackgroundColor #ffffff
+  DatabaseBorderColor #6959DB
+  DatabaseBackgroundColor #ffffff
+
+  LifeLineBorderColor #878787
+}
+
+title Uport Verified Claim Request Flow
+participant ClientApp
+participant UportMobile
+actor Owner
+
+ClientApp -> UportMobile : Verified Claim Request
+UportMobile -> Owner : Authorize Request?
+Owner -> UportMobile: Allow/Disallow
+UportMobile -> UportMobile: Sign Verified Claim
+UportMobile -> ClientApp: Send Verified Claim
+
+@enduml
+
+PlantUML version 1.2017.19(Sun Nov 12 12:46:22 CET 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_144-b01
+Operating System: Mac OS X
+OS Version: 10.13.3
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
