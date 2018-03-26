@@ -24,6 +24,10 @@ This is an example of a minimal identity document:
     "type": "Curve25519EncryptionPublicKey",
     "owner": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX",
     "publicKeyBase64": "QCFPBLm5pwmuTOu+haxv0+Vpmr6Rrz/DEEvbcjktQnQ="
+  }],
+  "authentication": [{
+    "type": "EcdsaSignatureAuthentication2018",
+    "publicKey": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX#keys-1"
   }]
 }
 ```
@@ -39,6 +43,10 @@ This is a example of a identity document for an app with extra public profile in
     "type": "EcdsaPublicKeySecp256k1",
     "owner": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX",
     "publicKeyHex": "04613bb3a4874d27032618f020614c21cbe4c4e4781687525f6674089f9bd3d6c7f6eb13569053d31715a3ba32e0b791b97922af6387f087d6b5548c06944ab062"
+  }],
+  "authentication": [{
+    "type": "EcdsaSignatureAuthentication2018",
+    "publicKey": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX#keys-1"
   }],
   "uportProfile": {
     "@context":"http://schema.org",
@@ -56,5 +64,6 @@ This is a example of a identity document for an app with extra public profile in
 Name | Description | Required
 ---- | ----------- | --------
 `@context` | `https://w3id.org/did/v1`| yes
-`publicKey` | array of allowed hex encoded [secp256k1 ECDSA curve](https://en.bitcoin.it/wiki/Secp256k1) public keys and/or Ed25519| yes
+`publicKey` | array of allowed [public key objects](https://w3c-ccg.github.io/did-spec/#public-keys) containing hex encoded [secp256k1 ECDSA curve](https://en.bitcoin.it/wiki/Secp256k1) public keys and/or Ed25519| yes
+`authentication` | array of [authentication objects](https://w3c-ccg.github.io/did-spec/#authentication) specifying which keys are allowed to be used for authenticating the identity owner | yes
 `owner` | Public profile information compatible with [schema.org](https://schema.org) | no
