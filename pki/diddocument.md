@@ -2,7 +2,7 @@
 
 This is the subset of the [DID Document](https://w3c-ccg.github.io/did-spec) spec that we implement as part of the uPort platform.
 
-The Identity document is stored on IPFS and tied to the address using the uport registry as specified in the [PKI document](../index.md).
+The Identity document is stored on IPFS and tied to the address using the uport registry as specified in the [PKI document](./index.md).
 
 ## Contents
 
