@@ -16,7 +16,7 @@ This is an example of a minimal identity document:
   "id": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX",
   "publicKey": [{
     "id": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX#keys-1",
-    "type": "EcdsaPublicKeySecp256k1",
+    "type": "Secp256k1VerificationKey2018",
     "owner": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX",
     "publicKeyHex": "04613bb3a4874d27032618f020614c21cbe4c4e4781687525f6674089f9bd3d6c7f6eb13569053d31715a3ba32e0b791b97922af6387f087d6b5548c06944ab062"
   }, {
@@ -26,7 +26,7 @@ This is an example of a minimal identity document:
     "publicKeyBase64": "QCFPBLm5pwmuTOu+haxv0+Vpmr6Rrz/DEEvbcjktQnQ="
   }],
   "authentication": [{
-    "type": "EcdsaSignatureAuthentication2018",
+    "type": "Secp256k1SignatureAuthentication2018",
     "publicKey": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX#keys-1"
   }]
 }
@@ -40,12 +40,12 @@ This is a example of a identity document for an app with extra public profile in
   "id": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX",
   "publicKey": [{
     "id": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX#keys-1",
-    "type": "EcdsaPublicKeySecp256k1",
+    "type": "Secp256k1VerificationKey2018",
     "owner": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX",
     "publicKeyHex": "04613bb3a4874d27032618f020614c21cbe4c4e4781687525f6674089f9bd3d6c7f6eb13569053d31715a3ba32e0b791b97922af6387f087d6b5548c06944ab062"
   }],
   "authentication": [{
-    "type": "EcdsaSignatureAuthentication2018",
+    "type": "Secp256k1SignatureAuthentication2018",
     "publicKey": "did:uport:2nQtiQG6Cgm1GYTBaaKAgr76uY7iSexUkqX#keys-1"
   }],
   "uportProfile": {
