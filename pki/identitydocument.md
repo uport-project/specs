@@ -1,5 +1,7 @@
 # Identity Document
 
+Note this format will be deprecated soon and replaced by a standard [DID Document](./diddocument.md).
+
 The Identity document is stored on IPFS and tied to the address using the uport registry as specified in the [PKI document](../index).
 
 The Identity document is a JSON document (strictly speaking a [JSON-LD](https://json-ld.org/)).
