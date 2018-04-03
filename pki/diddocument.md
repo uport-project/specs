@@ -53,7 +53,8 @@ This is a example of a identity document for an app with extra public profile in
     "@type":"Organization",
     "name":"uPort @ Devcon 3",
     "description":"Uport Attestations",
-    "image":{"@type":"ImageObject","name":"avatar","contentUrl":"/ipfs/QmSCnmXC91Arz2gj934Ce4DeR7d9fULWRepjzGMX6SSazB"}
+    "image":{"@type":"ImageObject","name":"avatar","contentUrl":"/ipfs/QmSCnmXC91Arz2gj934Ce4DeR7d9fULWRepjzGMX6SSazB"},
+    "authorizedCallbacks": ["https://example.callback1", "https://example.callback2"]
   }
 }
 
