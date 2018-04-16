@@ -21,6 +21,8 @@ Signed example:
 
 `me.uport:me?requestToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJp...`
 
+The attributes `redirect_url` and `callback_type` can also be appended to the URL as encoded query parameters to specify how you want the response and control returned. For more details see [Messages](./index.md#json-web-token).
+
 Unsigned example:
 
 `me.uport:me?callback_url=https://mysite.com/callback&label=My%20Site`

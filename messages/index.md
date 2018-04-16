@@ -37,6 +37,15 @@ Name | Description | Required
 `callback` | Callback URL for returning the response to a request | no
 `type` | Type of Message | no
 
+The following attributes can also be appended to the signed request as URL encoded query parameters outside of the signed payload.
+
+Name | Description | Required
+---- | ----------- | --------
+`redirect_url` | The URL that control is returned to once a request is complete (mobile). Base url/domain must match callback in JWT. | no
+`callback_type` | Valid values `post` or `redirect`. Determines if callback should be sent as a HTTP POST or open the link (`redirect`). If unspecified, the mobile app will attempt to pick the correct one| no
+
+These options allow you to tell the client how you want to receive the response. If a redirect_url is provided, the client will post the response to the callback in the JWT and then call the given redirect_url to return control to the original callee. You can also add any contextual data in the redirect_url query params or as a url fragment (i.e. you may want to map requests to responses). If a redirect_url is provided and a callback_type redirect is provided the response will be passed as url fragment with the redirect_url. If no redirect_url is provided, it will use the callback in JWT and will use the callback_type if provided or the client will attempt to choose the correct type.
+
 ### Signature Verification
 
 Each uPort compatible JWT must be signed using an secp256k1 curve. The public key is resolved for the `iss` using the [uPort PKI](../pki/index.md).
