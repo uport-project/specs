@@ -50,7 +50,7 @@ These options allow you to tell the client how you want to receive the response.
 
 Each uPort compatible JWT must be signed using an secp256k1 curve. The public key is resolved for the `iss` using the [uPort PKI](../pki/index.md).
 
-## Unsigned Requests
+## Unsigned Requests (Deprecated)
 
 Many apps that run 100% in the browser do not have a secure way of signing a request. Therefore we provide unsigned versions of certain requests.
 

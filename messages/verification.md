@@ -12,6 +12,7 @@ Name | Description | Required
 ---- | ----------- | --------
 [`iss`](https://tools.ietf.org/html/rfc7519#section-4.1.1) | The [MNID](https://github.com/uport-project/mnid) of the signing identity| yes
 [`sub`](https://tools.ietf.org/html/rfc7519#section-4.1.1) | The [MNID](https://github.com/uport-project/mnid) of the subject identity| yes
+`type`| The type of attestation | no
 [`iat`](https://tools.ietf.org/html/rfc7519#section-4.1.6) | The time of issuance | yes
 [`exp`](https://tools.ietf.org/html/rfc7519#section-4.1.4) | Expiration time of Verification | no
 `claim` | An object containing one or more claims about `sub` eg: `{"name":"Carol Crypteau"}` | yes

@@ -27,6 +27,10 @@ NOTE: We will provide a better way of provisioning a owner address in future ver
 
 The request should be sent to one of the following URLs:
 
+- `https://id.uport.me/req/[JWT]`
+
+*The following endpoints are deprecated*
+
 - `me.uport:net/[JWT]`
 - `https://id.uport.me/net/[JWT]`
 

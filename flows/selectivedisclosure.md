@@ -8,12 +8,26 @@ The following shows the basic flow:
 
 ## Endpoint
 
-The request should be sent to one of the following URLs:
+The request should be sent to the following URLs:
+
+- `https://id.uport.me/req/[JWT]`
+
+*The following endpoints are deprecated*
 
 - `me.uport:me`
 - `https://id.uport.me/me`
 
 ## Send Request
+
+Create a valid signed [Selective Disclosure Request](../messages/sharereq.md) and send it to the uPort mobile app.
+
+Signed example:
+
+`https://id.uport.me/req/eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJp...`
+
+The attributes `redirect_url` and `callback_type` can also be appended to the URL as encoded query parameters to specify how you want the response and control returned. For more details see [Messages](./index.md#json-web-token).
+
+### Deprecated Flows
 
 Create a valid signed or unsigned [Selective Disclosure Request](../messages/sharereq.md) and send it to the uPort mobile app.
 
@@ -22,6 +36,7 @@ Signed example:
 `me.uport:me?requestToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJp...`
 
 The attributes `redirect_url` and `callback_type` can also be appended to the URL as encoded query parameters to specify how you want the response and control returned. For more details see [Messages](./index.md#json-web-token).
+
 
 Unsigned example:
 
