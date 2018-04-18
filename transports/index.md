@@ -174,7 +174,7 @@ Any of the above transports can be augmented with our Push Notification Transpor
 
 From a protocol point of view it works like this:
 
-![Desktop Server Backed Flow](desktopserverapp.png)
+![Push Notification Flow](push.png)
 
 - The user performs a regular [Selective Disclosure Flow](../flows/selectivedisclosure.md) asking for notification permissions using whichever transport they want
 - User authorizes the issuance of a "PushToken" to the client app
