@@ -1,0 +1,34 @@
+@startuml
+!include ../uportskin.plantuml
+title Uport Push Notification Architecture v2
+actor UportMobile
+participant "Apple Push Server" as APNS
+participant AmazonSNS
+box "Uport Servicess"
+  participant UportPushServer
+  database Inbox
+end box
+participant ClientApp
+
+group Mobile Registration
+  UportMobile <- APNS : Device Token
+  UportMobile -> AmazonSNS: Device Token
+  AmazonSNS -> UportMobile: Endpoint ARN
+end
+
+group App Request Permission
+  ClientApp -> UportMobile : Selective Disclosure Request Token
+  UportMobile -> ClientApp: Push Token (containing Endpoint ARN)
+end
+
+group Send Request
+  ClientApp -> UportPushServer: PushToken and Encrypted Request
+  UportPushServer -> Inbox: Store Encrypted Request and return message id
+  UportPushServer -> UportPushServer: Extract Endpoint ARN from Push Token
+  UportPushServer -> AmazonSNS: Push message id and EndpointARN
+  AmazonSNS -> APNS: Message ID and Device Token
+  APNS -> UportMobile : Message ID
+  UportMobile <-> Inbox : Fetch Message
+  UportMobile -> UportMobile : Decrypt Message
+end
+@enduml
