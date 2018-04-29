@@ -73,4 +73,5 @@ There are several standard message types that the uPort mobile app knows how to 
 - **[Selective Disclosure Response](shareresp.md)** signed by the app as a response to a Selective Disclosure Request
 - **[Verified Claim](verification.md)** - signed claim by one party about another party
 - **[Verified Claim Request](verificationreq.md)** - Request a signed claim by one party about another party
+- **[Ethereum Transaction Request](tx.md)** for requesting a user to sign a transaction
 - **[Private Chain Provisioning Message](privatechain.md)** for provisioning an identity on a private Ethereum chain

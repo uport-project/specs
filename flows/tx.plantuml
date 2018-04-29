@@ -7,7 +7,7 @@ actor Owner
 participant FuelingService
 database Ethereum
 
-ClientApp -> UportMobile : ERC 76 Request
+ClientApp -> UportMobile : Ethereum Transaction Request
 UportMobile -> Owner : Authorize Request?
 Owner -> UportMobile: Allow/Disallow
 UportMobile -> UportMobile: Sign Transaction

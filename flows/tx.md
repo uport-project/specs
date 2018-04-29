@@ -6,9 +6,13 @@ The following shows the basic flow:
 
 ![Ethereum Transaction Flow](tx.png)
 
-We currently only support unsigned Ethereum Transaction Requests that are a superset of [ERC 67](https://github.com/ethereum/EIPs/issues/67).
-
 ## Endpoint
+
+Signed request should be sent to the following URLs:
+
+- `https://id.uport.me/req/[JWT]`
+
+*The following endpoints are deprecated*
 
 The request should be sent to one of the following URLs:
 
@@ -16,31 +20,19 @@ The request should be sent to one of the following URLs:
 - `ethereum:[ADDRESS]`
 - `https://id.uport.me/[ADDRESS]`
 
-## Addresses
+## Send Request
 
-Addresses SHOULD be [MNID](https://github.com/uport-project/mnid) encoded so they have the correct network specified with them.
+Create a valid signed or unsigned [Ethereum Transaction Request](../messages/tx.md) and send it to the uPort mobile app.
 
-DEPRECATED: For backwards compatibility any hex address passed along will be interpreted as being on the Ropsten (0x3) network. This will be removed soon.
+Signed example:
 
-## ERC 67
+`https://id.uport.me/req/eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJp...`
 
-To perform an unsigned selective disclosure request append the request parameters as URL encoded query parameters to one of the above endpoints and open it. Eg.:
+The attributes `redirect_url` and `callback_type` can also be appended to the URL as encoded query parameters to specify how you want the response and control returned. For more details see [Messages](./index.md#json-web-token).
+
+Unsigned example: (Deprecated)
 
 `me.uport:2oDZvNUgn77w2BKTkd9qKpMeUo8EL94QL5V?transfer(address%200xdeadbeef%2C%20uint%205)&callback_url=https://mysite.com/callback&label=My%20Site`
-
-The following
-
-Name | Description | Required
----- | ----------- | --------
-`value` | hex encoded value in wei | yes *
-`function` | Solidity function call eg. `transfer(address 0xdeadbeef, uint 5)` | yes *
-`bytecode` | Hex encoded data field of transaction | yes *
-`callback_url` | The URL that receives the response | no
-`callback_type` | Valid values `post` or `redirect`. Determines if callback should be sent as a HTTP POST or open the link (`redirect`). If unspecified the mobile app will attempt to pick the correct one| no
-`client_id` | The [MNID](https://github.com/uport-project/mnid) of the requesting identity | no
-`label` | Plain text name of client to be displayed to user | no
-
-Either `value`, `function` or `bytecode` is required.
 
 ## Client Callback
 
