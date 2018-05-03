@@ -8,10 +8,9 @@ The following shows the basic flow:
 
 ## Endpoint
 
-The request should be formatted using one of the following URLs:
+The request should be sent to the following URLs:
 
-- `me.uport:req`
-- `https://id.uport.me/req`
+- `https://id.uport.me/req/[JWT]`
 
 ## Send Request
 
@@ -19,7 +18,7 @@ Create a valid signed [Verified Claim Request](../messages/verificationreq.md) a
 
 Signed example:
 
-`me.uport:req?m=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJp...`
+`https://id.uport.me/req/eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJp...`
 
 
 ## Client Callback

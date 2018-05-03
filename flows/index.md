@@ -10,6 +10,16 @@ A request will typically be signed by a client app and sent to mobile app using 
 
 ![Generic uPort Request Flow](generic.png)
 
+## Unified Message Request Flow
+
+We are now introducing a new unified message request flow that will replace all other request flows.
+
+Each request now consists of a single [Signed Message](../index.md) that is sent to the following endpoint:
+
+`https://id.uport.me/req/[JWT]`
+
+Se each specific flow for specifics on each message type.
+
 ## Specific Application flows
 
 - [Selective Disclosure Flow](selectivedisclosure.md)
