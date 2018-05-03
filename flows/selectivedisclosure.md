@@ -1,3 +1,9 @@
+---
+title: "Selective Disclosure Flow"
+category: "reference"
+type: "content"
+---
+
 # Selective Disclosure Flow
 
 A client application can request various information from the user.
@@ -19,7 +25,7 @@ The request should be sent to the following URLs:
 
 ## Send Request
 
-Create a valid signed [Selective Disclosure Request](../messages/sharereq.md) and send it to the uPort mobile app.
+Create a valid signed [Selective Disclosure Request](/messages/sharereq.md) and send it to the uPort mobile app.
 
 Signed example:
 
@@ -29,7 +35,7 @@ The attributes `redirect_url` and `callback_type` can also be appended to the UR
 
 ### Deprecated Flows
 
-Create a valid signed or unsigned [Selective Disclosure Request](../messages/sharereq.md) and send it to the uPort mobile app.
+Create a valid signed or unsigned [Selective Disclosure Request](/messages/sharereq.md) and send it to the uPort mobile app.
 
 Signed example:
 
@@ -52,7 +58,7 @@ Responses are param appended to a URL fragment. If the callback requires the res
 
 param          | Description
 -------------- | -----------
-`access_token` | [Selective Disclosure Response](../messages/shareresp.md)
+`access_token` | [Selective Disclosure Response](/messages/shareresp.md)
 
 ### Errors
 

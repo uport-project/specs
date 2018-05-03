@@ -1,3 +1,9 @@
+---
+title: "Uport PKI"
+category: "reference"
+type: "content"
+---
+
 # uPort PKI
 
 uPort implements a simple yet general purpose decentralized PKI system, making it easy to create and verify off-chain JWT messages.
@@ -25,7 +31,7 @@ We currently support 2 kinds of Identity Documents:
 
 ## Verifying a signature
 
-Any [Signed Message](../messages/index.md) has an `iss` attribute. This contains an [MNID](https://github.com/uport-project/mnid).
+Any [Signed Message](/messages/index.md) has an `iss` attribute. This contains an [MNID](https://github.com/uport-project/mnid).
 
 An MNID contains an Ethereum address, the network id as well as a checksum.
 

@@ -1,3 +1,9 @@
+---
+title: "Identity Document"
+category: "reference"
+type: "content"
+---
+
 # Identity Document
 
 Note this format will be deprecated soon and replaced by a standard [DID Document](./diddocument.md).
@@ -44,7 +50,3 @@ Name | Description | Required
 `name` | Name of identity | no
 `description` | Description of identity | no
 `image` | Avatar or logo of identity (Uses [ImageObject](http://schema.org/ImageObject) with `contentUrl`) | no
-
-
-
-

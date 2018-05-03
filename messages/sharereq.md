@@ -1,6 +1,12 @@
+---
+title: "Selective Disclosure Request"
+category: "reference"
+type: "content"
+---
+
 # Selective Disclosure Request
 
-The Selective Disclosure Request is created by a client app and sent to a user's mobile app during the [Selective Disclosure Flow](../flows/selectivedisclosure.md).
+The Selective Disclosure Request is created by a client app and sent to a user's mobile app during the [Selective Disclosure Flow](/flows/selectivedisclosure.md).
 
 The request can be either signed or unsigned.
 

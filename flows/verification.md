@@ -1,4 +1,10 @@
-# Send Verified Claim Flow
+---
+title: "Send Verification Flow"
+category: "reference"
+type: "content"
+---
+
+# Send Verification Flow
 
 A client application can verify information about a user
 

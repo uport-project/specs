@@ -1,8 +1,14 @@
+---
+title: "Private Chain Provisioning"
+category: "reference"
+type: "content"
+---
+
 # Private Chain Provisioning Message
 
 A Private Chain Provisioning Message can be used for adding an account created on a private Ethereum chain to a users Uport Mobile App.
 
-Private Chain Provisioning Messages are always signed and are created as part of the [Private Chain Provisioning Flow](../flows/privatechain.md).
+Private Chain Provisioning Messages are always signed and are created as part of the [Private Chain Provisioning Flow](/flows/privatechain.md).
 
 ## Attributes
 
@@ -19,6 +25,6 @@ Name | Description | Required
 `dad`|Ethereum address of devicekey as passed to provisioning service as `nad` in the [Selective Disclosure Response](./shareresp.md) | yes
 `ctl`|Ethereum address of the [Meta Identity Manager](https://github.com/uport-project/uport-identity/blob/develop/contracts/MetaIdentityManager.sol) used to control the account | yes
 `reg`|Ethereum address of the [Uport Registry](https://github.com/uport-project/uport-registry/blob/master/contracts/UportRegistry.sol) used on private chain | no
-`rel`|Url of [relay service](../rest-apis/relay-server.md) for providing gas on private network | no (recommended)
-`fct`|Url of [fueling service](../rest-apis/fuel-server.md) for providing gas on private network | no
+`rel`|Url of [relay service](/rest-apis/relay-server.md) for providing gas on private network | no (recommended)
+`fct`|Url of [fueling service](/rest-apis/fuel-server.md) for providing gas on private network | no
 `acc`|Fuel token used to authenticate on above `fct` url | yes

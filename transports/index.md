@@ -1,3 +1,9 @@
+---
+title: "Request/Response Transports"
+category: "reference"
+type: "content"
+---
+
 # Request/Response Transports
 
 ## Requests
@@ -34,11 +40,11 @@ While this is often used for interacting with an application in a desktop browse
 
 ### Push Notifications
 
-As part of a regular [Selective Disclosure Flow](../flows/selectivedisclosure.md) you can request permissions from your user to send requests directly to their uPort app using push notifications.
+As part of a regular [Selective Disclosure Flow](/flows/selectivedisclosure.md) you can request permissions from your user to send requests directly to their uPort app using push notifications.
 
 Push notifications makes the interaction flow much simpler for users if they have to interact with multiple requests on their phone.
 
-They can also be used to send [Verifications](../flows/verification.md) or [Ethereum Transaction Requests](../flow/tx.md) directly to the user outside of a regular logged in session based on some external event.
+They can also be used to send [Verifications](/flows/verification.md) or [Ethereum Transaction Requests](/flow/tx.md) directly to the user outside of a regular logged in session based on some external event.
 
 For more details see [Push Notification Transport](./push.md)
 
@@ -51,7 +57,7 @@ Name | Description | Required
 `callback_url` | The URL that receives the response | no
 `callback_type` | Valid values `post` or `redirect`. Determines if callback should be sent as a
 
-For signed [Selective Disclosure Requests](../messages/sharereq.md) you should include the `callback` attribute in the JWT to ensure that it is not modified by malicious code.
+For signed [Selective Disclosure Requests](/messages/sharereq.md) you should include the `callback` attribute in the JWT to ensure that it is not modified by malicious code.
 
 If no callback_url is specified then no response is returned.
 
@@ -176,7 +182,7 @@ From a protocol point of view it works like this:
 
 ![Push Notification Flow](push.png)
 
-- The user performs a regular [Selective Disclosure Flow](../flows/selectivedisclosure.md) asking for notification permissions using whichever transport they want
+- The user performs a regular [Selective Disclosure Flow](/flows/selectivedisclosure.md) asking for notification permissions using whichever transport they want
 - User authorizes the issuance of a "PushToken" to the client app
 - Client App receives response containing PushToken
 - All future requests are sent to a Push Server maintained by uPort authenticated using the PushToken as a Bearer token see [RFC 6750](https://tools.ietf.org/html/rfc6750)
