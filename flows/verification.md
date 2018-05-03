@@ -2,10 +2,6 @@
 title: "Send Verification Flow"
 category: "reference"
 type: "content"
-tags:
-    - programming
-    - stuff
-    - other
 ---
 
 # Send Verification Flow

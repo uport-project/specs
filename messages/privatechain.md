@@ -2,10 +2,6 @@
 title: "Private Chain Provisioning"
 category: "reference"
 type: "content"
-tags:
-    - programming
-    - stuff
-    - other
 ---
 
 # Private Chain Provisioning Message

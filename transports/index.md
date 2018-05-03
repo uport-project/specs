@@ -2,10 +2,6 @@
 title: "Request/Response Transports"
 category: "reference"
 type: "content"
-tags:
-    - programming
-    - stuff
-    - other
 ---
 
 # Request/Response Transports

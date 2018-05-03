@@ -2,10 +2,6 @@
 title: "Uport PKI"
 category: "reference"
 type: "content"
-tags:
-    - programming
-    - stuff
-    - other
 ---
 
 # uPort PKI

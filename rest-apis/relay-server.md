@@ -2,10 +2,6 @@
 title: "Meta Transaction Relaying Server"
 category: "reference"
 type: "content"
-tags:
-    - programming
-    - stuff
-    - other
 ---
 
 # Meta Transaction Relaying Server

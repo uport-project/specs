@@ -2,10 +2,6 @@
 title: "Uport Request Flows"
 category: "reference"
 type: "content"
-tags:
-    - programming
-    - stuff
-    - other
 ---
 
 # Uport Request Flows

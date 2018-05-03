@@ -2,10 +2,6 @@
 title: "Identity Document"
 category: "reference"
 type: "content"
-tags:
-    - programming
-    - stuff
-    - other
 ---
 
 # Identity Document

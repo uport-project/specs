@@ -1,11 +1,7 @@
 ---
-title: "Veriication"
+title: "Verification"
 category: "reference"
 type: "content"
-tags:
-    - programming
-    - stuff
-    - other
 ---
 
 

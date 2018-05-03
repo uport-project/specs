@@ -2,10 +2,6 @@
 title: "Off-chain Messages"
 category: "reference"
 type: "content"
-tags:
-    - programming
-    - stuff
-    - other
 ---
 
 # Selective Disclosure Response

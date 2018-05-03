@@ -2,10 +2,6 @@
 title: "Push Notification Transport"
 category: "reference"
 type: "content"
-tags:
-    - programming
-    - stuff
-    - other
 ---
 
 # Push Notification Transport

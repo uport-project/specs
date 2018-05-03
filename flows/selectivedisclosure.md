@@ -1,12 +1,7 @@
 ---
 title: "Selective Disclosure Flow"
-date: "01/01/2017"
 category: "reference"
 type: "content"
-tags:
-    - programming
-    - stuff
-    - other
 ---
 
 # Selective Disclosure Flow

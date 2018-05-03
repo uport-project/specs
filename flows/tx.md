@@ -2,10 +2,6 @@
 title: "Ethereum Transaction Flow"
 category: "reference"
 type: "content"
-tags:
-    - programming
-    - stuff
-    - other
 ---
 
 # Ethereum Transaction Flow

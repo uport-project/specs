@@ -3,10 +3,6 @@ title: "Uport Specs"
 index: 0
 category: "reference"
 type: "content"
-tags:
-    - programming
-    - stuff
-    - other
 ---
 
 # uPort Specs
