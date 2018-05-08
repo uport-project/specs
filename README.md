@@ -5,6 +5,7 @@ category: "reference"
 type: "content"
 ---
 
+
 # uPort Specs
 
 uPort is a platform for user centric identity and communication. The platform currently consists of our mobile app, Ethereum smart contracts and number of open protocols for signed messages and message flow.
