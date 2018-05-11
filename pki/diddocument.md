@@ -1,3 +1,9 @@
+---
+title: "DID Document"
+category: "reference"
+type: "content"
+---
+
 # Decentralized Identity Document (DID Document)
 
 This is the subset of the [DID Document](https://w3c-ccg.github.io/did-spec) spec that we implement as part of the uPort platform.
