@@ -18,14 +18,26 @@ A more complete example of using this with a simple Identify Verification servic
 
 ## Endpoint
 
-The request should be sent to one of the following URLs:
+The request should be sent to the following URLs:
+
+- `https://id.uport.me/req/[JWT]`
+
+*The following endpoints are deprecated*
 
 - `me.uport:add`
 - `https://id.uport.me/add`
 
 ## Send Verifications
 
-Create one or more [Verified Claims](../messages/verification.md) and send it to the uPort mobile app in the `attestations` query parameter. Multiple verifications can be included by comma separating them.
+Create a [Verified Claims](../messages/verification.md) and attach it to the `https://id.uport.me/req/` url. Present this URL to the user and the app will open.
+
+Example:
+
+`https://id.uport.me/req/eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJp...`
+
+### Deprecated Flows
+
+A deprecated version adds it to the uPort mobile app in the `attestations` query parameter.
 
 Example:
 

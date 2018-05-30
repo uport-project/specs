@@ -56,7 +56,7 @@ These options allow you to tell the client how you want to receive the response.
 
 Each uPort compatible JWT must be signed using an secp256k1 curve. The public key is resolved for the `iss` using the [uPort PKI](/pki/index.md).
 
-## Unsigned Requests
+## Unsigned Requests (Deprecated)
 
 Many apps that run 100% in the browser do not have a secure way of signing a request. Therefore we provide unsigned versions of certain requests.
 
@@ -79,4 +79,5 @@ There are several standard message types that the uPort mobile app knows how to 
 - **[Selective Disclosure Response](shareresp.md)** signed by the app as a response to a Selective Disclosure Request
 - **[Verified Claim](verification.md)** - signed claim by one party about another party
 - **[Verified Claim Request](verificationreq.md)** - Request a signed claim by one party about another party
+- **[Ethereum Transaction Request](tx.md)** for requesting a user to sign a transaction
 - **[Private Chain Provisioning Message](privatechain.md)** for provisioning an identity on a private Ethereum chain
