@@ -42,6 +42,7 @@ Name | Description | Required
 ---- | ----------- | --------
 `callback` | Callback URL for returning the response to a request | no
 `type` | Type of Message | no
+`boxPub` | 32 byte base64 encoded [`Curve25519`](http://nacl.cr.yp.to/box.html) public key | no
 
 The following attributes can also be appended to the signed request as URL encoded query parameters outside of the signed payload.
 
@@ -55,6 +56,10 @@ These options allow you to tell the client how you want to receive the response.
 ### Signature Verification
 
 Each uPort compatible JWT must be signed using an secp256k1 curve. The public key is resolved for the `iss` using the [uPort PKI](/pki/index.md).
+
+### Message Encryption
+
+Some [message transports](/transports/index.md) are not secure and require messages to be encrypted. See [/messages/encryption.md] for more.
 
 ## Unsigned Requests (Deprecated)
 

@@ -27,3 +27,4 @@ Name | Description | Required
 `own` | The self signed claims requested from a user. Object of claim types for self signed claims eg: `{"name":"Carol Crypteau", "email":"carol@sample.com"}` | no
 `verified` | Array of requested verification JWTs | no
 `capabilities` | An array of JWT tokens giving client app the permissions requested. Currently a token allowing them to send push notifications | no
+`boxPub` | 32 byte base64 encoded [`Curve25519`](http://nacl.cr.yp.to/box.html) public key used for sending encrypted messages to user | no
