@@ -46,17 +46,40 @@ We plan to support these in the future.
 
 ## Encrypting the request
 
-We use the [Sealed Box](https://download.libsodium.org/doc/public-key_cryptography/sealed_boxes.html) method which is part of [libsodium](https://download.libsodium.org). This allows the recipient to decrypt a message without having to resolve the public key of the sender.
+We use the [ERC 1098](https://github.com/ethereum/EIPs/pull/1098) encryption method which uses an ephemeral sending key and the [box](https://github.com/dchest/tweetnacl-js/blob/master/README.md#public-key-authenticated-encryption-box) method from [tweet-nacl](https://tweetnacl.js.org/). This allows the recipient to decrypt a message without having to resolve the public key of the sender.
 
-A Javascript implementation can be found in [tweetnacl-sealed-box](https://github.com/whs/tweetnacl-sealed-box).
+The following method is used:
 
-Create the signed [JWT payload like normal](/messages/index.md) and encrypt the resulting JWT using the `crypto_box_seal()` function from [libsodium](https://download.libsodium.org/doc/public-key_cryptography/sealed_boxes.html) or the `tweetnacl.sealedbox.open()` function from [tweetnact-sealedbox](https://github.com/whs/tweetnacl-sealed-box). The resulting data should be base64url encoded.
+1. Create the signed [JWT payload like normal](/messages/index.md)
+2. JWT is padded with `\0`s to the nearest multiple of 64 bytes (see "padding" below)
+3. Create an ephemeral keypair using [`nacl.box.keyPair()`](https://github.com/dchest/tweetnacl-js/blob/master/README.md#naclboxkeypair)
+4. Create a random 24 bytes `nonce` using [`nacl.randomBytes(nacl.box.nonceLength)`](https://github.com/dchest/tweetnacl-js/blob/master/README.md#naclrandombyteslength)
+5. encrypt the resulting JWT using the [`nacl.box(message, nonce, recipient publicKey, ephemeralKeyPair.secretKey)`](https://github.com/dchest/tweetnacl-js/blob/master/README.md#naclboxmessage-nonce-theirpublickey-mysecretkey)
+6. Combine the base64 encoded versions of the above `nonce`, `ephemPublicKey` and `ciphertext` values together with the `version` of `x25519-xsalsa20-poly1305` in a JSON payload.
+
+```js
+{ version: 'x25519-xsalsa20-poly1305',
+  nonce: '1dvWO7uOnBnO7iNDJ9kO9pTasLuKNlej',
+  ephemPublicKey: 'FBH1/pAEHOOW14Lu3FWkgV3qOEcuL78Zy+qW1RwzMXQ=',
+  ciphertext: 'f8kBcl/NCyf3sybfbwAKk/np2Bzt9lRVkZejr6uh5FgnNlH/ic62DZzy' }
+```
 
 ## Decrypting the request
 
-If a message matches a single base64url section, the message is encrypted. Regular JWT's match 3 `.` separated base64url sections and can be verified directly.
+You need to know the recipients secretKey.
 
-Decode the base64url message and pass the resulting raw payload into either `crypto_box_seal_open()` from [libsodium](https://download.libsodium.org/doc/public-key_cryptography/sealed_boxes.html) or `tweetnacl.sealedbox.open()` function from [tweetnact-sealedbox](https://github.com/whs/tweetnacl-sealed-box).
+1. Check that the `version` field is `x25519-xsalsa20-poly1305`
+2. Decode the base64 encoded `nonce`, `ephemPublicKey` and `ciphertext` attributes
+3. Decrypt it message using [`nacl.box.open(ciphertext, nonce, ephemPublicKey, recieverEncryptionPrivateKey)`](https://github.com/dchest/tweetnacl-js/blob/master/README.md#naclboxopenbox-nonce-theirpublickey-mysecretkey)
+4. Strip any trailing `\0` from the payload
+5. Decode JWT as normal
+
+
+## Padding
+
+To avoid leaking information about the specific size of the payload, we need to pad the payload to the nearest multiple of 64 bytes. The padding should be done with `\0` bytes.
+
+After decrypting any trailing `\0`s  are removed before passing the result to the JWT verifier.
 
 ## Legacy Encryption of the request
 
