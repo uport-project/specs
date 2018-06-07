@@ -84,6 +84,8 @@ uPort operates a free messaging server at the URL:
 
 This allows serverless desktop browser apps to receive a response from the mobile app.
 
+The message SHOULD be encrypted. See the [message encryption](/messages/encrypted.md) document for more details.
+
 ### Preparing callback URL
 
 To use the messaging server, create a large secure URL safe random number that we call the topic id.

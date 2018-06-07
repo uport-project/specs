@@ -26,6 +26,7 @@ Name | Description | Required
 `requested` | The self signed claims requested from a user. Array of claim types for self signed claims eg: `["name", "email"]` | no
 `verified` | The verified claims requested from a user. Array of claim types for self signed claims eg: `["name", "email"]` | no
 `permissions` | An array of permissions requested. Currently only supported is `notifications` | no
+`boxPub` | 32 byte base64 encoded [`Curve25519`](http://nacl.cr.yp.to/box.html) public key of requesting identity. Use to encrypt messages sent to callback URL| no
 
 The attributes `redirect_url` and `callback_type` can also be appended to the signed request as URL encoded query parameters outside of the signed payload. They are used to specify how you want the response and control returned. For more details see [Messages](./index.md#json-web-token).
 
