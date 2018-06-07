@@ -1,6 +1,12 @@
+---
+title: "Verification Claim Request"
+category: "reference"
+type: "content"
+---
+
 # Verified Claim Request
 
-The Verified Claim Request is created by a client app and sent to a user's mobile app during the [Verified Claim Request Flow](../flows/verificationreq.md).
+The Verified Claim Request is created by a client app and sent to a user's mobile app during the [Verified Claim Request Flow](/flows/verification.md).
 
 
 #### Attributes

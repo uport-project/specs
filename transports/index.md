@@ -44,7 +44,7 @@ As part of a regular [Selective Disclosure Flow](/flows/selectivedisclosure.md) 
 
 Push notifications makes the interaction flow much simpler for users if they have to interact with multiple requests on their phone.
 
-They can also be used to send [Verifications](/flows/verification.md) or [Ethereum Transaction Requests](/flow/tx.md) directly to the user outside of a regular logged in session based on some external event.
+They can also be used to send [Verifications](/flows/verification.md) or [Ethereum Transaction Requests](/flows/tx.md) directly to the user outside of a regular logged in session based on some external event.
 
 For more details see [Push Notification Transport](./push.md)
 
