@@ -23,13 +23,13 @@ To send the now encrypted message the server described below is used.
 
 The uPort push notification service is operating from the following url:
 
-`https://pututu.uport.me`
+`https://api.uport.me/pututu`
 
 It allows you to send encrypted push notifications to your user given that you have a `notification token` that you get when requesting the `'notifications'` permission in the [Selective Disclosure Flow](/flows/selectivedisclosure.md).
 
 #### Endpoint
 
-`GET /api/v1/sns`
+`POST /sns`
 
 #### Headers
 
