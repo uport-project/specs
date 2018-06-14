@@ -6,7 +6,7 @@ type: "content"
 
 # Message Encryption
 
-Some [message transports](/transprots/index.md) are not directly secure and require encryption of the message. We currently use the [box public key auhtenticated encryption algorithm](http://nacl.cr.yp.to/box.html) and thus both parties need a Curve25519 public key to be able to create a secure session.
+Some [message transports](/transports/index.md) are not directly secure and require encryption of the message. We currently use the [box public key auhtenticated encryption algorithm](http://nacl.cr.yp.to/box.html) and thus both parties need a Curve25519 public key to be able to create a secure session.
 
 ## Encryption Public Key resolution
 
