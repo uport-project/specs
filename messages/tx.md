@@ -1,3 +1,9 @@
+---
+title: "Ethereum Transaction Request"
+category: "reference"
+type: "content"
+---
+
 # Ethereum Transaction Request
 
 This message allows an application to request that a client signs an ethereum transaction.
