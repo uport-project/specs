@@ -2,6 +2,7 @@
 title: "Verification Claim Request"
 category: "reference"
 type: "content"
+source: "https://github.com/uport-project/specs/blob/develop/messages/verificationreq.md"
 ---
 
 # Verified Claim Request

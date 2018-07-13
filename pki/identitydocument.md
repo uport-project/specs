@@ -2,6 +2,7 @@
 title: "Identity Document"
 category: "reference"
 type: "content"
+source: "https://github.com/uport-project/specs/blob/develop/pki/identitydocument.md"
 ---
 
 # Identity Document

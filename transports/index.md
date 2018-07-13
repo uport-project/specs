@@ -2,6 +2,7 @@
 title: "Request/Response Transports"
 category: "reference"
 type: "content"
+source: "https://github.com/uport-project/specs/blob/develop/transports/index.md"
 ---
 
 # Request/Response Transports

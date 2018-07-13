@@ -2,6 +2,7 @@
 title: "Transaction Fueling Server"
 category: "reference"
 type: "content"
+source: "https://github.com/uport-project/specs/blob/develop/rest-apis/fuel-server.md"
 ---
 
 # Transaction Fueling Server
