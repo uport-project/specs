@@ -1,3 +1,11 @@
+---
+title: "Verification Request Flow"
+category: "reference"
+type: "content"
+source: "https://github.com/uport-project/specs/blob/develop/flows/verificationreq.md"
+---
+
+
 # Verified Claim Request Flow
 
 A client application can request that the user sign a Verified Claim.

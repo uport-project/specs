@@ -3,6 +3,7 @@ title: "Uport Specs"
 index: 0
 category: "reference"
 type: "content"
+source: "https://github.com/uport-project/specs/blob/develop/README.md"
 ---
 
 # uPort Specs

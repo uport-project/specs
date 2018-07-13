@@ -2,6 +2,7 @@
 title: "Selective Disclosure Flow"
 category: "reference"
 type: "content"
+source: "https://github.com/uport-project/specs/blob/develop/flows/selectivedisclosure.md"
 ---
 
 # Selective Disclosure Flow

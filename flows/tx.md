@@ -2,6 +2,7 @@
 title: "Ethereum Transaction Flow"
 category: "reference"
 type: "content"
+source: "https://github.com/uport-project/specs/blob/develop/flows/tx.md"
 ---
 
 # Ethereum Transaction Flow

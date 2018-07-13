@@ -2,6 +2,7 @@
 title: "Message Encryption"
 category: "reference"
 type: "content"
+source: "https://github.com/uport-project/specs/blob/develop/messages/encryption.md"
 ---
 
 # Message Encryption
@@ -98,4 +99,3 @@ Using the data above a NACL Box can be used to encrypt the message: `c = crypto_
 In order for the mobile app to be able to decrypt the ciphertext it also needs `epk` and `n`. This needs to be formatted in a specific way. Most importantly the parameters need to be encoded as Base64 strings.
 
 Simply create a JSON object and encode it as a string: `{"from":"<epk encoded as Base64>","nonce":"<n encoded as Base64>","ciphertext":"<c encoded as Base64>"}`. This string is now our `encrypted message`.
-

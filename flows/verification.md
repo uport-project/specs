@@ -2,6 +2,7 @@
 title: "Send Verification Flow"
 category: "reference"
 type: "content"
+source: "https://github.com/uport-project/specs/blob/develop/flows/verification.md"
 ---
 
 # Send Verification Flow
