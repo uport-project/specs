@@ -1,6 +1,6 @@
 ---
 title: "Uport Specs"
-index: 8
+index: 3
 category: "reference"
 type: "content"
 source: "https://github.com/uport-project/specs/blob/develop/README.md"
