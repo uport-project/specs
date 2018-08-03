@@ -2,6 +2,7 @@
 title: "Off-chain Messages"
 category: "reference"
 type: "content"
+source: "https://github.com/uport-project/specs/blob/develop/messages/index.md"
 ---
 
 # Off-chain Messages

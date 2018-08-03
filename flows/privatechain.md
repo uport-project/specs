@@ -2,6 +2,7 @@
 title: "Private Chain Provisioning Flows"
 category: "reference"
 type: "content"
+source: "https://github.com/uport-project/specs/blob/develop/flows/privatechain.md"
 ---
 
 # Private Chain Provisioning Flow

@@ -2,6 +2,7 @@
 title: "Ethereum Transaction Request"
 category: "reference"
 type: "content"
+source: "https://github.com/uport-project/specs/blob/develop/messages/tx.md"
 ---
 
 # Ethereum Transaction Request
