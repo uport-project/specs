@@ -24,6 +24,7 @@ Name | Description | Required
 `aud` | The DID of the identity you want to sign the Verified Claim | no
 `callback` | Callback URL for returning the response to a request (may be deprecated in future) | no
 `rexp` | Requested expiry time in seconds | no
+`style` | IPFS Hash of [style document](/messages/styles.md) | no
 
 
 Example Verified Claim request:

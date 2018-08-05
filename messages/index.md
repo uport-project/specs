@@ -44,6 +44,7 @@ Name | Description | Required
 `callback` | Callback URL for returning the response to a request | no
 `type` | Type of Message | no
 `boxPub` | 32 byte base64 encoded [`Curve25519`](http://nacl.cr.yp.to/box.html) public key | no
+`style` | IPFS Hash of [style document](/messages/styles.md) | no
 
 The following attributes can also be appended to the signed request as URL encoded query parameters outside of the signed payload.
 
