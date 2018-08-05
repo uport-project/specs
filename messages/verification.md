@@ -24,6 +24,7 @@ Name | Description | Required
 [`iat`](https://tools.ietf.org/html/rfc7519#section-4.1.6) | The time of issuance | yes
 [`exp`](https://tools.ietf.org/html/rfc7519#section-4.1.4) | Expiration time of Verification | no
 `claim` | An object containing one or more claims about `sub` eg: `{"name":"Carol Crypteau"}` | yes
+`style` | IPFS Hash of [style document](/messages/styles.md) | no
 
 ## Claims Best Practices
 

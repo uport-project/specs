@@ -43,6 +43,7 @@ Name | Description | Required
 `callback_type` | Valid values `post` or `redirect`. Determines if callback should be sent as a HTTP POST or open the link (`redirect`). If unspecified the mobile app will attempt to pick the correct one| no
 `client_id` | The [DID](https://w3c-ccg.github.io/did-spec) or [MNID](https://github.com/uport-project/mnid) of the requesting identity | no
 `label` | Plain text name of client to be displayed to user | no
+`style` | IPFS Hash of [style document](/messages/styles.md) | no
 `boxPub` | 32 byte base64 encoded [`Curve25519`](http://nacl.cr.yp.to/box.html) public key of requesting identity. Use to encrypt messages sent to callback URL| no
 
 The attributes `redirect_url` can also be appended to the signed request as URL encoded query parameters outside of the signed payload. They are used to specify how you want the response and control returned. For more details see [Messages](./index.md#json-web-token).
