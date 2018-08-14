@@ -25,7 +25,7 @@ Name | Description | Required
 `req`| The original JWT encoded Selective Disclosure Request | yes for responses to signed requests
 `nad`| The [MNID](https://github.com/uport-project/mnid) of the Ethereum account requested using `act` in the [Selective Disclosure Request](sharereq.md) | no
 `dad`| The `devicekey` as a regular hex encoded ethereum address as requested using `act='devicekey'` in the [Selective Disclosure Request](sharereq.md) | no
-`own` | The self signed claims requested from a user. Object of claim types for self signed claims eg: `{"name":"Carol Crypteau", "email":"carol@sample.com"}` | no
-`verified` | Array of requested verification JWTs | no
+`own` | The self signed claims requested from a user. Either as an Object of claim types for self signed claims eg: `{"name":"Carol Crypteau", "email":"carol@sample.com","image":{"/":"/ipfs/QmSCnmXC91Arz2gj934Ce4DeR7d9fULWRepjzGMX6SSazB"}}` or the IPFS Hash of a JSON encoded equivalent. See [claims](/messages/claims.md) | no
+`verified` | Array of Verified Claims JWTs or IPFS hash of JSON encoded equivalent. See [Verified Claims](/messages/verification.md) | no
 `capabilities` | An array of JWT tokens giving client app the permissions requested. Currently a token allowing them to send push notifications | no
 `boxPub` | 32 byte base64 encoded [`Curve25519`](http://nacl.cr.yp.to/box.html) public key used for sending encrypted messages to user | no

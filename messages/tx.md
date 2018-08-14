@@ -44,6 +44,8 @@ Name | Description | Required
 `client_id` | The [DID](https://w3c-ccg.github.io/did-spec) or [MNID](https://github.com/uport-project/mnid) of the requesting identity | no
 `label` | Plain text name of client to be displayed to user | no
 `boxPub` | 32 byte base64 encoded [`Curve25519`](http://nacl.cr.yp.to/box.html) public key of requesting identity. Use to encrypt messages sent to callback URL| no
+`own` | The self signed claims for the `iss` of this message. Either as an Object of claim types for self signed claims eg: `{"name":"Some Corp Inc", "url":"https://somecorp.example","image":{"/":"/ipfs/QmSCnmXC91Arz2gj934Ce4DeR7d9fULWRepjzGMX6SSazB"}}` or the IPFS Hash of a JSON encoded equivalent. See [Issuer Claims](/messages/claims.md) | no
+`verified` | Array of Verified Claims JWTs or IPFS hash of JSON encoded equivalent about the `iss` of this message. See [Verified Claims](/messages/verification.md) | no
 
 The attributes `redirect_url` can also be appended to the signed request as URL encoded query parameters outside of the signed payload. They are used to specify how you want the response and control returned. For more details see [Messages](./index.md#json-web-token).
 
