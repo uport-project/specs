@@ -19,7 +19,7 @@ Each request now consists of a single [Signed Message](../messages/index.md) tha
 
 `https://id.uport.me/req/[JWT]`
 
-Se each specific flow for specifics on each message type.
+See each specific flow for specifics on each message type.
 
 ## Specific Application flows
 
