@@ -17,7 +17,7 @@ Another kind of claims are [verified claims](/messages/verification.md). The iss
 
 ## Self Claims
 
-As the issuer of a request you can provide your own claims about who you are within your request. This is primarily for adding name and branding to a request.
+As the issuer of a request you can provide your own claims about who you are within your request. Include it as the `issc` of the message. This is primarily used for adding name and branding to a request.
 
 It is important to remember that this is not verified and consumers of the data such as the uPort mobile app will present it as unverified.
 
