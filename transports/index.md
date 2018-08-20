@@ -39,6 +39,8 @@ By encoding the request in a QR code it is very easy for users with the uPort ap
 
 While this is often used for interacting with an application in a desktop browser, there other applications: QR codes can be printed or displayed at conferences, on posters, or in other real-world use cases.
 
+Large requests create large QR codes that can be difficult to scan. Use the [Initiating a request for use in a QR code from the request server](/rest-apis/request-server.md) to create a compact URL containing the request.
+
 ### Push Notifications
 
 As part of a regular [Selective Disclosure Flow](/flows/selectivedisclosure.md) you can request permissions from your user to send requests directly to their uPort app using push notifications.
@@ -77,74 +79,7 @@ The response is encoded as JSON and sent as an HTTP POST to the callback url pro
 
 The callback MUST return 200 to notify the user it has been received correctly.
 
-## Messaging Server
-
-uPort operates a free messaging server at the URL:
-
-`https://chasqui.uport.me`
-
-This allows serverless desktop browser apps to receive a response from the mobile app.
-
-The message SHOULD be encrypted. See the [message encryption](/messages/encrypted.md) document for more details.
-
-### Preparing callback URL
-
-To use the messaging server, create a large secure URL safe random number that we call the topic id.
-
-Include the callback URL with the following format in your request `https://chasqui.uport.me/api/v1/topic/[TOPIC ID]`.
-
-### Listening for Response
-
-You can perform polling to the same callback URL you passed along to the request using HTTP GET.
-
-#### Endpoint
-
-`GET /api/v1/topic/:id`
-
-#### Response
-
-| Status |     Message    |                               |
-|:------:|----------------|-------------------------------|
-| 200    | Ok.            | Message stored on topic <id>  |
-| 500    | Internal Error | Internal error                |
-
-#### Response data
-
-If no response has been received the `message` object will be empty:
-
-```json
-{
-  "status": "success",
-  "message": {}
-}
-```
-
-Once the uPort app returns the response it will be included there:
-
-```json
-{
-  "status": "success",
-  "message": {"access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJp..."}
-}
-```
-
-### Cleanup
-
-To avoid having potentially private data stored on our server please `DELETE` the response after receiving a successful response.
-
-Just perform a HTTP `DELETE` on the callback url.
-
-#### Endpoint
-
-`DELETE /api/v1/topic/:id`
-
-#### Response
-
-| Status |     Message    |                                            |
-|:------:|----------------|--------------------------------------------|
-| 200    | Ok.            | Topic deleted                              |
-| 404    | Not found      | Topic not found                            |
-| 500    | Internal Error | Internal Error                             |
+[uPort has a request/response messaging server that can be used to automatically handle this for Serverless apps](/rest-apis/request-server.md).
 
 ## Examples
 
