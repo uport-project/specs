@@ -29,3 +29,5 @@ Name | Description | Required
 `rel`|Url of [relay service](/rest-apis/relay-server.md) for providing gas on private network | no (recommended)
 `fct`|Url of [fueling service](/rest-apis/fuel-server.md) for providing gas on private network | no
 `acc`|Fuel token used to authenticate on above `fct` url | yes
+`issc` | The self signed claims for the `iss` of this message. Either as an Object of claim types for self signed claims eg: `{"name":"Some Corp Inc", "url":"https://somecorp.example","image":{"/":"/ipfs/QmSCnmXC91Arz2gj934Ce4DeR7d9fULWRepjzGMX6SSazB"}}` or the IPFS Hash of a JSON encoded equivalent. See [Issuer Claims](/messages/claims.md) | no
+`vc` | Array of Verified Claims JWTs or IPFS hash of JSON encoded equivalent about the `iss` of this message. See [Issuer Claims](/messages/claims.md) and [Verified Claims](/messages/verification.md) | no
