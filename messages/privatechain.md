@@ -17,10 +17,10 @@ The following attributes of the JWT are supported:
 
 Name | Description | Required
 ---- | ----------- | --------
-[`iss`](https://tools.ietf.org/html/rfc7519#section-4.1.1) | The [MNID](https://github.com/uport-project/mnid) of the signing identity| yes
-[`aud`](https://tools.ietf.org/html/rfc7519#section-4.1.1) | The [MNID](https://github.com/uport-project/mnid) of the parent identity (the receiver of this account)| yes
+[`iss`](https://tools.ietf.org/html/rfc7519#section-4.1.1) | The [DID](https://w3c-ccg.github.io/did-spec/#decentralized-identifiers-dids) of the signing identity| yes
+[`aud`](https://tools.ietf.org/html/rfc7519#section-4.1.1) | The [DID](https://w3c-ccg.github.io/did-spec/#decentralized-identifiers-dids) of the parent identity (the receiver of this account)| yes
 `type`| `chainProv` | yes
-[`sub`](https://tools.ietf.org/html/rfc7519#section-4.1.1) | The [MNID](https://github.com/uport-project/mnid) encoding of the [private chain account](https://github.com/uport-project/uport-identity/blob/develop/contracts/Proxy.sol)| yes
+[`sub`](https://tools.ietf.org/html/rfc7519#section-4.1.1) | The [DID](https://w3c-ccg.github.io/did-spec/#decentralized-identifiers-dids) encoding of the [private chain account](https://github.com/uport-project/uport-identity/blob/develop/contracts/Proxy.sol)| yes
 [`iat`](https://tools.ietf.org/html/rfc7519#section-4.1.6) | The time of issuance | yes
 [`exp`](https://tools.ietf.org/html/rfc7519#section-4.1.4) | Expiration time of Verification | no
 `dad`|Ethereum address of devicekey as passed to provisioning service as `nad` in the [Selective Disclosure Response](./shareresp.md) | yes

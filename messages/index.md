@@ -31,9 +31,9 @@ The JWT spec calls these claims, but we use the term "claims" for identity-speci
 
 Name | Description | Required
 ---- | ----------- | --------
-[`iss`](https://tools.ietf.org/html/rfc7519#section-4.1.1) | The [MNID](https://github.com/uport-project/mnid) of the signing identity| yes
-[`sub`](https://tools.ietf.org/html/rfc7519#section-4.1.2) | The [MNID](https://github.com/uport-project/mnid) of the subject of the JWT| no
-[`aud`](https://tools.ietf.org/html/rfc7519#section-4.1.3) | The [MNID](https://github.com/uport-project/mnid) or URL of the audience of the JWT. Our libraries or app will not accept any JWT that has someone else as the audience| no
+[`iss`](https://tools.ietf.org/html/rfc7519#section-4.1.1) | The [DID](https://w3c-ccg.github.io/did-spec/#decentralized-identifiers-dids) of the signing identity| yes
+[`sub`](https://tools.ietf.org/html/rfc7519#section-4.1.2) | The [DID](https://w3c-ccg.github.io/did-spec/#decentralized-identifiers-dids) of the subject of the JWT| no
+[`aud`](https://tools.ietf.org/html/rfc7519#section-4.1.3) | The [DID](https://w3c-ccg.github.io/did-spec/#decentralized-identifiers-dids) or URL of the audience of the JWT. Our libraries or app will not accept any JWT that has someone else as the audience| no
 [`iat`](https://tools.ietf.org/html/rfc7519#section-4.1.6) | The time of issuance | yes
 [`exp`](https://tools.ietf.org/html/rfc7519#section-4.1.4) | Expiration time of JWT | no
 
@@ -72,7 +72,7 @@ There are certain standardized parameters that are provided using HTTP query par
 
 Name | Description | Required
 ---- | ----------- | --------
-`client_id` | The [MNID](https://github.com/uport-project/mnid) of the requesting identity | no
+`client_id` | The [DID](https://w3c-ccg.github.io/did-spec/#decentralized-identifiers-dids) of the requesting identity | no
 `callback_url` | The URL that receives the response | no
 `callback_type` | Valid values `post` or `redirect`. Determines if callback should be sent as a HTTP POST or open the link (`redirect`). If unspecified the mobile app will attempt to pick the correct one| no
 `label` | Plain text name of client to be displayed to user | no
