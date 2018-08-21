@@ -7,9 +7,9 @@ This RESTful API simplifies a few interactions for a serverless Decentralized Ap
 
 uPort operates a free implementation of this service at this URL:
 
-`https://chasqui.uport.me`
+`https://api.uport.me/chasqui`
 
-The [source is available on github](https://github.com/uport-project/chasqui) and you can freely run your own version of it.
+The [source is available on github](https://github.com/uport-project/lambda-chasqui) and you can freely run your own version of it.
 
 ## Initiating a request for use in a QR code
 
@@ -19,7 +19,7 @@ Just perform a HTTP `DELETE` on the callback url.
 
 #### Endpoint
 
-`POST /api/v1/topic`
+`POST /topic`
 
 #### Body
 
@@ -42,7 +42,7 @@ If the QR code contains a URL that does not match an existing deep URL used by t
 
 #### Endpoint
 
-`GET /api/v1/topic/:id`
+`GET /topic/:id`
 
 #### Response
 
@@ -73,7 +73,7 @@ The message sent as a response SHOULD be encrypted. See the [message encryption]
 
 To use the messaging server, create a large secure URL safe random number that we call the topic id.
 
-Include the callback URL with the following format in your request `https://chasqui.uport.me/api/v1/topic/[TOPIC ID]`.
+Include the callback URL with the following format in your request `https://api.uport.me/chasqui/topic/[TOPIC ID]`.
 
 ### Listening for Response
 
@@ -81,7 +81,7 @@ You can perform polling to the same callback URL you passed along to the request
 
 #### Endpoint
 
-`GET /api/v1/topic/:id`
+`GET /topic/:id`
 
 #### Response
 
@@ -118,7 +118,7 @@ Just perform a HTTP `DELETE` on the callback url.
 
 #### Endpoint
 
-`DELETE /api/v1/topic/:id`
+`DELETE /topic/:id`
 
 #### Response
 
