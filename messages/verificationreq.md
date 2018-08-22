@@ -18,16 +18,15 @@ The following additional attributes of the JWT are supported:
 
 Name | Description | Required
 ---- | ----------- | --------
-[`iss`](https://tools.ietf.org/html/rfc7519#section-4.1.1) | The [MNID](https://github.com/uport-project/mnid) of the signing identity| yes
-[`sub`](https://tools.ietf.org/html/rfc7519#section-4.1.2) | The [MNID](https://github.com/uport-project/mnid) of the subject of the JWT| no
-[`aud`](https://tools.ietf.org/html/rfc7519#section-4.1.3) | The [MNID](https://github.com/uport-project/mnid) or URL of the audience of the JWT. Our libraries or app will not accept any JWT that has someone else as the audience| no
+[`iss`](https://tools.ietf.org/html/rfc7519#section-4.1.1) | The DID of the signing identity| yes
+[`sub`](https://tools.ietf.org/html/rfc7519#section-4.1.2) | The DID of the identity you want the user to sign the claims ABOUT | no
+[`aud`](https://tools.ietf.org/html/rfc7519#section-4.1.3) | The DID or URL of the audience of the JWT. Our libraries or app will not accept any JWT that has someone else as the audience| no
 [`iat`](https://tools.ietf.org/html/rfc7519#section-4.1.6) | The time of issuance | yes
 [`exp`](https://tools.ietf.org/html/rfc7519#section-4.1.4) | Expiration time of JWT | no
 `type` | MUST have the value `verReq` | yes
 `unsignedClaim` | An unsigned claim that the user is requested to sign, this should exactly match the `claim` of the finished signed [Verified Claim](./verification.md). | yes
-`sub` | The DID of the identity you want the user to sign the claims ABOUT | no
-`aud` | The DID of the identity you want to sign the Verified Claim | no
 `callback` | Callback URL for returning the response to a request (may be deprecated in future) | no
+`riss` | The DID of the identity you want to sign the Verified Claim | no
 `rexp` | Requested expiry time in seconds | no
 `issc` | The self signed claims for the `iss` of this message. Either as an Object of claim types for self signed claims eg: `{"name":"Some Corp Inc", "url":"https://somecorp.example","image":{"/":"/ipfs/QmSCnmXC91Arz2gj934Ce4DeR7d9fULWRepjzGMX6SSazB"}}` or the IPFS Hash of a JSON encoded equivalent. See [Issuer Claims](/messages/claims.md) | no
 `vc` | Array of Verified Claims JWTs or IPFS hash of JSON encoded equivalent about the `iss` of this message. See [Issuer Claims](/messages/claims.md) and [Verified Claims](/messages/verification.md) | no
@@ -41,6 +40,7 @@ Example Verified Claim request:
   "iss":"did:uport:REQUESTING_APP_OR_USER",
   "aud":"did:uport:VERIFYING_APP_OR_USER",
   "sub":"did:uport:SUBJECT_OF_VERIFIED_CLAIM",
+  "riss":"did:uport:IDENTITY_THAT_WILL_SIGN_THE_CLAIM",
   "unsignedClaim": {
     "name":"Bob Smith"
   },
