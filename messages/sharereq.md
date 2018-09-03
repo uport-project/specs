@@ -18,7 +18,7 @@ The following attributes of the JWT are supported:
 Name | Description | Required
 ---- | ----------- | --------
 `type` | MUST have the value `shareReq` | yes
-[`iss`](https://tools.ietf.org/html/rfc7519#section-4.1.1) | The [MNID](https://github.com/uport-project/mnid) of the signing identity| yes
+[`iss`](https://tools.ietf.org/html/rfc7519#section-4.1.1) | The [DID](https://w3c-ccg.github.io/did-spec/#decentralized-identifiers-dids) of the signing identity| yes
 [`iat`](https://tools.ietf.org/html/rfc7519#section-4.1.6) | The time of issuance | yes
 [`exp`](https://tools.ietf.org/html/rfc7519#section-4.1.4) | Expiration time of JWT | no
 `callback` | Callback URL for returning the response to a request | no
@@ -48,6 +48,6 @@ Name | Description | Required
 ---- | ----------- | --------
 `callback_url` | The URL that receives the response | yes
 `callback_type` | Valid values `post` or `redirect`. Determines if callback should be sent as a HTTP POST or open the link (`redirect`). If unspecified, the mobile app will attempt to pick the correct one| no
-`client_id` | The [MNID](https://github.com/uport-project/mnid) of the requesting identity | no
+`client_id` | The [DID](https://w3c-ccg.github.io/did-spec/#decentralized-identifiers-dids) of the requesting identity | no
 `label` | Plain text name of client to be displayed to user | no
 `network_id` | Network ID of Ethereum chain of identity eg. `0x4` for `rinkeby` | no

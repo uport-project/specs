@@ -16,7 +16,7 @@ An identity in uPort is really just someone or something that can sign data or t
 
 An identity has:
 
-- An Identifier in the form of an [MNID](https://github.com/uport-project/mnid)
+- An Identifier in the form of a [Decentralized ID (DID)](https://w3c-ccg.github.io/did-spec/#decentralized-identifiers-dids)
 - A signing key
 - A public key stored on the [uPort Registry](https://github.com/uport-project/uport-registry)
 
