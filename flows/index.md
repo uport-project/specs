@@ -1,7 +1,7 @@
 ---
 title: "Uport Request Flows"
-category: "reference"
-type: "content"
+category: "flows"
+type: "reference"
 source: "https://github.com/uport-project/specs/blob/develop/flows/index.md"
 ---
 

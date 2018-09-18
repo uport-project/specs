@@ -1,7 +1,7 @@
 ---
 title: "Verification Request Flow"
-category: "reference"
-type: "content"
+category: "flows"
+type: "reference"
 source: "https://github.com/uport-project/specs/blob/develop/flows/verificationreq.md"
 ---
 
