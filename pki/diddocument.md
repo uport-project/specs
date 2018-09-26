@@ -1,7 +1,7 @@
 ---
 title: "Decentralized Identity Document"
-category: "reference"
-type: "content"
+category: "pki"
+type: "reference"
 source: "https://github.com/uport-project/specs/blob/develop/pki/diddocument.md"
 ---
 

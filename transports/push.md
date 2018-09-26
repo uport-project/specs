@@ -1,7 +1,7 @@
 ---
 title: "Push Notification Transport"
-category: "reference"
-type: "content"
+category: "transports"
+type: "reference"
 source: "https://github.com/uport-project/specs/blob/develop/transports/push.md"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Selective Disclosure Request"
-category: "reference"
-type: "content"
+category: "messages"
+type: "reference"
 source: "https://github.com/uport-project/specs/blob/develop/messages/sharereq.md"
 ---
 

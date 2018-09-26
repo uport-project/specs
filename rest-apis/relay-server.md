@@ -1,7 +1,7 @@
 ---
 title: "Meta Transaction Relaying Server"
-category: "reference"
-type: "content"
+category: "apis"
+type: "reference"
 source: "https://github.com/uport-project/specs/blob/develop/rest-apis/relay-server.md"
 ---
 

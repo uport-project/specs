@@ -1,7 +1,7 @@
 ---
 title: "Uport PKI"
-category: "reference"
-type: "content"
+category: "pki"
+type: "reference"
 source: "https://github.com/uport-project/specs/blob/develop/pki/index.md"
 ---
 
