@@ -35,7 +35,7 @@ Example EIP712 signature request:
 
 ```json
 {
-  "type":"verReq",
+  "type":"eip712Req",
   "iss":"did:uport:REQUESTING_APP_OR_USER",
   "aud":"did:uport:VERIFYING_APP_OR_USER",
   "sub":"did:uport:SUBJECT_OF_VERIFIED_CLAIM",
