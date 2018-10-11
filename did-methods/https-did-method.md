@@ -10,7 +10,7 @@ This is a DID method specification that conforms to the requirements specified i
 
 ## Abstract
 
-DIDs that target a distributed ledger face significant practical challenges in bootstrapping enough meaningful trusted data around identities to incentivize mass adoption<sup>[1](#footnote1)</sup>. We propose a new DID method meant to be used in conjunction with blockchain-based DIDs that allows them to bootstrap trust using a web domain's existing reputation.
+DIDs that target a distributed ledger face significant practical challenges in bootstrapping enough meaningful trusted data around identities to incentivize mass adoption. We propose a new DID method meant to be used in conjunction with blockchain-based DIDs that allows them to bootstrap trust using a web domain's existing reputation.
 
 ## Introduction
 
@@ -37,7 +37,7 @@ DIDs that target a distributed ledger face significant practical challenges in b
 
 ## Target System
 
-This DID method targets the TLS/SSL certificate system used to secure domains in DNS<sup>[2](#footnote2)</sup>.
+This DID method targets the TLS/SSL certificate system used to secure domains in DNS.
 
 ## DID Method Name
 
@@ -47,7 +47,7 @@ A DID that uses this method MUST begin with the following prefix: `did:https`. P
 
 ## DID Method Namespace Specific Identifier
 
-The method specific identifier is a fully qualified domain name that is secured by a TLS/SSL certificate.  It is analagous to the common name used in a certificate and must not include IP addresses, port numbers, or directories behind the top-level domain extension. The formal rules describing valid domain name syntax are described in [RFC 1035](https://tools.ietf.org/html/rfc1035), [RFC 1123](https://tools.ietf.org/html/rfc1123), and [RFC 2181](https://tools.ietf.org/html/rfc2181)<sup>[3](#footnote3)</sup>.
+The method specific identifier is a fully qualified domain name that is secured by a TLS/SSL certificate.  It is analagous to the common name used in a certificate and must not include IP addresses, port numbers, or directories behind the top-level domain extension. The formal rules describing valid domain name syntax are described in [RFC 1035](https://tools.ietf.org/html/rfc1035), [RFC 1123](https://tools.ietf.org/html/rfc1123), and [RFC 2181](https://tools.ietf.org/html/rfc2181).
 
 ### Example
 
@@ -93,12 +93,4 @@ This DID method is not fully "self-sovereign" due to its reliance on centralized
 
 ## Reference Implementations
 
-The code at [https://github.com/uport-project/https-did-resolver](https://github.com/uport-project/https-did-resolver) is intended to present a reference implementation of this DID method. Any other implementations should ensure that they pass the test suite described in `/src/__tests__` before claiming compatibility.
-
-
-
-<a name="footnote1">1</a>: Not sure about the wording of this sentence. Is this true/useful to put here in the document? Attempting to set the stage for why this DID method is useful. How else to describe the problem of someone verifying a claim made by some DID lacking low friction ways to associate that DID with an existing entity that they trust? Also communicate that this problem occurs because DIDs are new and there will not be enough information associated with them for users to decide to trust them.
-
-<a name="footnote2">2</a> Not sure how to accurately classify the target system. DNS seems too broad, but not sure if TLS/SSL certificate system is enough.
-
-<a name="footnote2">3</a> Is this descriptive enough? Those RFCs are huge and I didn't bother to understand them fully. Do we need to explicitly reproduce the relevant sections of them in this document?
+The code at [https://github.com/uport-project/https-did-resolver](https://github.com/uport-project/https-did-resolver) is intended to present a reference implementation of this DID method. Any other implementations should ensure that they pass the test suite described in `/src/__tests__` before claiming compatibility
