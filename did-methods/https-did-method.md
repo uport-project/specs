@@ -83,9 +83,24 @@ You must perform the following steps in order to resolve the DID document from a
 
 ## Security Considerations
 
-> TODO: Not sure if this counts as a security concern or a philosophical one that should be discussed elsewhere.
+At least TLS 1.2 should be configured to use only strong ciphers suites and to use sufficiently large key sizes. As recommendations may be volatile these days, only the very latest recommendations should be used. However, as a rule of thumb, the following must be used:
 
-The HTTPS DID method is not fully "self-sovereign" due to its reliance on centralized certificate authorities for establishing trust in the ownership of a domain.
+- ephemeral keys are to be used
+- ECDHE with one of the strong curves {X25519, brainpoolP384r1, NIST P-384, brainpoolP256r1, NIST P-256} shall be used as key exchange
+- AESGCM or ChaCha20 with 256 bit large keys shall be used for bulk encryption
+- ECDSA with one of the strong curves {brainpoolP384r1, NIST P-384, brainpoolP256r1, NIST P-256} or RSA (at least 3072) shall be used
+- Authenticated Encryption with Associated Data (AEAD) shall be used as Mac
+- SHA384 or POLY1305 shall be utilized
+
+Examples for strong ciphersuites for now are:
+ECDHE-ECDSA-AES256-GCM-SHA384 TLSv1.2 Kx=ECDH Au=ECDSA Enc=AESGCM(256) Mac=AEAD
+ECDHE-RSA-AES256-GCM-SHA384 TLSv1.2 Kx=ECDH Au=RSA Enc=AESGCM(256) Mac=AEAD
+ECDHE-ECDSA-CHACHA20-POLY1305 TLSv1.2 Kx=ECDH Au=ECDSA Enc=ChaCha20-Poly1305 Mac=AEAD
+ECDHE-RSA-CHACHA20-POLY1305 TLSv1.2 Kx=ECDH Au=RSA Enc=ChaCha20-Poly1305 Mac=AEAD
+ECDHE-RSA-AES256-GCM-SHA384 TLSv1.2 Kx=ECDH Au=RSA Enc=AESGCM(256) Mac=AEAD
+ECDHE-ECDSA-AES256-GCM-SHA384 TLSv1.2 Kx=ECDH Au=ECDSA Enc=AESGCM(256) Mac=AEAD
+
+More infos on hardening TLS can be found here: https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet
 
 ## Privacy Considerations
 
