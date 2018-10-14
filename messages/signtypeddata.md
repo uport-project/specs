@@ -19,8 +19,6 @@ The following additional attributes of the JWT are supported:
 Name | Description | Required
 ---- | ----------- | --------
 [`iss`](https://tools.ietf.org/html/rfc7519#section-4.1.1) | The DID of the signing identity| yes
-[`sub`](https://tools.ietf.org/html/rfc7519#section-4.1.2) | The DID of the identity you want the user to sign the claims ABOUT | no
-[`aud`](https://tools.ietf.org/html/rfc7519#section-4.1.3) | The DID or URL of the audience of the JWT. Our libraries or app will not accept any JWT that has someone else as the audience| no
 [`iat`](https://tools.ietf.org/html/rfc7519#section-4.1.6) | The time of issuance | yes
 [`exp`](https://tools.ietf.org/html/rfc7519#section-4.1.4) | Expiration time of JWT | no
 `type` | MUST have the value `eip712Req` | yes
@@ -37,8 +35,6 @@ Example EIP712 signature request:
 {
   "type":"eip712Req",
   "iss":"did:uport:REQUESTING_APP_OR_USER",
-  "aud":"did:uport:VERIFYING_APP_OR_USER",
-  "sub":"did:uport:SUBJECT_OF_VERIFIED_CLAIM",
   "riss":"did:uport:IDENTITY_THAT_WILL_SIGN_THE_CLAIM",
   "typedData": {
     "types": {
@@ -78,7 +74,6 @@ The signing user views the data structure in the UX and signs it (or rejects the
 ```json
 {
   "iss":"did:uport:IDENTITY_OF_SIGNER",
-  "sub":"did:uport:SUBJECT_OF_VERIFIED_CLAIM",
   "typedData": {
     "types": {
         "EIP712Domain": [
