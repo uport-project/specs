@@ -11,7 +11,7 @@ A signed typed data response is a message created by a client app which includes
 
 # Attributes
 
-The JWT contains three required fields, `iat`, `iss`, `request`, and `signature`.  The `request` is an EIP712 signature request, as definied in the [EIP712 specification for typed data](https://eips.ethereum.org/EIPS/eip-712). `iss` and `iat` are defined as the issuer of the JWT, and the time at which it was issued, as usual. The `signature` field is an object containing the components `r`, `s`, and `v` which make up the signature over the typed data specified in the `request` field.  The JWT may optionally also contain the `exp`, `vc`, and `callback` fields.
+The JWT contains three required fields, `iat`, `iss`, `request`, and `signature`.  The `request` is an EIP712 signature request, as definied in the [EIP712 specification for typed data](https://eips.ethereum.org/EIPS/eip-712). `iss` and `iat` are defined as the issuer of the JWT, and the time at which it was issued, as usual. The `signature` field is an object containing the components `r`, `s`, and `v` which make up the signature over the typed data specified in the `request` field.  The JWT may optionally also contain the `exp`, `vc` fields.
 
 Name | Description | Required
 ---- | ----------- | --------
@@ -20,7 +20,6 @@ Name | Description | Required
 `iss` | The DID of the issuer of the JWT, not necessarily the same as the signer in `signature` | yes
 `request` | A JSON object that conforms to the [ERC712 specification for typed data](https://eips.ethereum.org/EIPS/eip-712). It must contain the keys `types`, `primaryType`, `domain`, and `message`. | yes
 `signature` | An object containing `r`, `s`, and `v`, the components of the signature | yes
-`callback` | Callback URL for returning the response to a request (may be deprecated in future) | no
 `vc` | Array of Verified Claims JWTs or IPFS hash of JSON encoded equivalent about the `iss` of this message. See [Issuer Claims](/messages/claims.md) and [Verified Claims](/messages/verification.md) | no
 [`exp`](https://tools.ietf.org/html/rfc7519#section-4.1.4) | Expiration time of JWT | no
 
