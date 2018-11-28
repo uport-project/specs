@@ -31,6 +31,7 @@ Example Personal Sign request:
 ```json
 {
   "riss":"did:ethr:IDENTITY_THAT_WILL_SIGN_THE_CLAIM",
+  "type": "personalSignReq",
   "data": "0xdeaddeadbeefbeef",
   "callback": "https://example.com",
   "exp": 123456789

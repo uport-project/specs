@@ -16,7 +16,7 @@ The JWT contains three required fields, `iat`, `iss`, `request`, and `signature`
 Name | Description | Required
 ---- | ----------- | --------
 [`iat`](https://tools.ietf.org/html/rfc7519#section-4.1.6) | The time of issuance | yes
-`type` | MUST have the value `eip712Resp` | yes
+`type` | MUST have the value `personalSignResp` | yes
 `iss` | The DID of the issuer of the JWT, not necessarily the same as the signer in `signature` | yes
 `data` | A hex string representing the data that was signed. | yes
 `signature` | An object containing `r`, `s`, and `v`, the components of the signature | yes
@@ -29,6 +29,7 @@ An example personal signature response:
 ```json
 {
   "iat": 123456789,
+  "type": "personalSignResp",
   "iss": "did:ethr:0x...",
   "data": "0xdeaddeadbeefbeef",
   "signature": {
