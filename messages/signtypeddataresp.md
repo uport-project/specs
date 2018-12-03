@@ -11,7 +11,7 @@ A signed typed data response is a message created by a client app which includes
 
 # Attributes
 
-The JWT contains three required fields, `iat`, `iss`, `request`, and `signature`.  The `request` is an EIP712 signature request, as definied in the [EIP712 specification for typed data](https://eips.ethereum.org/EIPS/eip-712). `iss` and `iat` are defined as the issuer of the JWT, and the time at which it was issued, as usual. The `signature` field is an object containing the components `r`, `s`, and `v` which make up the signature over the typed data specified in the `request` field.  The JWT may optionally also contain the `exp`, `vc` fields.
+The JWT contains three required fields, `iat`, `iss`, `request`, and `signature`.  The `request` is an EIP712 signature request, as definied in the [EIP712 specification for typed data](https://eips.ethereum.org/EIPS/eip-712). `iss` and `iat` are defined as the issuer of the JWT, and the time at which it was issued, as usual. The `signature` field is a string, prefixed with `0x`, containing the hex representation of a 129-byte signature. Bytes `0...64` contain the `r` parameter, bytes `64...128` the `s` parameter and the last byte the `v` parameter, which together make up the signature over the typed data specified in the `request` field.  The JWT may optionally also contain the `exp`, `vc` fields.
 
 Name | Description | Required
 ---- | ----------- | --------
@@ -58,11 +58,7 @@ An example typed data signature response:
       }
     }
   },
-  "signature": {
-    "r": "0x...",
-    "s": "0x...",
-    "v": "0x..."
-  },
+  "signature": "0xa90bed9301293da38...",
   exp: 123456789,
 }
 ```
