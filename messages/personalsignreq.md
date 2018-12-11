@@ -24,6 +24,7 @@ Name | Description | Required
 `callback` | Callback URL for returning the response to a request (may be deprecated in future) | no
 `riss` | The DID of the identity you want to sign the Verified Claim | no
 `from` | The DID or hex encoded address requested to sign the message. If not specified the user will select an account | no
+`net` | network id of Ethereum chain of identity eg. `0x4` for `rinkeby`. It defaults to the network encoded in the `to` if specified as an [DID](https://w3c-ccg.github.io/did-spec/#decentralized-identifiers-dids). If not it defaults to `0x1` for `mainnet`. | no
 `vc` | Array of Verified Claims JWTs or IPFS hash of JSON encoded equivalent about the `iss` of this message. See [Issuer Claims](/messages/claims.md) and [Verified Claims](/messages/verification.md) | no
 
 
@@ -32,6 +33,7 @@ Example Personal Sign request:
 ```json
 {
   "from":"ADDRESS_THAT_WILL_SIGN_THE_MESSAGE",
+  "net":"NETWORK_OF_ADDRESS_THAT_WILL_SIGN_THE_MESSAGE",
   "riss":"did:ethr:IDENTITY_THAT_WILL_SIGN_THE_CLAIM",
   "type": "personalSignReq",
   "data": "0xdeaddeadbeefbeef",
