@@ -23,6 +23,7 @@ Name | Description | Required
 `data` | A string containing the hex encoding of the data to be signed | yes
 `callback` | Callback URL for returning the response to a request (may be deprecated in future) | no
 `riss` | The DID of the identity you want to sign the Verified Claim | no
+`from` | The DID or hex encoded address requested to sign the message. If not specified the user will select an account | no
 `vc` | Array of Verified Claims JWTs or IPFS hash of JSON encoded equivalent about the `iss` of this message. See [Issuer Claims](/messages/claims.md) and [Verified Claims](/messages/verification.md) | no
 
 
@@ -30,6 +31,7 @@ Example Personal Sign request:
 
 ```json
 {
+  "from":"ADDRESS_THAT_WILL_SIGN_THE_MESSAGE",
   "riss":"did:ethr:IDENTITY_THAT_WILL_SIGN_THE_CLAIM",
   "type": "personalSignReq",
   "data": "0xdeaddeadbeefbeef",
