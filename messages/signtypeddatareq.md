@@ -24,6 +24,8 @@ Name | Description | Required
 `typedData` | A JSON object that conforms to the [ERC712 specification for typed data](https://eips.ethereum.org/EIPS/eip-712). It must contain the keys `types`, `primaryType`, `domain`, and `message`. | yes
 `callback` | Callback URL for returning the response to a request (may be deprecated in future) | no
 `riss` | The DID of the identity you want to sign the Verified Claim | no
+`from` | Hex encoded address requested to sign the transaction. If not specified the user will select an account. | no
+`net` | network id of Ethereum chain of identity eg. `0x4` for `rinkeby`. It defaults to `0x1` for `mainnet`. | no
 `vc` | Array of Verified Claims JWTs or IPFS hash of JSON encoded equivalent about the `iss` of this message. See [Issuer Claims](/messages/claims.md) and [Verified Claims](/messages/verification.md) | no
 
 
