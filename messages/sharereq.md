@@ -30,7 +30,7 @@ Name | Description | Required
 `boxPub` | 32 byte base64 encoded [`Curve25519`](http://nacl.cr.yp.to/box.html) public key of requesting identity. Use to encrypt messages sent to callback URL| no
 `issc` | The self signed claims for the `iss` of this message. Either as an Object of claim types for self signed claims eg: `{"name":"Some Corp Inc", "url":"https://somecorp.example","image":{"/":"/ipfs/QmSCnmXC91Arz2gj934Ce4DeR7d9fULWRepjzGMX6SSazB"}}` or the IPFS Hash of a JSON encoded equivalent. See [Issuer Claims](/messages/claims.md) | no
 `vc` | Array of Verified Claims JWTs or IPFS hash of JSON encoded equivalent about the `iss` of this message. See [Issuer Claims](/messages/claims.md) and [Verified Claims](/messages/verification.md) | no
-`jsonRPC` | URL for the JSON RPC endpoint, ie: `https://mainnet.infura.io/`. Useful for private networks. The `net_version` method shoud return the same networkId as the filed `net`. The JSON RPC endpoint must provide method `eth_sendRawTransaction` (https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sendrawtransaction) | no
+`rpc` | URL for the JSON RPC endpoint, ie: `https://mainnet.infura.io/`. Useful for [Private Networks](/flows/privatechain.md). The `net_version` method shoud return the same networkId as the filed `net`. The JSON RPC endpoint must provide the following methods: `eth_getTransactionCount`, `eth_getBalance`, `eth_estimateGas`, `eth_gasPrice`, `eth_sendRawTransaction`, `eth_getTransactionReceipt` | no
 
 The attributes `redirect_url` and `callback_type` can also be appended to the signed request as URL encoded query parameters outside of the signed payload. They are used to specify how you want the response and control returned. For more details see [Messages](./index.md#json-web-token).
 

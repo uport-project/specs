@@ -44,7 +44,7 @@ We currently support the following flows:
 - [Selective Disclosure Flow](flows/selectivedisclosure.md)
 - [Send Verification Flow](flows/verification.md)
 - [Ethereum Transaction Request Flow](flows/tx.md)
-- [Private Chain Provisioning Flow](flows/privatechain.md)
+- [Private Chain Flow](flows/privatechain.md)
 
 ### [More about request flows](flows/index.md)
 
