@@ -98,23 +98,23 @@ did:https:w3c-ccg.github.io/.well-known/did.json
 
 ### Read (Resolve)
 
-The following steps must be executed in order to resolve the DID document from an `https` DID:
+The following steps must be executed to resolve the DID document from an https DID:
 
 1. Parse the fully qualified domain name from the identifier.
-2. Generate an HTTPS URL to the expected location of the DID document by prepending `https:// and appending 
+2. Generate an HTTPS URL to the expected location of the DID document by prepending `https://` and appending 
 `/.well-known/did.json` to the domain name.
-3. Perform a HTTP `GET` request to the URL using an agent that can successfully negotiate a secure HTTPS connection,
-which enforces the security requirements as described under [Security Considerations](Security-Considerations).
+3. Perform an HTTP `GET` request to the URL using an agent that can successfully negotiate a secure HTTPS connection,
+which enforces the security requirements as described in [Security Considerations](Security-Considerations).
 
 ### Update
 
-To update the DID Document, the `did.json`has to be updated. Please note that the DID will remain the same but 
-the contents of the DID document could change, e.g., by including a new verification key, or adding service endpoints.  
+To update the DID document, the `did.json`has to be updated. Please note that the DID will remain the same, but 
+the contents of the DID document could change, e.g., by including a new verification key or adding service endpoints.  
 
 ### Delete (Revoke)
 
-To delete the DID Document, the `did.json`has to be deleted, or has to be no longer publicly available
-due any other means.  
+To delete the DID document, the `did.json`has to be removed or has to be no longer publicly available due to
+any other means.
 
 ## Security Considerations
 
