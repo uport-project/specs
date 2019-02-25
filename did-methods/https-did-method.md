@@ -47,13 +47,6 @@ to when queried through the Domain Name System (DNS).
 
 The namestring that shall identify this DID method is: `https`
 
-A DID that uses this method MUST begin with the following prefix: `did:https`. Per the DID specification, this
-string MUST be in lowercase.
-
-## DID Method Name
-
-The namestring that shall identify this DID method is: `https`
-
 A DID that uses this method MUST begin with the following prefix: `did:https`. Per the DID specification, this string 
 MUST be in lowercase. The remainder of the DID, after the prefix, is specified below.
 
