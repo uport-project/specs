@@ -25,7 +25,7 @@ Name | Description | Required
 `net` | network id of Ethereum chain of identity eg. `0x4` for `rinkeby` | no
 `act` | Ethereum account type: `general` users choice (default), `segregated` a unique smart contract based account will be created for requesting app, `keypair` a unique keypair based account will be created for requesting app, `devicekey` request a new device key for a [Private Chain Account](./privatechain.md), `none` no account is returned | no
 `requested` | The self signed claims requested from a user. Array of claim types for self signed claims. Currently supported: `["name", "email", "image", "country", "phone"]` | no
-`verified` | The verified claims requested from a user. Array of claim types for self signed claims eg: `["name", "email"]`, see [Verified Claims](/messages/verification.md) | no
+`verified` | The verified claims requested from a user. Array of claim types or [Claims Specs](#claims-spec) for self signed claims eg: `["name", {type: "email", essential: true, iss: ['did:web:uport.claims']}]`, see [Verified Claims](/messages/verification.md) | no
 `permissions` | An array of permissions requested. Currently only supported is `notifications` | no
 `boxPub` | 32 byte base64 encoded [`Curve25519`](http://nacl.cr.yp.to/box.html) public key of requesting identity. Use to encrypt messages sent to callback URL| no
 `issc` | The self signed claims for the `iss` of this message. Either as an Object of claim types for self signed claims eg: `{"name":"Some Corp Inc", "url":"https://somecorp.example","image":{"/":"/ipfs/QmSCnmXC91Arz2gj934Ce4DeR7d9fULWRepjzGMX6SSazB"}}` or the IPFS Hash of a JSON encoded equivalent. See [Issuer Claims](/messages/claims.md) | no
@@ -34,8 +34,31 @@ Name | Description | Required
 
 The attributes `redirect_url` and `callback_type` can also be appended to the signed request as URL encoded query parameters outside of the signed payload. They are used to specify how you want the response and control returned. For more details see [Messages](./index.md#json-web-token).
 
-#### Claim Types
+#### Claims Spec
 
+A Claims Spec allows you to set specific requirements for the claims you are requesting.
+
+Name | Description | Required
+---- | ----------- | --------
+type | The claims type | yes
+essential | This claim is essential. A response should not be returned if user does not have this claim | no
+iss | Array of DID's of allowed issuers of claims | no
+url | URL for obtaining claim | no
+reason | Short string explaining why you need this | no
+
+Examples:
+
+```js
+{
+  type: 'email',
+  essential: true,
+  iss: ['did:web:uport.claims'],
+  url: 'https://uport.claims/email',
+  reason: 'Whe need to be able to email you' 
+}
+```
+
+#### Claim Types
 
 ## Unsigned Requests (Deprecated)
 
