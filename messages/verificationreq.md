@@ -30,6 +30,7 @@ Name | Description | Required
 `rexp` | Requested expiry time in seconds | no
 QmSCnmXC91Arz2gj934Ce4DeR7d9fULWRepjzGMX6SSazB"}}` or the IPFS Hash of a JSON encoded equivalent. See [Issuer Claims](/messages/claims.md) | no
 `vc` | Array of Verified Claims JWTs or IPFS hash of JSON encoded equivalent about the `iss` of this message. See [Issuer Claims](/messages/claims.md) and [Verified Claims](/messages/verification.md) | no
+`dev` | `true` or `false`. Is this Verification for development purpose only? Use it to distinguish between verifications created during development and/or testing. | no (defaults to `false`)
 
 
 Example Verified Claim request:

@@ -25,6 +25,7 @@ Name | Description | Required
 [`exp`](https://tools.ietf.org/html/rfc7519#section-4.1.4) | Expiration time of Verification | no
 `claim` | An object containing one or more claims about `sub` eg: `{"name":"Carol Crypteau"}` | yes
 `vc` | Array of Verified Claims JWTs or IPFS hash of JSON encoded equivalent about the `iss` of this message | no
+`dev` | `true` or `false`. Is this Verification for development purpose only? Use it to distinguish between verifications created during development and/or testing. | no (defaults to `false`)
 
 ## Claims Best Practices
 
