@@ -26,6 +26,7 @@ Name | Description | Required
 `claim` | An object containing one or more claims about `sub` eg: `{"name":"Carol Crypteau"}` | yes
 `issc` | The self signed claims for the `iss` of this message. Either as an Object of claim types for self signed claims eg: `{"name":"Some Corp Inc", "url":"https://somecorp.example","image":{"/":"/ipfs/QmSCnmXC91Arz2gj934Ce4DeR7d9fULWRepjzGMX6SSazB"}}` or the IPFS Hash of a JSON encoded equivalent. See [Issuer Claims](/messages/claims.md) | no
 `vc` | Array of Verified Claims JWTs or IPFS hash of JSON encoded equivalent about the `iss` of this message | no
+`dev` | `true` or `false`. Is this Verification for development purpose only? Use it to distinguish between verifications created during development and/or testing. | no (defaults to `false`)
 
 ## Claims Best Practices
 
