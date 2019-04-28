@@ -88,7 +88,10 @@ The definition of the https DID JSON-LD context is:
 
 ### Create (Register)
 
-Creating a DID is done by creating the DID document JSON-LD file including a suitable keypair, e.g., using the 
+Creating a DID is done by 
+1. applying at a domain name registrar for use of a domain name and 
+1. storing the location of a hosting service, the IP address at a DNS lookup service 
+1. creating the DID document JSON-LD file including a suitable keypair, e.g., using the 
 Koblitz Curve, and storing the `did.json` file under the well-known URL.  
 
 For the domain name `w3c-ccg.github.io`, the `did.json` will be available under the following URL: 
@@ -142,6 +145,7 @@ Examples of strong SSL/TLS configurations for now are:
 It is recommended to adhere to [OWASP's](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
 latest recommendations for hardening TLS configurations.
 
+Delete action can be performed by domain name registars or DNS lookup services.
 ## Reference Implementations
 
 The code at [https://github.com/uport-project/https-did-resolver](https://github.com/uport-project/https-did-resolver)
