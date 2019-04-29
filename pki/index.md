@@ -5,7 +5,7 @@ type: "reference"
 source: "https://github.com/uport-project/specs/blob/develop/pki/index.md"
 ---
 
-# uPort PKI
+# uPort Public Key Infrastructure (PKI)
 
 uPort implements a simple yet general purpose decentralized PKI system, making it easy to create and verify off-chain JWT messages.
 
