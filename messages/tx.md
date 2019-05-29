@@ -9,7 +9,7 @@ source: "https://github.com/uport-project/specs/blob/develop/messages/tx.md"
 
 This message allows an application to request that a client signs an ethereum transaction.
 
-The Ethereum Transaction Request is created by a client app and sent to a user's mobile app as part of the [Ethereeum Transaction Request Flow](../flows/tx.md).
+The Ethereum Transaction Request is created by a client app and sent to a user's mobile app as part of the [Ethereum Transaction Request Flow](../flows/tx.md).
 
 Requests can be either signed or unsigned.
 
