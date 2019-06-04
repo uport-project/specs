@@ -31,9 +31,9 @@ Name | Description | Required
 [`iss`](https://tools.ietf.org/html/rfc7519#section-4.1.1) | The [DID](https://w3c-ccg.github.io/did-spec) or [DID](https://w3c-ccg.github.io/did-spec/#decentralized-identifiers-dids) of the application identity requesting the signature| yes
 [`iat`](https://tools.ietf.org/html/rfc7519#section-4.1.6) | The time of issuance | yes
 [`exp`](https://tools.ietf.org/html/rfc7519#section-4.1.4) | Expiration time of JWT | no
-`from` | [DID](https://w3c-ccg.github.io/did-spec/#decentralized-identifiers-dids) or hex encoded address requested to sign the transaction. If not specified the user will select an account. | no
-`to` | [DID](https://w3c-ccg.github.io/did-spec/#decentralized-identifiers-dids) or hex encoded address of the recipient of the transaction. If not specified the transaction will create a contract and a bytecode field must exist. | no
-`net` | network id of Ethereum chain of identity eg. `0x4` for `rinkeby`. It defaults to the network encoded in the `to` if specified as an [DID](https://w3c-ccg.github.io/did-spec/#decentralized-identifiers-dids). If not it defaults to `0x1` for `mainnet`. | no
+`from` | [MNID](https://github.com/uport-project/mnid) or hex encoded address requested to sign the transaction. If not specified the user will select an account. | no
+`to` | [MNID](https://github.com/uport-project/mnid) or hex encoded address of the recipient of the transaction. If not specified the transaction will create a contract and a bytecode field must exist. | no
+`net` | network id of Ethereum chain of identity eg. `0x4` for `rinkeby`. It defaults to the network encoded in the `to` if specified as an [MNID](https://github.com/uport-project/mnid). If not it defaults to `0x1` for `mainnet`. | no
 `value` | [hex encoded value](https://github.com/ethereum/wiki/wiki/JSON-RPC#hex-value-encoding) in wei | no
 `fn` | Solidity function call eg. `transfer(address 0xdeadbeef, uint 5)` | no
 `gasPrice` | [hex encoded value](https://github.com/ethereum/wiki/wiki/JSON-RPC#hex-value-encoding) of integer of the gasPrice used for each paid gas. This is only treated as a recommendation. The client may override this. | no
@@ -61,9 +61,9 @@ The following
 
 Name | Description | Required
 ---- | ----------- | --------
-`from` | [DID](https://w3c-ccg.github.io/did-spec/#decentralized-identifiers-dids) or hex encoded address requested to sign the transaction. If not specified the user will select an account. | no
-`to` | This is the  [DID](https://w3c-ccg.github.io/did-spec/#decentralized-identifiers-dids) or hex encoded address of the recipient of the transaction. If not specified the transaction will create a contract and a bytecode field must exist. | yes
-`net` | network id of Ethereum chain of identity eg. `0x4` for `rinkeby`. It defaults to the network encoded in the `to` if specified as an [DID](https://w3c-ccg.github.io/did-spec/#decentralized-identifiers-dids). If not it defaults to `0x1` for `mainnet`. | no
+`from` | [MNID](https://github.com/uport-project/mnid) or hex encoded address requested to sign the transaction. If not specified the user will select an account. | no
+`to` | This is the [MNID](https://github.com/uport-project/mnid) or hex encoded address of the recipient of the transaction. If not specified the transaction will create a contract and a bytecode field must exist. | yes
+`net` | network id of Ethereum chain of identity eg. `0x4` for `rinkeby`. It defaults to the network encoded in the `to` if specified as an [MNID](https://github.com/uport-project/mnid). If not it defaults to `0x1` for `mainnet`. | no
 `value` | [hex encoded value](https://github.com/ethereum/wiki/wiki/JSON-RPC#hex-value-encoding) in wei | no
 `function` | Solidity function call eg. `transfer(address 0xdeadbeef, uint 5)` | no
 `bytecode` | Hex encoded data field of transaction | no
@@ -76,7 +76,7 @@ Name | Description | Required
 
 ## Addresses and Network selection
 
-Addresses SHOULD be either [DID](https://w3c-ccg.github.io/did-spec/#decentralized-identifiers-dids) encoded so they have the correct network specified with them or be a combination of a normal ethereum hex address and a `net` attribute specifying the network.
+Addresses SHOULD be either [MNID](https://github.com/uport-project/mnid) encoded so they have the correct network specified with them or be a combination of a normal ethereum hex address and a `net` attribute specifying the network.
 
 If there is any kind of mismatch between `to`, `from` or `net` an error will be returned.
 
