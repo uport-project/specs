@@ -61,7 +61,7 @@ Each uPort compatible JWT must be signed using an secp256k1 curve. The public ke
 
 ### Message Encryption
 
-Some [message transports](/transports/index.md) are not secure and require messages to be encrypted. See [/messages/encryption.md] for more.
+Some [message transports](/transports/index.md) are not secure and require messages to be encrypted. See [our encryption specs](/messages/encryption.md) for more detail.
 
 ## Unsigned Requests (Deprecated)
 
