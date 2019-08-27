@@ -10,7 +10,7 @@ Push notifications is a transport for sending requests to users. To make sure th
 
 ### Proper encoding of the request
 
-The message SHOULD be encrypted. See the [message encryption](/messages/encrypted.md) document for more details.
+The message SHOULD be encrypted. See the [message encryption](/messages/encryption.md) document for more details.
 
 First, simply wrap the request url in a JSON object and encode it as a string, like so: `{"url":"<request-url>"}`.
 We recommend padding the message so that it is less vulnerable to analysis attacks. This is done by appending spaces to the message until it is of length `N * I`, where `N` is any integer and `I` is some consistent number. We recommend `I = 50`.
