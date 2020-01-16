@@ -23,7 +23,7 @@ Name | Description | Required
 [`exp`](https://tools.ietf.org/html/rfc7519#section-4.1.4) | Expiration time of JWT | no
 `callback` | Callback URL for returning the response to a request | no
 `net` | network id of Ethereum chain of identity eg. `0x4` for `rinkeby` | no
-`act` | Ethereum account type: `general` users choice (default), `segregated` a unique smart contract based account will be created for requesting app, `keypair` a unique keypair based account will be created for requesting app, `devicekey` request a new device key for a [Private Chain Account](./privatechain.md), `none` no account is returned | no
+`act` | Ethereum account type: `general` users choice (default), `segregated` a unique smart contract based account will be created for requesting app, `keypair` a unique keypair based account will be created for requesting app, `devicekey` request a new device key for a [Private Chain Account](../flows/privatechain.md), `none` no account is returned | no
 `requested` | DEPRECATED The self signed claims requested from a user. Array of claim types for self signed claims. Currently supported: `["name", "email", "image", "country", "phone"]` | no
 `verified` | DEPRECATED The verified claims requested from a user. Array of claim types for self signed claims eg: `["name", "email"]`, see [Verified Claims](/messages/verification.md) | no
 `claims` | Requirements for claims requested from a user. See [Claims Specs](#claims-spec) and [Verified Claims](/messages/verification.md) | no
