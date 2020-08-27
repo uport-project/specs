@@ -47,7 +47,7 @@ Remember to prefix the hash with `/ipfs/`.
 
 ### IPLD Format
 
-To reduce the size of messages we remember storing the claims as an as an [IPLD Document](https://github.com/ipld/specs/blob/master/IPLD.md).
+To reduce the size of messages we remember storing the claims as an [IPLD Document](https://github.com/ipld/specs/blob/master/IPLD.md).
 QmbpLchVBiF5Deg8Dp31y4AUSNLiBbF92mHAp3xDcAfg4k
 
 Upload your claims document to IPFS.
@@ -80,7 +80,7 @@ Now use the returned hash in your requests:
 }
 ```
 
-**Note:** For links to other IPFS files such as images, you must add then as an [IPLD merkle link](https://github.com/ipld/specs/blob/master/IPLD.md#what-is-a-merkle-link). This just means that instead of using the string `ipfs/QmV3pEPwSzkQVMPmkvpWRvWRxexdMrCNayMnZeao8dibm4` as in an embedded document. You use the object `{"/":"/ipfs/QmV3pEPwSzkQVMPmkvpWRvWRxexdMrCNayMnZeao8dibm4"}` instead.
+**Note:** For links to other IPFS files such as images, you must add them as an [IPLD merkle link](https://github.com/ipld/specs/blob/master/IPLD.md#what-is-a-merkle-link). This just means that instead of using the string `ipfs/QmV3pEPwSzkQVMPmkvpWRvWRxexdMrCNayMnZeao8dibm4` as in an embedded document. You use the object `{"/":"/ipfs/QmV3pEPwSzkQVMPmkvpWRvWRxexdMrCNayMnZeao8dibm4"}` instead.
 
 ### Parameters
 
